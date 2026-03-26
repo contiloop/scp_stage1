@@ -49,11 +49,71 @@
 
 ---
 
-## Run 6 — Qwen3.5 (예정)
-- **변경**: lora_alpha: 32, use_rslora: true → scaling 5.66
-- **기대**: grad_norm 안정화
+## Run 6 — Qwen3.5-4B CPT (Vast.ai 4090)
+- **GPU**: RTX 4090 24GB, unsloth/unsloth:latest Docker
+- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=1e-5, weight_decay=0.1, warmup=0.1, batch=8, grad_accum=2
+- **관찰**: grad_norm 단조 증가 경향 있었으나 폭발하지는 않음. loss 정상 하강.
+- **결과**:
+  - Domain PPL: 10.37 → **9.35** (-9.8%)
+  - 영어 벤치마크 (lm-eval, limit=400):
+    | Task | Base | CPT | Diff |
+    |------|------|-----|------|
+    | MMLU | 76.7% | 76.6% | -0.1% |
+    | HellaSwag | 50.7% | 50.7% | 0.0% |
+    | ARC-Easy | 81.2% | 81.0% | -0.2% |
+    | ARC-Challenge | 50.5% | 50.0% | -0.5% |
+    | Winogrande | 71.8% | 72.8% | +1.0% |
+  - 한국어 벤치마크 (lm-eval, full):
+    | Task | Base | CPT | Diff |
+    |------|------|-----|------|
+    | KMMLU | 48.9% | 48.4% | -0.5% |
+    | KoBEST BoolQ | 78.5% | 75.8% | -2.7% |
+    | KoBEST COPA | 70.3% | 67.8% | -2.5% |
+    | KoBEST HellaSwag | 46.3% | 45.8% | -0.5% |
+- **HF**: `alwaysgood/Qwen3.5-4B-CPT-stage1`
+- **교훈**: 도메인 PPL 개선, 영어 유지, 한국어 BoolQ/COPA 소폭 하락. weight_decay=0.1이 기존 지식 보존에 부정적 영향 가능성.
 
-## Run 7 — Gemma 3 4B (예정)
-- **모델**: unsloth/gemma-3-4b-pt
-- **목적**: DeltaNet 없는 표준 Transformer로 비교 실험
-- **기대**: gradient explosion 없이 안정적 학습
+## Run 7 — Gemma-3-4B CPT (Vast.ai 4090)
+- **GPU**: RTX 4090 24GB, unsloth/unsloth:latest Docker
+- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=1e-5, weight_decay=0.01, warmup=0.1, batch=8, grad_accum=2
+- **관찰**: grad_norm 안정적 (1.1~1.7), loss 안정적 하강 (1.85→1.83)
+- **결과**:
+  - Domain PPL: 10.46 → **6.35** (-39.3%)
+  - 영어 벤치마크 (lm-eval, limit=400):
+    | Task | Base | CPT | Diff |
+    |------|------|-----|------|
+    | MMLU | 60.0% | 60.0% | 0.0% |
+    | HellaSwag | 65.5% | 64.8% | -0.7% |
+    | ARC-Easy | 82.8% | 83.8% | +1.0% |
+    | ARC-Challenge | 55.3% | 55.3% | 0.0% |
+    | Winogrande | 71.8% | 69.0% | -2.8% |
+  - 한국어 벤치마크 (lm-eval, full):
+    | Task | Base | CPT | Diff |
+    |------|------|-----|------|
+    | KMMLU | 35.2% | 34.6% | -0.6% |
+    | KoBEST BoolQ | 64.8% | 64.8% | 0.0% |
+    | KoBEST COPA | 73.8% | 73.3% | -0.5% |
+    | KoBEST HellaSwag | 45.0% | 43.5% | -1.5% |
+- **HF**: `alwaysgood/Gemma-3-4B-CPT-stage1`
+- **교훈**: PPL 39% 대폭 개선 (Qwen 대비 4배). 벤치마크 거의 유지. weight_decay=0.01 + 표준 Attention 구조가 안정적 학습에 기여.
+
+---
+
+## Qwen vs Gemma 비교
+
+| | Qwen3.5-4B | Gemma-3-4B |
+|---|-----------|-----------|
+| Base 한국어 (KMMLU) | 48.9% | 35.2% |
+| Domain PPL 개선 | -9.8% | **-39.3%** |
+| 영어 벤치마크 유지 | ✅ | ✅ |
+| 한국어 벤치마크 유지 | △ (BoolQ -2.7%) | ✅ |
+| grad_norm 안정성 | △ 단조 증가 | ✅ 안정 |
+| weight_decay | 0.1 | 0.01 |
+| 아키텍처 | DeltaNet+Attention | Attention only |
+
+---
+
+## Run 8 — Qwen3.5-4B CPT v2 (예정)
+- **변경**: weight_decay 0.1 → 0.01 (Gemma와 동일)
+- **가설**: weight_decay가 높으면 LoRA 업데이트와 충돌하여 grad_norm 불안정 + 기존 지식(한국어) 보존 저하
+- **기대**: grad_norm 안정화, 한국어 벤치마크 하락 완화

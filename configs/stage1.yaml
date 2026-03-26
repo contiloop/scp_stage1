@@ -23,7 +23,7 @@ training:
   gradient_accumulation_steps: 2    # effective batch = 16 × 2048 = 32K tokens
   bf16: true
   gradient_checkpointing: true
-  weight_decay: 0.1
+  weight_decay: 0.01
   max_grad_norm: 1.0
   logging_steps: 10
   save_steps: 250
