@@ -1,0 +1,30 @@
+# 학습 산출물 (용량 큼)
+checkpoints/
+models/
+data/processed/
+
+# 로컬 원본 데이터 (HF Hub에서 pull)
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 환경
+.env
+.venv/
+venv/
+
+# W&B
+wandb/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
