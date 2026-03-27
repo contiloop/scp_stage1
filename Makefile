@@ -5,7 +5,7 @@ CONFIG ?= configs/stage1.yaml
 setup:
 	pip install -e . --no-deps -q
 	pip install -U huggingface_hub -q
-	pip install "transformers>=5.2.0" "trl>=0.15.0" --no-deps -q
+	pip install "transformers>=5.2.0,<=5.3.0" "trl>=0.15.0" --no-deps -q
 	pip install --upgrade unsloth unsloth-zoo --no-deps -q
 	# transformers, trl, huggingface_hub만 업그레이드. torch는 docker 이미지 버전 유지.
 	python -c "import causal_conv1d" 2>/dev/null || pip install causal-conv1d -q
