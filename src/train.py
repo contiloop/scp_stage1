@@ -74,13 +74,27 @@ class EMACallback(TrainerCallback):
 
 
 
-class LayerGradNormCallback(TrainerCallback):
-    """레이어 그룹별 grad_norm을 wandb에 로깅."""
+class GradNormTrainer(SFTTrainer):
+    """SFTTrainer with per-group gradient norm logging to wandb.
 
-    # Qwen3.5 DeltaNet 관련 projection
+    Hooks optimizer.step directly instead of relying on
+    on_before_optimizer_step (which Unsloth bypasses).
+    """
+
     DELTANET_KEYS = {"a_proj", "b_proj", "g_proj"}
     ATTN_KEYS = {"q_proj", "k_proj", "v_proj", "o_proj"}
     MLP_KEYS = {"gate_proj", "up_proj", "down_proj"}
+
+    def create_optimizer(self):
+        super().create_optimizer()
+        original_step = self.optimizer.step
+        trainer_ref = self
+
+        def hooked_step(*args, **kwargs):
+            trainer_ref._log_grad_norms()
+            return original_step(*args, **kwargs)
+
+        self.optimizer.step = hooked_step
 
     def _classify(self, name: str):
         """파라미터 이름 → (group, layer_idx)"""
@@ -102,11 +116,8 @@ class LayerGradNormCallback(TrainerCallback):
                 return int(part)
         return -1
 
-    def on_before_optimizer_step(self, args, state, control, model=None, **kw):
-        if model is None:
-            return
-        # logging_steps마다만 실행 (매 step은 오버헤드)
-        if (state.global_step + 1) % args.logging_steps != 0:
+    def _log_grad_norms(self):
+        if (self.state.global_step + 1) % self.args.logging_steps != 0:
             return
 
         group_norms = defaultdict(float)
@@ -114,7 +125,7 @@ class LayerGradNormCallback(TrainerCallback):
         grad_count = 0
         none_count = 0
 
-        for n, p in model.named_parameters():
+        for n, p in self.model.named_parameters():
             if not p.requires_grad:
                 continue
             if p.grad is None:
@@ -127,16 +138,12 @@ class LayerGradNormCallback(TrainerCallback):
             if layer_idx >= 0:
                 layer_norms[layer_idx] += norm_sq
 
-        # 디버그: 첫 몇 step에서 grad 상태 출력
-        if state.global_step <= 30:
-            print(f"[LayerGradNorm] step={state.global_step} grad={grad_count} none={none_count}")
+        if self.state.global_step <= 30:
+            print(f"[GradNorm] step={self.state.global_step} grad={grad_count} none={none_count}")
 
-        # 그룹별 로깅
         log_dict = {}
         for g, ns in group_norms.items():
             log_dict[f"grad_norm/{g}"] = ns ** 0.5
-
-        # 레이어별 로깅
         for layer, ns in sorted(layer_norms.items()):
             log_dict[f"grad_norm/layer_{layer:02d}"] = ns ** 0.5
 
@@ -255,7 +262,7 @@ def main():
     )
 
     # 5. Callbacks
-    cbs = [LayerGradNormCallback()]
+    cbs = []
     if not args.no_ema:
         cbs.append(EMACallback())
 
@@ -266,7 +273,7 @@ def main():
         tok.eos_token = tok.convert_ids_to_tokens(tok.eos_token_id)
 
     # 7. Trainer
-    trainer = SFTTrainer(
+    trainer = GradNormTrainer(
         model=model, args=training_args,
         processing_class=tok,
         train_dataset=train_ds, eval_dataset=val_ds,
