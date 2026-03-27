@@ -81,7 +81,7 @@ class GradNormTrainer(SFTTrainer):
     on_before_optimizer_step (which Unsloth bypasses).
     """
 
-    DELTANET_KEYS = {"a_proj", "b_proj", "g_proj"}
+    DELTANET_KEYS = {"in_proj_a", "in_proj_b", "in_proj_z", "in_proj_qkv", "out_proj"}
     ATTN_KEYS = {"q_proj", "k_proj", "v_proj", "o_proj"}
     MLP_KEYS = {"gate_proj", "up_proj", "down_proj"}
 
