@@ -15,7 +15,7 @@ lora:
   use_rslora: true
 
 training:
-  learning_rate: 1.0e-5
+  learning_rate: 5.0e-6
   lr_scheduler_type: "cosine"
   warmup_ratio: 0.1
   num_train_epochs: 1
@@ -24,7 +24,7 @@ training:
   bf16: true
   gradient_checkpointing: true
   weight_decay: 0.01
-  max_grad_norm: 1.0
+  max_grad_norm: 3.0
   logging_steps: 10
   save_steps: 250
   eval_strategy: "no"
