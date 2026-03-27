@@ -113,7 +113,23 @@
 
 ---
 
-## Run 8 — Qwen3.5-4B CPT v2 (예정)
-- **변경**: weight_decay 0.1 → 0.01 (Gemma와 동일)
-- **가설**: weight_decay가 높으면 LoRA 업데이트와 충돌하여 grad_norm 불안정 + 기존 지식(한국어) 보존 저하
-- **기대**: grad_norm 안정화, 한국어 벤치마크 하락 완화
+## Run 8 — Qwen3.5-4B CPT + DeltaNet adapter (Vast.ai 4090)
+- **GPU**: RTX 4090 24GB, unsloth/unsloth:latest Docker
+- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=1e-5, max_grad_norm=1.0, weight_decay=0.01, warmup=0.1, batch=8, grad_accum=2
+- **변경**: target_modules에 DeltaNet projection 추가 (`in_proj_a`, `in_proj_b`, `in_proj_z`, `in_proj_qkv`, `out_proj`)
+- **Trainable params**: 64,929,792 (1.41%) — Run 6 대비 +22M
+- **관찰**: 초반 MLP grad_norm 단조 증가, DeltaNet/attn grad_norm은 안정적 (0.5 수준)
+- **MMLU (full)**:
+  | Group | Acc |
+  |-------|-----|
+  | Overall | 76.57% |
+  | Humanities | 71.49% |
+  | Other | 76.95% |
+  | Social Sciences | 83.49% |
+  | STEM | 75.23% |
+- **비고**: Run 6 CPT(76.6%)와 거의 동일. DeltaNet adapter 추가가 벤치마크 성능 유지하면서 학습됨.
+
+## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (예정)
+- **변경**: lr 1e-5 → 5e-6, max_grad_norm 1.0 → 3.0
+- **가설**: rslora effective scaling(5.66)을 감안하면 lr이 높았음. 낮춰서 grad_norm 단조 증가 억제
+- **기대**: grad_norm 안정화, PPL 개선 유지
