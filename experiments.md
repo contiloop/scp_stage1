@@ -127,7 +127,8 @@
   | Other | 76.95% |
   | Social Sciences | 83.49% |
   | STEM | 75.23% |
-- **비고**: Run 6 CPT(76.6%)와 거의 동일. DeltaNet adapter 추가가 벤치마크 성능 유지하면서 학습됨.
+- **Domain PPL**: Base 10.37 → FT 9.47 (**-8.6%**)
+- **비고**: Run 6 CPT(-9.8%) 대비 소폭 낮음. DeltaNet adapter 추가가 벤치마크 성능 유지하면서 학습됨.
 
 ## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (예정)
 - **변경**: lr 1e-5 → 5e-6, max_grad_norm 1.0 → 3.0
