@@ -240,6 +240,7 @@ def main():
         output_dir=out,
         learning_rate=t["learning_rate"],
         lr_scheduler_type=t["lr_scheduler_type"],
+        lr_scheduler_kwargs=t.get("lr_scheduler_kwargs", {}),
         warmup_steps=warmup_steps,
         num_train_epochs=t["num_train_epochs"],
         per_device_train_batch_size=t["per_device_train_batch_size"],
