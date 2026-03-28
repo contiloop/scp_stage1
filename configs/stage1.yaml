@@ -29,7 +29,9 @@ training:
   max_grad_norm: 3.0
   logging_steps: 10
   save_steps: 500
-  eval_strategy: "no"
+  eval_strategy: "steps"
+  eval_steps: 500
+  per_device_eval_batch_size: 4
   save_total_limit: 3
   seed: 42
   report_to: "wandb"
