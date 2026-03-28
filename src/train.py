@@ -245,7 +245,7 @@ def main():
         num_train_epochs=t["num_train_epochs"],
         per_device_train_batch_size=t["per_device_train_batch_size"],
         per_device_eval_batch_size=t.get("per_device_eval_batch_size", t["per_device_train_batch_size"]),
-        eval_on_start=True,
+        eval_on_start=t.get("eval_on_start", False),
         gradient_accumulation_steps=t["gradient_accumulation_steps"],
         bf16=use_bf16,
         fp16=use_fp16,
