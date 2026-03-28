@@ -28,7 +28,7 @@ training:
   weight_decay: 0.01
   max_grad_norm: 3.0
   logging_steps: 10
-  save_steps: 250
+  save_steps: 500
   eval_strategy: "no"
   save_total_limit: 3
   seed: 42

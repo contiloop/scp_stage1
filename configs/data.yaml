@@ -18,7 +18,7 @@ sources:
     file: "korea-bank-700-cleaned.jsonl"
     fields: { title: "term", content: "text" }
     format: glossary
-    upsample: 10
+    upsample: 3
 
   - name: naver
     repo: "alwaysgood/ko-news-split-512"
