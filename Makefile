@@ -16,9 +16,6 @@ setup:
 preprocess:
 	python -m src.preprocess --config $(CONFIG)
 
-preprocess-local:
-	python -m src.preprocess --config $(CONFIG) --local
-
 train:
 	python -m src.train --config $(CONFIG)
 

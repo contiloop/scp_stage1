@@ -1,14 +1,14 @@
 """
 Preprocess pipeline: load → reassemble → filter → format → upsample → tokenize/pack → save.
 
-Data: alwaysgood/ko-news-split-512 (hk, mk, korea_bank, naver)
+Data sources are declared in the YAML config under `sources:`.
+Adding a new source = adding an entry to the config. No code changes needed.
 
 Usage:
   python -m src.preprocess --config configs/stage1.yaml        # Qwen3.5
   python -m src.preprocess --config configs/stage1_gemma.yaml  # Gemma
 """
 
-import sys
 import random
 import argparse
 from pathlib import Path
@@ -17,93 +17,77 @@ import yaml
 import numpy as np
 from datasets import Dataset, load_dataset
 
-from src.config import (
-    ROOT, HK_DATA, MK_DATA, KOREA_BANK_DATA, NAVER_DATA,
-    DATA_PROCESSED, NAVER_EXCLUDE_CATEGORIES, SEED,
-    HF_KOREAN_MONO,
-)
+from src.config import ROOT, SEED
 from src.utils import (
-    load_jsonl, reassemble_news_chunks, reassemble_naver_chunks,
+    reassemble_news_chunks, reassemble_naver_chunks,
     clean_text, deduplicate, fmt_news, fmt_glossary,
 )
 
+FORMATTERS = {
+    "news": fmt_news,
+    "glossary": fmt_glossary,
+}
 
-# ── Loaders ──
-
-def load_from_hub():
-    print("=" * 60)
-    print("1. Loading data (HF Hub)")
-    print("=" * 60)
-
-    repo = HF_KOREAN_MONO
-
-    hk_ds = load_dataset("json", data_files=f"hf://datasets/{repo}/hk.jsonl", split="train")
-    hk = reassemble_news_chunks(hk_ds.to_list())
-    print(f"  hk: {len(hk_ds)} chunks → {len(hk)} articles")
-
-    mk_ds = load_dataset("json", data_files=f"hf://datasets/{repo}/mk.jsonl", split="train")
-    mk = reassemble_news_chunks(mk_ds.to_list())
-    print(f"  mk: {len(mk_ds)} chunks → {len(mk)} articles")
-
-    kb_ds = load_dataset("json", data_files=f"hf://datasets/{repo}/korea-bank-700-cleaned.jsonl", split="train")
-    kb = [{"title": r["term"], "content": r["text"], "source": "korea_bank",
-           "category": ",".join(r.get("categories", []) or [])} for r in kb_ds.to_list()]
-    print(f"  korea_bank: {len(kb)} terms")
-
-    nv_ds = load_dataset("json", data_files=f"hf://datasets/{repo}/naver_terms_clean.jsonl", split="train")
-    nv = reassemble_naver_chunks(nv_ds.to_list())
-    print(f"  naver: {len(nv_ds)} chunks → {len(nv)} terms")
-
-    return hk, mk, kb, nv
+REASSEMBLERS = {
+    "news_chunks": reassemble_news_chunks,
+    "naver_chunks": reassemble_naver_chunks,
+}
 
 
-def load_from_local():
-    print("=" * 60)
-    print("1. Loading data (local)")
-    print("=" * 60)
+def load_source(src_cfg):
+    """Load a single data source from HF Hub based on its config."""
+    name = src_cfg["name"]
+    repo = src_cfg["repo"]
+    file = src_cfg["file"]
 
-    hk = reassemble_news_chunks(load_jsonl(HK_DATA))
-    mk = reassemble_news_chunks(load_jsonl(MK_DATA))
-    kb = [{"title": r["term"], "content": r["text"], "source": "korea_bank",
-           "category": ",".join(r.get("categories", []))} for r in load_jsonl(KOREA_BANK_DATA)]
-    nv = reassemble_naver_chunks(load_jsonl(NAVER_DATA))
+    ds = load_dataset("json", data_files=f"hf://datasets/{repo}/{file}", split="train")
+    records = ds.to_list()
 
-    print(f"  hk: {len(hk)} | mk: {len(mk)} | kb: {len(kb)} | naver: {len(nv)}")
-    return hk, mk, kb, nv
+    # Reassemble chunked docs if needed
+    reassemble = src_cfg.get("reassemble")
+    if reassemble:
+        docs = REASSEMBLERS[reassemble](records)
+        print(f"  {name}: {len(records)} chunks → {len(docs)} docs")
+    else:
+        # Direct field mapping
+        field_map = src_cfg.get("fields", {"title": "title", "content": "content"})
+        docs = [{"title": r[field_map["title"]],
+                 "content": r[field_map["content"]],
+                 "source": name}
+                for r in records]
+        print(f"  {name}: {len(docs)} docs")
+
+    for d in docs:
+        d["source"] = name
+    return docs
 
 
-# ── Processing ──
+def filter_docs(docs, src_cfg):
+    """Apply source-specific filters (e.g. exclude_categories)."""
+    exclude = src_cfg.get("exclude_categories")
+    if exclude:
+        exclude_set = set(exclude)
+        before = len(docs)
+        docs = [d for d in docs if d.get("category") not in exclude_set]
+        print(f"  {src_cfg['name']} category filter: {before} → {len(docs)}")
+    return docs
 
-def filter_domain(hk, mk, kb, nv):
-    before = len(nv)
-    nv = [d for d in nv if d.get("category") not in NAVER_EXCLUDE_CATEGORIES]
-    print(f"  naver domain filter: {before} → {len(nv)}")
-    return hk, mk, kb, nv
 
-
-def clean_and_filter(docs, name, min_chars=100):
+def clean_and_filter(docs, name, min_chars=100, dedup=True):
     for d in docs:
         d["content"] = clean_text(d["content"])
         if "title" in d:
             d["title"] = clean_text(d["title"])
     docs = [d for d in docs if len(d["content"]) >= min_chars]
-    docs = deduplicate(docs)
-    print(f"  {name}: {len(docs)} docs after clean+dedup")
+    if dedup:
+        docs = deduplicate(docs)
+    print(f"  {name}: {len(docs)} docs after clean" + ("+dedup" if dedup else ""))
     return docs
 
 
-def format_all(hk, mk, kb, nv):
-    out = []
-    for d in hk: out.append({"text": fmt_news(d), "source": "hk"})
-    for d in mk: out.append({"text": fmt_news(d), "source": "mk"})
-    for d in kb: out.append({"text": fmt_glossary(d), "source": "korea_bank"})
-    for d in nv: out.append({"text": fmt_glossary(d), "source": "naver"})
-
-    for src in ["hk", "mk", "korea_bank", "naver"]:
-        n = sum(1 for d in out if d["source"] == src)
-        chars = sum(len(d["text"]) for d in out if d["source"] == src)
-        print(f"  {src}: {n} docs, {chars:,} chars")
-    return out
+def format_docs(docs, fmt_name):
+    formatter = FORMATTERS[fmt_name]
+    return [{"text": formatter(d), "source": d["source"]} for d in docs]
 
 
 def upsample(docs, weights):
@@ -150,7 +134,6 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", default=str(ROOT / "configs" / "stage1.yaml"))
     parser.add_argument("--val_ratio", type=float, default=0.02)
-    parser.add_argument("--local", action="store_true")
     args = parser.parse_args()
 
     with open(args.config) as f:
@@ -159,28 +142,40 @@ def main():
     model_name = cfg["model"]["name"]
     max_seq_len = cfg["model"]["max_seq_length"]
     output_dir = str(ROOT / cfg["data"]["train_path"]).rsplit("/train", 1)[0]
-    up = cfg.get("upsampling", {})
+
+    # Load data sources from separate config
+    data_config_path = ROOT / cfg["data"]["config"]
+    with open(data_config_path) as f:
+        data_cfg = yaml.safe_load(f)
+    sources_cfg = data_cfg["sources"]
 
     random.seed(SEED)
     np.random.seed(SEED)
 
-    # Load
-    hk, mk, kb, nv = load_from_local() if args.local else load_from_hub()
+    # Load → filter → clean → format per source
+    print("=" * 60)
+    print("1. Loading data (HF Hub)")
+    print("=" * 60)
 
-    # Filter
-    hk, mk, kb, nv = filter_domain(hk, mk, kb, nv)
+    all_formatted = []
+    weights = {}
 
-    print("\n  Cleaning...")
-    hk = clean_and_filter(hk, "hk")
-    mk = clean_and_filter(mk, "mk")
-    kb = clean_and_filter(kb, "korea_bank")
-    nv = clean_and_filter(nv, "naver")
+    for src_cfg in sources_cfg:
+        name = src_cfg["name"]
 
-    # Format + upsample
-    formatted = format_all(hk, mk, kb, nv)
-    weights = {"hk": up.get("hk", 1), "mk": up.get("mk", 1),
-               "korea_bank": up.get("korea_bank", 1), "naver": up.get("naver", 1)}
-    upsampled = upsample(formatted, weights)
+        docs = load_source(src_cfg)
+        docs = filter_docs(docs, src_cfg)
+        docs = clean_and_filter(docs, name, dedup=src_cfg.get("dedup", True))
+        formatted = format_docs(docs, src_cfg["format"])
+
+        chars = sum(len(d["text"]) for d in formatted)
+        print(f"  {name}: {len(formatted)} formatted, {chars:,} chars")
+
+        all_formatted.extend(formatted)
+        weights[name] = src_cfg.get("upsample", 1)
+
+    # Upsample + shuffle
+    upsampled = upsample(all_formatted, weights)
     random.shuffle(upsampled)
 
     # Tokenize

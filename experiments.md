@@ -132,5 +132,10 @@
 
 ## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (예정)
 - **변경**: lr 1e-5 → 5e-6, max_grad_norm 1.0 → 3.0
-- **가설**: rslora effective scaling(5.66)을 감안하면 lr이 높았음. 낮춰서 grad_norm 단조 증가 억제
-- **기대**: grad_norm 안정화, PPL 개선 유지
+- **데이터 확장**: 나무위키 경제 + 영어 경제 데이터 추가
+  - namuwiki: 96,620 chunks (~43M tokens) — 나무위키 경제/시사/정책/지정학
+  - en_econ: 224,636 chunks (~63M tokens) — NCERT Economics/Business/Accounting + Bloomberg 120k
+  - 기존 4소스 ~18M + 신규 ~106M = **총 ~124M tokens**
+  - 언어 비율: 한국어 ~50% / 영어 ~50%
+- **가설**: rslora effective scaling(5.66)을 감안하면 lr이 높았음. 낮춰서 grad_norm 단조 증가 억제. 영어 데이터 혼합으로 catastrophic forgetting 방지.
+- **기대**: grad_norm 안정화, PPL 개선, 영어 벤치마크 유지

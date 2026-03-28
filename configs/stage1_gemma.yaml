@@ -35,11 +35,6 @@ training:
   dataloader_num_workers: 4
 
 data:
+  config: "configs/data.yaml"
   train_path: "data/processed_gemma/train"
   val_path: "data/processed_gemma/val"
-
-upsampling:
-  hk: 1
-  mk: 1
-  korea_bank: 10
-  naver: 2
