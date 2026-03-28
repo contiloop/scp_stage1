@@ -10,9 +10,8 @@ setup:
 	# transformers, trl, huggingface_hub만 업그레이드. torch는 docker 이미지 버전 유지.
 	python -c "import causal_conv1d" 2>/dev/null || pip install causal-conv1d -q
 	python -c "from fla.ops.gated_delta_rule import chunk_gated_delta_rule" 2>/dev/null || pip install flash-linear-attention -q
-	# flash-attn 또는 xformers 중 하나 확보
-	python -c "import flash_attn" 2>/dev/null || pip install flash-attn --no-build-isolation -q 2>/dev/null || \
-		(python -c "import xformers" 2>/dev/null || pip install xformers -q)
+	# attention backend 확인
+	@python -c "import torch; print('  flash_sdp:', torch.backends.cuda.flash_sdp_enabled())"
 	pip install lm-eval -q 2>/dev/null || true
 
 preprocess:
