@@ -31,7 +31,7 @@ training:
   save_steps: 499
   eval_strategy: "steps"
   eval_steps: 500
-  per_device_eval_batch_size: 2
+  per_device_eval_batch_size: 4
   save_total_limit: 3
   seed: 42
   report_to: "wandb"
