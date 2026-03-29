@@ -139,6 +139,16 @@ class GradNormTrainer(SFTTrainer):
 
         self.optimizer.step = hooked_step
 
+    @torch.no_grad()
+    def prediction_step(self, model, inputs, prediction_loss_only=True, ignore_keys=None):
+        """Unsloth의 prediction_step override를 우회. logits 반환 안 함 → fp32 변환 OOM 방지."""
+        model.eval()
+        with torch.amp.autocast("cuda", dtype=torch.bfloat16):
+            outputs = model(**inputs)
+        loss = outputs.loss.detach()
+        model.train()
+        return (loss, None, None)
+
     def _should_skip_step(self) -> bool:
         total_norm_sq = 0.0
         for p in self.model.parameters():
