@@ -335,6 +335,7 @@ def main():
         report_to=t.get("report_to", "none"),
         dataloader_num_workers=t.get("dataloader_num_workers", 4),
         remove_unused_columns=False,
+        prediction_loss_only=True,  # eval 시 logits fp32 변환 방지 (OOM)
         dataset_text_field="",  # pre-tokenized, no text processing
     )
 
