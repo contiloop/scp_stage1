@@ -39,6 +39,9 @@ training:
   output_dir: "checkpoints/stage1_cpt"
   dataloader_num_workers: 4
 
+stability:
+  llrd_decay: 0.95
+
 data:
   config: "configs/data.yaml"
   train_path: "data/processed/train"

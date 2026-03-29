@@ -130,12 +130,33 @@
 - **Domain PPL**: Base 10.37 → FT 9.47 (**-8.6%**)
 - **비고**: Run 6 CPT(-9.8%) 대비 소폭 낮음. DeltaNet adapter 추가가 벤치마크 성능 유지하면서 학습됨.
 
-## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (예정)
-- **변경**: lr 1e-5 → 5e-6, max_grad_norm 1.0 → 3.0
+## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (실패: layer-wise collapse)
+- **GPU**: RTX 4090 24GB
+- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=5e-6, max_grad_norm=3.0, weight_decay=0.01, warmup=0.1, batch=16, grad_accum=2, EMA on
 - **데이터 확장**: 나무위키 경제 + 영어 경제 데이터 추가
   - namuwiki: 96,620 chunks (~43M tokens) — 나무위키 경제/시사/정책/지정학
   - en_econ: 224,636 chunks (~63M tokens) — NCERT Economics/Business/Accounting + Bloomberg 120k
   - 기존 4소스 ~18M + 신규 ~106M = **총 ~124M tokens**
   - 언어 비율: 한국어 ~50% / 영어 ~50%
-- **가설**: rslora effective scaling(5.66)을 감안하면 lr이 높았음. 낮춰서 grad_norm 단조 증가 억제. 영어 데이터 혼합으로 catastrophic forgetting 방지.
-- **기대**: grad_norm 안정화, PPL 개선, 영어 벤치마크 유지
+- **Total steps**: 2361
+- **관찰**:
+  - step 510, 1010에서 loss spike (eval_steps=500 직후 + logging_steps=10)
+  - step ~850부터 layer-wise grad_norm 분기:
+    - Layer 31~11: grad_norm 급락 (representation collapse)
+    - Layer 10~6: 감소 폭 점진적 축소
+    - Layer 5~0: grad_norm 계속 상승 (보상 시도)
+  - step 1010 spike에서 grad_norm은 오히려 **낮아지는** 방향 → 단순 explosion이 아닌 collapse
+- **원인 분석**:
+  1. **EMACallback + eval 상호작용**: eval 시 EMA weight swap → eval 직후 optimizer state와 불일치 → spike 유발
+  2. **LoRA weight 누적 성장 + rsLoRA 5.66x 증폭**: 후반 layer에서 pretrained representation 이탈 → depth에 비례하는 collapse
+  3. **max_grad_norm=3.0**: Run 8의 1.0에서 올렸으나, spike를 충분히 잡아주지 못함
+- **교훈**: EMA callback이 eval과 충돌. 후반 layer collapse는 depth-dependent → LLRD 필요. max_grad_norm 3.0은 이 문제와 무관 (weight 누적 성장 문제).
+
+## Run 10 — Qwen3.5-4B CPT + DeltaNet adapter v3 (예정)
+- **변경**:
+  1. EMA callback 비활성화 (`--no_ema`) — eval 시 weight swap 제거
+  2. LLRD (Layer-wise LR Decay) 적용: decay=0.95, layer 0=5e-6, layer 31≈1e-6
+  3. Spike skip 안전장치: abs threshold=5.0, relative 3x rolling mean (window=20)
+- **설정**: lr=5e-6, max_grad_norm=3.0 유지, 그 외 Run 9과 동일
+- **가설**: LLRD로 후반 layer의 LoRA weight 성장 억제 → collapse 방지. EMA 제거로 eval 직후 spike 방지.
+- **기대**: layer별 grad_norm 균형 유지, loss spike 없이 완주

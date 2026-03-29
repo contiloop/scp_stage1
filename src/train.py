@@ -79,22 +79,96 @@ class GradNormTrainer(SFTTrainer):
 
     Hooks optimizer.step directly instead of relying on
     on_before_optimizer_step (which Unsloth bypasses).
+
+    Features:
+      - LLRD (layer-wise learning rate decay): 후반 layer에 더 낮은 lr 적용
+      - Spike skip: gradient 이상 감지 시 step 건너뛰기
     """
 
     DELTANET_KEYS = {"in_proj_a", "in_proj_b", "in_proj_z", "in_proj_qkv", "out_proj"}
     ATTN_KEYS = {"q_proj", "k_proj", "v_proj", "o_proj"}
     MLP_KEYS = {"gate_proj", "up_proj", "down_proj"}
 
+    def __init__(self, *args, llrd_decay=1.0, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.llrd_decay = llrd_decay
+        self._grad_norm_history = []
+        self._skipped_steps = 0
+
     def create_optimizer(self):
         super().create_optimizer()
+
+        # LLRD: layer별 lr 재구성
+        if self.llrd_decay < 1.0:
+            base_lr = self.args.learning_rate
+            defaults = {k: v for k, v in self.optimizer.param_groups[0].items()
+                        if k != "params"}
+
+            layer_params = defaultdict(list)
+            for n, p in self.model.named_parameters():
+                if not p.requires_grad:
+                    continue
+                layer_idx = self._layer_idx(n)
+                layer_params[layer_idx].append(p)
+
+            new_groups = []
+            for layer_idx, params in sorted(layer_params.items()):
+                group = {**defaults, "params": params}
+                if layer_idx >= 0:
+                    group["lr"] = base_lr * (self.llrd_decay ** layer_idx)
+                else:
+                    group["lr"] = base_lr
+                new_groups.append(group)
+            self.optimizer.param_groups = new_groups
+
+            # 로깅
+            num_layers = max(k for k in layer_params if k >= 0) + 1
+            print(f"[LLRD] decay={self.llrd_decay}, layers={num_layers}")
+            print(f"  layer  0 lr={base_lr:.2e}")
+            print(f"  layer {num_layers-1:2d} lr={base_lr * self.llrd_decay ** (num_layers-1):.2e}")
+
         original_step = self.optimizer.step
         trainer_ref = self
 
         def hooked_step(*args, **kwargs):
             trainer_ref._log_grad_norms()
+            if trainer_ref._should_skip_step():
+                trainer_ref.optimizer.zero_grad()
+                return None
             return original_step(*args, **kwargs)
 
         self.optimizer.step = hooked_step
+
+    def _should_skip_step(self) -> bool:
+        total_norm_sq = 0.0
+        for p in self.model.parameters():
+            if p.requires_grad and p.grad is not None:
+                total_norm_sq += p.grad.data.float().norm().item() ** 2
+        total_norm = total_norm_sq ** 0.5
+
+        # 절대 임계값
+        skip = False
+        if total_norm > 5.0:
+            print(f"[SPIKE] step={self.state.global_step} norm={total_norm:.2f} -- SKIP (abs)")
+            skip = True
+        # 상대 임계값: 최근 20 step 평균의 3배
+        elif len(self._grad_norm_history) >= 20:
+            rolling_mean = sum(self._grad_norm_history[-20:]) / 20
+            if total_norm > 3.0 * rolling_mean:
+                print(f"[SPIKE] step={self.state.global_step} norm={total_norm:.2f} "
+                      f"> 3x mean={rolling_mean:.2f} -- SKIP")
+                skip = True
+
+        if skip:
+            self._skipped_steps += 1
+            import wandb
+            if wandb.run is not None:
+                wandb.log({"spike/skipped": 1, "spike/norm": total_norm,
+                           "spike/total_skipped": self._skipped_steps}, commit=False)
+            return True
+
+        self._grad_norm_history.append(total_norm)
+        return False
 
     def _classify(self, name: str):
         """파라미터 이름 → (group, layer_idx)"""
@@ -175,6 +249,7 @@ def main():
 
     cfg = load_config(args.config)
     m, l, t, d = cfg["model"], cfg["lora"], cfg["training"], cfg["data"]
+    stab = cfg.get("stability", {})
 
     # 1. Model
     print("=" * 60)
@@ -281,6 +356,7 @@ def main():
         train_dataset=train_ds, eval_dataset=val_ds,
         data_collator=PackedCollator(),
         callbacks=cbs,
+        llrd_decay=stab.get("llrd_decay", 1.0),
     )
 
     # 8. Train

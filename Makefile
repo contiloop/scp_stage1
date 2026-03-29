@@ -18,10 +18,10 @@ preprocess:
 	python -m src.preprocess --config $(CONFIG)
 
 train:
-	python -m src.train --config $(CONFIG)
+	python -m src.train --config $(CONFIG) --no_ema
 
 train-resume:
-	python -m src.train --config $(CONFIG) --resume auto
+	python -m src.train --config $(CONFIG) --resume auto --no_ema
 
 eval:
 	python -m src.evaluate --config $(CONFIG)
