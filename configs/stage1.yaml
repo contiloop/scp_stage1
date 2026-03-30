@@ -16,6 +16,8 @@ lora:
 
 training:
   learning_rate: 5.0e-6
+  optim: "adamw_8bit"
+  optim_args: null
   lr_scheduler_type: "cosine_with_min_lr"
   lr_scheduler_kwargs:
     min_lr_rate: 0.3
@@ -41,6 +43,11 @@ training:
 
 stability:
   llrd_decay: 0.95
+  module_lr_multipliers:
+    attn: 1.0
+    mlp: 0.5
+    deltanet: 0.25
+    other: 1.0
 
 data:
   config: "configs/data.yaml"

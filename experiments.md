@@ -171,11 +171,67 @@
   - resume로 인한 optimizer 불일치도 기여 가능성 있음
 - **교훈**: 표준 LLRD는 초반 layer = min lr (보존), 후반 layer = max lr (적응). 이렇게 해야 backward gradient amplification을 상쇄.
 
-## Run 11 — Qwen3.5-4B CPT + DeltaNet adapter v4 (예정)
+## Run 11 — Qwen3.5-4B CPT + DeltaNet adapter v4 (gradient explosion 전 중단)
 - **변경**:
   1. LLRD 방향 수정: decay=0.95, layer 0≈1e-6(min), layer 31=5e-6(max)
   2. Spike skip 제거 (clipping 후 실행이라 무효, max_grad_norm=3.0에 의존)
 - **설정**: lr=5e-6, max_grad_norm=3.0, 그 외 Run 10과 동일
 - **방식**: clean start (checkpoint resume 아님)
-- **가설**: LLRD 방향 수정으로 큰 gradient(초반 layer) × 작은 lr = 적당한 update, 작은 gradient(후반 layer) × 큰 lr = 적당한 update → layer간 update 균형 + 일반 지식 보존
-- **기대**: MMLU 유지 (76%+), grad_norm layer 균형, loss 안정 하강
+- **관찰**:
+  - grad_norm이 후반 step에서 지수적으로 증가 — explosion 직전에 checkpoint-998에서 중단
+  - LLRD 방향을 바꿔도 후반 layer grad_norm이 지수 증가하는 패턴은 해결되지 않음
+- **결과 (checkpoint-998, explosion 전):**
+  - 영어 벤치마크 (lm-eval, limit=400):
+    | Task | Base | CPT (ckpt-998) | Diff |
+    |------|------|----------------|------|
+    | MMLU | 76.7% | 76.71% | +0.0% |
+    | HellaSwag | 50.7% | 50.75% | +0.1% |
+    | ARC-Easy | 81.2% | 81.00% | -0.2% |
+    | ARC-Challenge | 50.5% | 52.75% | +2.3% |
+    | WinoGrande | 71.8% | 71.00% | -0.8% |
+  - 한국어 벤치마크 (lm-eval, limit=400):
+    | Task | Base (Run 6, full) | CPT (ckpt-998) | Diff |
+    |------|-------------------|----------------|------|
+    | KMMLU | 48.9% | 49.01% | +0.1% |
+    | KoBEST BoolQ | 78.5% | 78.25% | -0.3% |
+    | KoBEST COPA | 70.3% | 70.50% | +0.2% |
+    | KoBEST HellaSwag | 46.3% | 46.75% | +0.5% |
+  - ⚠️ 영어/한국어 모두 base와 거의 동일. 998 step (~64M tokens) 학습했으나 벤치마크에 반영 없음. gradient explosion 전에 끊은 것이므로, 벤치마크 유지는 LLRD 효과가 아니라 단순히 아직 망가지기 전인 상태
+- **교훈**: LLRD는 어느 방향으로 적용해도 gradient explosion을 근본적으로 해결하지 못함. max_grad_norm=3.0 + 7x 데이터(124M tokens)에서의 누적 update가 핵심 원인일 가능성.
+
+## Run 12 — Qwen3.5-4B CPT + DeltaNet adapter v5 (planned: module-aware stabilization)
+- **목표**:
+  1. 표준 LLRD 방향은 유지하면서 gradient explosion을 더 늦추거나 억제
+  2. catastrophic forgetting 없이 hot module만 선택적으로 약화
+  3. "어느 layer가 뜨거운가?"보다 "어느 module의 effective update가 뜨거운가?"를 먼저 확인
+- **핵심 가설**:
+  - 현재 문제는 LLRD 방향 자체보다, 특정 module(특히 MLP/DeltaNet)의 update가 누적되며 커지는 데 있음
+  - 따라서 `depth-wise scaling(LLRD)` 위에 `module-wise scaling`을 추가하면, 일반 지식 보존을 유지하면서도 폭주를 완화할 수 있음
+  - 기존 `grad_norm/*`는 clipping 이후 값일 가능성이 높으므로, `pre-clip` / `post-clip` / `update_proxy`를 분리해 봐야 실제 hot spot을 식별할 수 있음
+- **변경 예정**:
+  1. LLRD 유지: layer 0 = min lr, layer 31 = max lr
+  2. Module-aware LR 추가: optimizer group을 `layer x module_type(attn/mlp/deltanet/other)` 기준으로 재구성
+  3. 새 로깅 추가:
+     - `grad_pre/*`: clipping 전 grad norm
+     - `grad_post/*`: clipping 후 grad norm
+     - `update_proxy/*`: `lr x grad_post` 기반 proxy
+     - `lr/*`: 실제 param group 기준 lr 범위
+  4. optimizer 설정 명시화: `optim`, `optim_args`
+- **초기 설정안 (첫 비교 run)**:
+  - `optim=adamw_8bit`
+  - `llrd_decay=0.95`
+  - `module_lr_multipliers={attn:1.0, mlp:0.5, deltanet:0.25, other:1.0}`
+  - 첫 run부터 실제 감쇠를 적용하고, 새 로깅으로 `pre/post clip` 및 `update_proxy` 패턴을 함께 확인
+- **후속 ablation 계획**:
+  1. 필요 시 `mlp=1.0`, `deltanet=1.0`으로 되돌려 baseline과 직접 비교
+  2. 필요 시 `llrd_decay=1.0`과 비교하여 "LLRD only vs LLRD + module-wise" 분리
+  3. 필요 시 `optim=adamw_torch` A/B로 optimizer 영향 분리
+- **중점 관찰 포인트**:
+  - `grad_pre`와 `grad_post` 차이가 실제로 얼마나 큰지
+  - `update_proxy/deltanet`, `update_proxy/mlp`가 후반 step에서 지수 증가하는지
+  - hot spot이 "후반 layer 일반"인지, "특정 module 전반"인지
+  - `lr/max`와 layer-wise effective lr이 기존 `train/learning_rate` 그래프와 얼마나 다른지
+- **성공 기준**:
+  1. 동일 데이터/유사 step 구간에서 Run 11 대비 grad 폭주 시점이 유의미하게 늦어짐
+  2. checkpoint 중간 평가에서 영어/한국어 벤치마크가 base 수준을 유지
+  3. 이후 실험에서 어떤 module multiplier를 줄여야 할지 로그만 보고 결정 가능해짐

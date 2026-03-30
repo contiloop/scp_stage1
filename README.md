@@ -100,6 +100,21 @@ lm_eval --model hf \
   --batch_size 4
 ```
 
+네트워크가 불안정하거나 타임아웃이 발생하면, 모델을 먼저 로컬에 다운로드 후 평가:
+
+```bash
+python -c "
+from huggingface_hub import snapshot_download
+snapshot_download('your-username/your-model-name', local_dir='./my_model')
+"
+
+lm_eval --model hf \
+  --model_args pretrained=./my_model,trust_remote_code=True \
+  --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
+  --limit 400 \
+  --batch_size 4
+```
+
 이 repo의 평가 스크립트를 사용하려면 `make setup` 후:
 
 ```bash
