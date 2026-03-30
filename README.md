@@ -90,13 +90,13 @@ python -m src.merge --adapter checkpoints/stage1_cpt/checkpoint-750 --push your-
 이 repo 없이도 `lm-eval`만 설치하면 HF Hub 모델을 바로 평가할 수 있습니다.
 
 ```bash
-# lm-eval만 설치 (이 repo 불필요)
-pip install lm-eval
+pip install "lm-eval[all]" accelerate
+huggingface-cli login  # private repo인 경우 필요
 
-# 벤치마크 실행
 lm_eval --model hf \
   --model_args pretrained=your-username/your-model-name,trust_remote_code=True \
   --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
+  --limit 400 \
   --batch_size 4
 ```
 
