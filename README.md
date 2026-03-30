@@ -87,15 +87,23 @@ python -m src.merge --adapter checkpoints/stage1_cpt/checkpoint-750 --push your-
 
 ### Download & Evaluate from HF Hub
 
-```bash
-# HF Hub 모델로 벤치마크
-python -m src.evaluate --model_path your-username/your-model-name --base_model unsloth/Qwen3.5-4B-Base --benchmarks_only
+이 repo 없이도 `lm-eval`만 설치하면 HF Hub 모델을 바로 평가할 수 있습니다.
 
-# lm-eval 직접 실행
+```bash
+# lm-eval만 설치 (이 repo 불필요)
+pip install lm-eval
+
+# 벤치마크 실행
 lm_eval --model hf \
   --model_args pretrained=your-username/your-model-name,trust_remote_code=True \
   --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
   --batch_size 4
+```
+
+이 repo의 평가 스크립트를 사용하려면 `make setup` 후:
+
+```bash
+python -m src.evaluate --model_path your-username/your-model-name --base_model unsloth/Qwen3.5-4B-Base --benchmarks_only
 ```
 
 > **Note**: unsloth adapter는 `lora_B=0`으로 저장되므로, `train.py`에서 `save_pretrained_merged()`로 merged 모델을 별도 저장합니다. eval/upload 모두 merged 모델을 사용합니다.
