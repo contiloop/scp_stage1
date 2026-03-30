@@ -132,7 +132,7 @@
 
 ## Run 9 — Qwen3.5-4B CPT + DeltaNet adapter v2 (실패: backward gradient explosion)
 - **GPU**: RTX 4090 24GB
-- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=5e-6, max_grad_norm=3.0, weight_decay=0.01, warmup=0.1, batch=16, grad_accum=2, EMA on
+- **설정**: r=32, alpha=32, use_rslora=true (scaling 5.66), lr=5e-6, max_grad_norm=3.0, weight_decay=0.01, warmup=0.1, batch=16, grad_accum=2, EMA off
 - **데이터 확장**: 나무위키 경제 + 영어 경제 데이터 추가
   - namuwiki: 96,620 chunks (~43M tokens) — 나무위키 경제/시사/정책/지정학
   - en_econ: 224,636 chunks (~63M tokens) — NCERT Economics/Business/Accounting + Bloomberg 120k
@@ -147,16 +147,35 @@
     - Layer 5~0: grad_norm 폭주 (32개 layer를 통과하며 누적 증폭된 gradient)
   - step 1010 spike에서 grad_norm은 오히려 **낮아지는** 방향
 - **원인 분석**:
-  1. **EMACallback + eval 상호작용**: eval 시 EMA weight swap → eval 직후 optimizer state와 불일치 → loss spike 유발
+  1. **Loss spike (step 510, 1010)**: eval_steps=500 직후에 발생. eval 전후 모델 상태 전환(train→eval→train) 과정에서 gradient accumulation 또는 CUDA 메모리 상태 교란 가능성
   2. **Backward gradient 증폭**: LoRA weight 누적 성장(rsLoRA 5.66x) → 후반 layer Jacobian의 spectral norm > 1 → backward pass에서 gradient가 layer를 거슬러 올라갈수록 기하급수적 증폭 → 초반 layer에서 gradient explosion
   3. step 850이 분기점인 이유: 이 시점에서 LoRA perturbation이 충분히 커져 Jacobian이 gradient를 증폭하기 시작
 - **교훈**: 후반 layer grad_norm 감소는 collapse가 아니라 "아직 증폭 안 된 gradient". 문제의 본질은 후반 layer의 LoRA weight 성장 → Jacobian 증폭 → 초반 layer gradient explosion. LLRD로 후반 layer weight 성장 억제 필요.
 
-## Run 10 — Qwen3.5-4B CPT + DeltaNet adapter v3 (예정)
+## Run 10 — Qwen3.5-4B CPT + DeltaNet adapter v3 (실패: catastrophic forgetting)
 - **변경**:
-  1. EMA callback 비활성화 (`--no_ema`) — eval 시 weight swap 제거
-  2. LLRD (Layer-wise LR Decay) 적용: decay=0.95, layer 0=5e-6, layer 31≈1e-6
-  3. Spike skip 안전장치: abs threshold=5.0, relative 3x rolling mean (window=20)
-- **설정**: lr=5e-6, max_grad_norm=3.0 유지, 그 외 Run 9과 동일
-- **가설**: LLRD로 후반 layer의 LoRA weight 성장 억제 → Jacobian spectral norm ≈ 1 유지 → backward gradient 증폭 방지. EMA 제거로 eval 직후 loss spike 방지.
-- **기대**: layer별 grad_norm 균형 유지, loss spike 없이 완주
+  1. LLRD (Layer-wise LR Decay) 적용: decay=0.95, layer 0=5e-6(max), layer 31≈1e-6(min)
+  2. Spike skip 안전장치 (실제로는 clipping 후 실행되어 무효)
+  3. prediction_step override (eval OOM 방지)
+- **설정**: lr=5e-6, max_grad_norm=3.0, 그 외 Run 9과 동일
+- **방식**: Run 9의 checkpoint-499에서 resume
+- **결과**: MMLU 76.6% → **38.0%** (-38.6%), Winogrande 63.5%
+- **관찰**:
+  - loss는 노이즈 많지만 하강 (2.38→2.28)
+  - grad_norm 후반에 1→8까지 증가, 여전히 후반 layer 감소 + 초반 layer 증가 패턴
+  - spike skip은 gradient clipping(3.0) 후에 실행되어 한 번도 trigger 안 됨
+- **원인**: LLRD 방향이 반대였음
+  - layer 0(초반) = max lr, layer 31(후반) = min lr로 설정
+  - backward gradient amplification으로 초반 layer가 가장 큰 gradient를 받는데, 거기에 가장 큰 lr까지 적용
+  - 큰 gradient × 큰 lr = 초반 layer의 일반 지식(MMLU) 파괴
+  - resume로 인한 optimizer 불일치도 기여 가능성 있음
+- **교훈**: 표준 LLRD는 초반 layer = min lr (보존), 후반 layer = max lr (적응). 이렇게 해야 backward gradient amplification을 상쇄.
+
+## Run 11 — Qwen3.5-4B CPT + DeltaNet adapter v4 (예정)
+- **변경**:
+  1. LLRD 방향 수정: decay=0.95, layer 0≈1e-6(min), layer 31=5e-6(max)
+  2. Spike skip 제거 (clipping 후 실행이라 무효, max_grad_norm=3.0에 의존)
+- **설정**: lr=5e-6, max_grad_norm=3.0, 그 외 Run 10과 동일
+- **방식**: clean start (checkpoint resume 아님)
+- **가설**: LLRD 방향 수정으로 큰 gradient(초반 layer) × 작은 lr = 적당한 update, 작은 gradient(후반 layer) × 큰 lr = 적당한 update → layer간 update 균형 + 일반 지식 보존
+- **기대**: MMLU 유지 (76%+), grad_norm layer 균형, loss 안정 하강
