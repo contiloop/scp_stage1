@@ -85,6 +85,19 @@ make push-to-hub HF_REPO=your-username/your-model-name
 python -m src.merge --adapter checkpoints/stage1_cpt/checkpoint-750 --push your-username/model-step750 --private
 ```
 
+### Download & Evaluate from HF Hub
+
+```bash
+# HF Hub 모델로 벤치마크
+python -m src.evaluate --model_path your-username/your-model-name --base_model unsloth/Qwen3.5-4B-Base --benchmarks_only
+
+# lm-eval 직접 실행
+lm_eval --model hf \
+  --model_args pretrained=your-username/your-model-name,trust_remote_code=True \
+  --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
+  --batch_size 4
+```
+
 > **Note**: unsloth adapter는 `lora_B=0`으로 저장되므로, `train.py`에서 `save_pretrained_merged()`로 merged 모델을 별도 저장합니다. eval/upload 모두 merged 모델을 사용합니다.
 
 ## Config
