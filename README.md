@@ -57,14 +57,13 @@ Open `notebooks/train.ipynb` and run all cells.
 ### Evaluate
 
 ```bash
-# 최종 모델 eval (ppl + base 비교)
-python -m src.evaluate --model_path checkpoints/stage1_cpt --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --batch_size 1 --skip_completion --skip_benchmarks
+# 전체 평가 (ppl + 벤치마크)
+make eval
 
-# 모든 체크포인트 eval (auto-merge + 디스크 정리)
-python -m src.evaluate --all_checkpoints --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --batch_size 1 --skip_completion --skip_benchmarks
-
-# catastrophic forgetting 벤치마크 (MMLU, HellaSwag 등)
-python -m src.evaluate --model_path checkpoints/stage1_cpt --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --benchmarks_only
+# 벤치마크만 (영어 + 한국어, base vs CPT 비교)
+# 영어: MMLU, HellaSwag, ARC, WinoGrande
+# 한국어: KMMLU, KoBEST (BoolQ, COPA, HellaSwag)
+make eval-benchmarks
 
 # 특정 체크포인트만
 python -m src.evaluate --model_path checkpoints/stage1_cpt/checkpoint-750 --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --batch_size 1 --skip_benchmarks
@@ -72,8 +71,7 @@ python -m src.evaluate --model_path checkpoints/stage1_cpt/checkpoint-750 --base
 
 결과 파일:
 - `checkpoints/eval_results_{label}.json` — ppl, completion 결과
-- `checkpoints/eval_summary_{label}.txt` — 벤치마크 요약
-- `checkpoints/lm_eval_results/comparison_{label}.json` — base vs CPT 비교
+- `checkpoints/eval_summary_{label}.txt` — 벤치마크 요약 (base vs CPT)
 
 ### Upload to HF Hub
 
@@ -95,22 +93,7 @@ huggingface-cli login  # private repo인 경우 필요
 
 lm_eval --model hf \
   --model_args pretrained=your-username/your-model-name,trust_remote_code=True \
-  --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
-  --limit 400 \
-  --batch_size 4
-```
-
-네트워크가 불안정하거나 타임아웃이 발생하면, 모델을 먼저 로컬에 다운로드 후 평가:
-
-```bash
-python -c "
-from huggingface_hub import snapshot_download
-snapshot_download('your-username/your-model-name', local_dir='./my_model')
-"
-
-lm_eval --model hf \
-  --model_args pretrained=./my_model,trust_remote_code=True \
-  --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande \
+  --tasks mmlu,hellaswag,arc_easy,arc_challenge,winogrande,kmmlu,kobest_boolq,kobest_copa,kobest_hellaswag \
   --limit 400 \
   --batch_size 4
 ```

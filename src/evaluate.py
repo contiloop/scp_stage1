@@ -27,6 +27,41 @@ from src.utils import load_jsonl
 
 # catastrophic forgetting 측정용 벤치마크
 BENCHMARK_TASKS = "mmlu,hellaswag,arc_easy,arc_challenge,winogrande"
+KOREAN_BENCHMARK_TASKS = "kmmlu,kobest_boolq,kobest_copa,kobest_hellaswag"
+
+
+def _resolve_eval_dtype():
+    """Match train-time precision policy as closely as possible for eval."""
+    if not torch.cuda.is_available():
+        return torch.float32
+    return torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+
+
+def _model_load_kwargs():
+    """Safer default loading kwargs for eval on mixed GPU environments."""
+    kwargs = {
+        "trust_remote_code": True,
+        "torch_dtype": _resolve_eval_dtype(),
+    }
+    if torch.cuda.is_available():
+        kwargs["device_map"] = "auto"
+        # Eval stability > absolute speed. Avoid backend-specific CUDA kernel issues first.
+        kwargs["attn_implementation"] = "eager"
+    return kwargs
+
+
+def _load_tokenizer(path_or_repo: str):
+    """Load tokenizer while tolerating the Mistral regex compatibility warning."""
+    from transformers import AutoTokenizer
+
+    try:
+        return AutoTokenizer.from_pretrained(
+            path_or_repo,
+            trust_remote_code=True,
+            fix_mistral_regex=True,
+        )
+    except TypeError:
+        return AutoTokenizer.from_pretrained(path_or_repo, trust_remote_code=True)
 
 
 def _free_vram():
@@ -147,10 +182,16 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
     return results, result.stdout
 
 
-def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENCHMARK_TASKS, limit: int = 400):
+def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENCHMARK_TASKS,
+                             korean: bool = True, limit: int = 400):
     """base 모델과 CPT 모델의 벤치마크 점수 비교."""
+    all_tasks = tasks
+    if korean:
+        all_tasks = f"{tasks},{KOREAN_BENCHMARK_TASKS}"
+
     print("\n" + "=" * 60)
     print(f"Catastrophic Forgetting Test (limit={limit} per task)")
+    print(f"Tasks: {all_tasks}")
     print("=" * 60)
 
     # 1. base 모델 평가 (이미 결과 있으면 스킵)
@@ -164,7 +205,7 @@ def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENC
             "lm_eval",
             "--model", "hf",
             "--model_args", f"pretrained={base_model},trust_remote_code=True",
-            "--tasks", tasks,
+            "--tasks", all_tasks,
             "--batch_size", "8",
             "--limit", str(limit),
             "--output_path", str(base_out),
@@ -177,7 +218,7 @@ def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENC
 
     # 2. CPT 모델 평가
     print("\n[2/2] CPT model evaluation...")
-    cpt_results, cpt_stdout = run_lm_eval(model_path, tasks)
+    cpt_results, cpt_stdout = run_lm_eval(model_path, all_tasks, limit=limit)
 
     # 3. 결과 저장 (lm-eval stdout 표 포함)
     label = _ckpt_label(model_path)
@@ -214,15 +255,19 @@ def _auto_merge(model_path: str):
 
 def _eval_single(model_path: str, args, val_ds):
     """단일 체크포인트 eval. merge → eval → merged 삭제 (디스크 절약)."""
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from transformers import AutoModelForCausalLM
 
     mp = Path(model_path)
     label = _ckpt_label(model_path)
     auto_merged = False
+    load_kwargs = _model_load_kwargs()
 
     print(f"\n{'='*60}")
     print(f"Evaluating: {mp.name} ({label})")
     print(f"{'='*60}")
+    print(f"  eval dtype: {load_kwargs['torch_dtype']}")
+    if torch.cuda.is_available():
+        print(f"  eval attn: {load_kwargs.get('attn_implementation', 'auto')}")
 
     # merge if needed
     if _need_merge(model_path):
@@ -237,20 +282,17 @@ def _eval_single(model_path: str, args, val_ds):
     merged_path = _resolve_merged(model_path)
     if merged_path:
         print(f"  loading merged model: {merged_path}")
-        model = AutoModelForCausalLM.from_pretrained(
-            str(merged_path), torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True)
-        tokenizer = AutoTokenizer.from_pretrained(str(merged_path), trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained(str(merged_path), **load_kwargs)
+        tokenizer = _load_tokenizer(str(merged_path))
     elif (mp / "adapter_config.json").exists():
         print("  [WARN] using adapter (lora_B may be zero with unsloth)")
         from peft import PeftModel
-        base = AutoModelForCausalLM.from_pretrained(
-            BASE_MODEL, torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True)
+        base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, **load_kwargs)
         model = PeftModel.from_pretrained(base, str(mp))
-        tokenizer = AutoTokenizer.from_pretrained(str(mp), trust_remote_code=True)
+        tokenizer = _load_tokenizer(str(mp))
     else:
-        model = AutoModelForCausalLM.from_pretrained(
-            str(mp), torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True)
-        tokenizer = AutoTokenizer.from_pretrained(str(mp), trust_remote_code=True)
+        model = AutoModelForCausalLM.from_pretrained(str(mp), **load_kwargs)
+        tokenizer = _load_tokenizer(str(mp))
 
     ft = compute_ppl(model, val_ds, args.batch_size, args.max_batches)
     print(f"\n  FT ppl: {ft['ppl']:.2f}")
@@ -268,8 +310,7 @@ def _eval_single(model_path: str, args, val_ds):
     base_m = None
     if args.base_model and not hasattr(args, '_base_ppl_cache'):
         try:
-            bm = AutoModelForCausalLM.from_pretrained(
-                args.base_model, torch_dtype=torch.bfloat16, device_map="auto", trust_remote_code=True)
+            bm = AutoModelForCausalLM.from_pretrained(args.base_model, **load_kwargs)
             base_m = compute_ppl(bm, val_ds, args.batch_size, args.max_batches)
             args._base_ppl_cache = base_m
             del bm; _free_vram()
