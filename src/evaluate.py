@@ -14,6 +14,7 @@ Usage:
 
 import math
 import json
+import sys
 import subprocess
 import argparse
 from pathlib import Path
@@ -158,6 +159,12 @@ def _ckpt_label(model_path: str) -> str:
     return mp.name if mp.name.startswith("checkpoint-") else "final"
 
 
+def _run_lm_eval_subprocess(cmd_args: list[str]):
+    """Run lm-eval through a local wrapper that imports Unsloth first."""
+    cmd = [sys.executable, "-m", "src.lm_eval_with_unsloth", *cmd_args]
+    return subprocess.run(cmd, capture_output=True, text=True)
+
+
 def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int = 8, limit: int = 400) -> dict:
     """lm-evaluation-harness로 벤치마크 실행."""
     label = _ckpt_label(model_path)
@@ -178,7 +185,6 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
 
     cpt_out = out_dir / f"cpt_{label}"
     cmd = [
-        "lm_eval",
         "--model", "hf",
         "--model_args", model_args,
         "--tasks", tasks,
@@ -192,7 +198,7 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
     print(f"model: {model_path} ({label})")
     print(f"{'='*60}")
 
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = _run_lm_eval_subprocess(cmd)
     if result.returncode != 0:
         print(f"  lm_eval error: {result.stderr[-500:]}")
         return {}, ""
@@ -236,7 +242,6 @@ def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str
         else:
             print("\n[1/2] Base model evaluation...")
             base_cmd = [
-                "lm_eval",
                 "--model", "hf",
                 "--model_args", f"pretrained={base_model},trust_remote_code=True",
                 "--tasks", all_tasks,
@@ -244,7 +249,7 @@ def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str
                 "--limit", str(limit),
                 "--output_path", str(base_out),
             ]
-            r1 = subprocess.run(base_cmd, capture_output=True, text=True)
+            r1 = _run_lm_eval_subprocess(base_cmd)
             if r1.returncode != 0:
                 print(f"  base eval error: {r1.stderr[-500:]}")
                 return
