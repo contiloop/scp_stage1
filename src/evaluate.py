@@ -207,9 +207,9 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
     return results, result.stdout
 
 
-def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENCHMARK_TASKS,
-                             korean: bool = True, limit: int = 400):
-    """base 모델과 CPT 모델의 벤치마크 점수 비교."""
+def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str = BENCHMARK_TASKS,
+                             korean: bool = True, limit: int = 400, run_base: bool = True):
+    """Run lm-eval on CPT, optionally comparing against the base model."""
     all_tasks = tasks
     if korean:
         all_tasks = f"{tasks},{KOREAN_BENCHMARK_TASKS}"
@@ -217,43 +217,55 @@ def run_benchmark_comparison(model_path: str, base_model: str, tasks: str = BENC
     print("\n" + "=" * 60)
     print(f"Catastrophic Forgetting Test (limit={limit} per task)")
     print(f"Tasks: {all_tasks}")
+    print(f"Base comparison: {'on' if run_base else 'off'}")
     print("=" * 60)
 
     # 1. base 모델 평가 (이미 결과 있으면 스킵)
-    base_out = ROOT / "checkpoints" / "lm_eval_results" / "base"
-    existing_base = list(base_out.rglob("results_*.json")) if base_out.exists() else []
-    if existing_base:
-        print("\n[1/2] Base model evaluation... (cached)")
-    else:
-        print("\n[1/2] Base model evaluation...")
-        base_cmd = [
-            "lm_eval",
-            "--model", "hf",
-            "--model_args", f"pretrained={base_model},trust_remote_code=True",
-            "--tasks", all_tasks,
-            "--batch_size", "8",
-            "--limit", str(limit),
-            "--output_path", str(base_out),
-        ]
-        r1 = subprocess.run(base_cmd, capture_output=True, text=True)
-        if r1.returncode != 0:
-            print(f"  base eval error: {r1.stderr[-500:]}")
+    existing_base = []
+    base_stdout = ""
+    if run_base:
+        if not base_model:
+            print("  [ERROR] base comparison requested but no base model was provided")
             return
-        print(r1.stdout[-500:])
+
+        base_out = ROOT / "checkpoints" / "lm_eval_results" / "base"
+        existing_base = list(base_out.rglob("results_*.json")) if base_out.exists() else []
+        if existing_base:
+            print("\n[1/2] Base model evaluation... (cached)")
+        else:
+            print("\n[1/2] Base model evaluation...")
+            base_cmd = [
+                "lm_eval",
+                "--model", "hf",
+                "--model_args", f"pretrained={base_model},trust_remote_code=True",
+                "--tasks", all_tasks,
+                "--batch_size", "8",
+                "--limit", str(limit),
+                "--output_path", str(base_out),
+            ]
+            r1 = subprocess.run(base_cmd, capture_output=True, text=True)
+            if r1.returncode != 0:
+                print(f"  base eval error: {r1.stderr[-500:]}")
+                return
+            base_stdout = r1.stdout
+            print(r1.stdout[-500:])
 
     # 2. CPT 모델 평가
-    print("\n[2/2] CPT model evaluation...")
+    step = "[2/2]" if run_base else "[1/1]"
+    print(f"\n{step} CPT model evaluation...")
     cpt_results, cpt_stdout = run_lm_eval(model_path, all_tasks, limit=limit)
 
     # 3. 결과 저장 (lm-eval stdout 표 포함)
     label = _ckpt_label(model_path)
     summary_path = ROOT / "checkpoints" / f"eval_summary_{label}.txt"
     with open(summary_path, "w") as f:
-        f.write(f"=== Base Model: {base_model} ===\n")
-        if existing_base:
-            f.write("(cached from previous run)\n")
-        else:
-            f.write(r1.stdout)
+        if run_base:
+            f.write(f"=== Base Model: {base_model} ===\n")
+            if existing_base:
+                f.write("(cached from previous run)\n")
+            else:
+                f.write(base_stdout)
+            f.write("\n")
         f.write(f"\n=== CPT Model: {model_path} ===\n")
         f.write(cpt_stdout)
     print(f"  summary: {summary_path}")
@@ -381,9 +393,15 @@ def _eval_single(model_path: str, args, val_ds):
     _free_vram()
     if not args.skip_benchmarks:
         try:
-            base_model = args.base_model or BASE_MODEL
+            base_model = None if args.skip_base_benchmarks else (args.base_model or BASE_MODEL)
             bench_path = str(merged_path) if merged_path else str(mp)
-            run_benchmark_comparison(bench_path, base_model, args.benchmark_tasks)
+            run_benchmark_comparison(
+                bench_path,
+                base_model,
+                args.benchmark_tasks,
+                korean=args.include_korean_benchmarks,
+                run_base=not args.skip_base_benchmarks,
+            )
         except Exception as e:
             print(f"  [WARN] benchmarks skipped: {e}")
 
@@ -407,6 +425,14 @@ def main():
     parser.add_argument("--skip_benchmarks", action="store_true")
     parser.add_argument("--benchmarks_only", action="store_true")
     parser.add_argument("--benchmark_tasks", default=BENCHMARK_TASKS)
+    parser.add_argument("--include_korean_benchmarks", dest="include_korean_benchmarks",
+                        action="store_true", default=True,
+                        help="영어 벤치마크에 한국어 벤치마크(KMMLU/KoBEST)를 함께 추가")
+    parser.add_argument("--no_korean_benchmarks", dest="include_korean_benchmarks",
+                        action="store_false",
+                        help="영어 벤치마크만 실행")
+    parser.add_argument("--skip_base_benchmarks", action="store_true",
+                        help="base 모델 벤치마크는 생략하고 CPT만 실행")
     parser.add_argument("--config", default=str(ROOT / "configs" / "stage1.yaml"))
     args = parser.parse_args()
 
@@ -415,9 +441,15 @@ def main():
         if not args.model_path:
             print("[ERROR] --model_path required for --benchmarks_only")
             return
-        if not args.base_model:
+        if not args.base_model and not args.skip_base_benchmarks:
             args.base_model = BASE_MODEL
-        run_benchmark_comparison(args.model_path[0], args.base_model, args.benchmark_tasks)
+        run_benchmark_comparison(
+            args.model_path[0],
+            args.base_model,
+            args.benchmark_tasks,
+            korean=args.include_korean_benchmarks,
+            run_base=not args.skip_base_benchmarks,
+        )
         return
 
     # --- resolve checkpoint list ---

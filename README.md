@@ -65,9 +65,20 @@ make eval
 # 한국어: KMMLU, KoBEST (BoolQ, COPA, HellaSwag)
 make eval-benchmarks
 
+# 벤치마크만 (영어 + 한국어, CPT만)
+python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks
+
+# 벤치마크만 (영어만, CPT만)
+python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks --no_korean_benchmarks
+
 # 특정 체크포인트만
 python -m src.evaluate --model_path checkpoints/stage1_cpt/checkpoint-750 --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --batch_size 1 --skip_benchmarks
 ```
+
+평가 팁:
+- standalone eval은 학습과 같은 Unsloth loader 경로를 우선 사용합니다
+- 로그 초반에 `eval dtype`, `eval attn`, `loader: FastVisionModel`(또는 `FastLanguageModel`)가 보이면 정상 경로입니다
+- GPU 환경이 애매하면 `--batch_size 1`부터 확인하는 쪽이 가장 안전합니다
 
 결과 파일:
 - `checkpoints/eval_results_{label}.json` — ppl, completion 결과
