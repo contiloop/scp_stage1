@@ -19,6 +19,7 @@ import argparse
 from pathlib import Path
 
 import torch
+import unsloth  # must be imported before transformers for kernel patches
 from datasets import load_from_disk
 from tqdm import tqdm
 
@@ -28,6 +29,12 @@ from src.utils import load_jsonl
 # catastrophic forgetting 측정용 벤치마크
 BENCHMARK_TASKS = "mmlu,hellaswag,arc_easy,arc_challenge,winogrande"
 KOREAN_BENCHMARK_TASKS = "kmmlu,kobest_boolq,kobest_copa,kobest_hellaswag"
+
+
+def _is_vision_model(model_name: str) -> bool:
+    """Mirror train.py loader choice for Qwen3.5/Gemma-3 style models."""
+    vision_keywords = ["qwen3.5", "qwen3_5", "gemma-3", "gemma3"]
+    return any(k in model_name.lower() for k in vision_keywords)
 
 
 def _resolve_eval_dtype():
@@ -62,6 +69,24 @@ def _load_tokenizer(path_or_repo: str):
         )
     except TypeError:
         return AutoTokenizer.from_pretrained(path_or_repo, trust_remote_code=True)
+
+
+def _load_with_unsloth(path_or_repo: str, model_hint: str):
+    """Prefer the same Unsloth loading path used during training."""
+    if _is_vision_model(model_hint):
+        from unsloth import FastVisionModel as ModelClass
+        mode = "FastVisionModel"
+    else:
+        from unsloth import FastLanguageModel as ModelClass
+        mode = "FastLanguageModel"
+
+    model, tokenizer = ModelClass.from_pretrained(
+        model_name=path_or_repo,
+        max_seq_length=MAX_SEQ_LEN,
+        dtype=None,
+        load_in_4bit=False,
+    )
+    return model, tokenizer, mode
 
 
 def _free_vram():
@@ -261,6 +286,7 @@ def _eval_single(model_path: str, args, val_ds):
     label = _ckpt_label(model_path)
     auto_merged = False
     load_kwargs = _model_load_kwargs()
+    model_hint = args.base_model or BASE_MODEL
 
     print(f"\n{'='*60}")
     print(f"Evaluating: {mp.name} ({label})")
@@ -282,17 +308,32 @@ def _eval_single(model_path: str, args, val_ds):
     merged_path = _resolve_merged(model_path)
     if merged_path:
         print(f"  loading merged model: {merged_path}")
-        model = AutoModelForCausalLM.from_pretrained(str(merged_path), **load_kwargs)
-        tokenizer = _load_tokenizer(str(merged_path))
+        try:
+            model, tokenizer, mode = _load_with_unsloth(str(merged_path), model_hint)
+            print(f"  loader: {mode}")
+        except Exception as e:
+            print(f"  [WARN] Unsloth load failed, falling back to HF: {e}")
+            model = AutoModelForCausalLM.from_pretrained(str(merged_path), **load_kwargs)
+            tokenizer = _load_tokenizer(str(merged_path))
     elif (mp / "adapter_config.json").exists():
         print("  [WARN] using adapter (lora_B may be zero with unsloth)")
         from peft import PeftModel
-        base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, **load_kwargs)
+        try:
+            base, tokenizer, mode = _load_with_unsloth(BASE_MODEL, model_hint)
+            print(f"  base loader: {mode}")
+        except Exception as e:
+            print(f"  [WARN] Unsloth base load failed, falling back to HF: {e}")
+            base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, **load_kwargs)
         model = PeftModel.from_pretrained(base, str(mp))
         tokenizer = _load_tokenizer(str(mp))
     else:
-        model = AutoModelForCausalLM.from_pretrained(str(mp), **load_kwargs)
-        tokenizer = _load_tokenizer(str(mp))
+        try:
+            model, tokenizer, mode = _load_with_unsloth(str(mp), model_hint)
+            print(f"  loader: {mode}")
+        except Exception as e:
+            print(f"  [WARN] Unsloth load failed, falling back to HF: {e}")
+            model = AutoModelForCausalLM.from_pretrained(str(mp), **load_kwargs)
+            tokenizer = _load_tokenizer(str(mp))
 
     ft = compute_ppl(model, val_ds, args.batch_size, args.max_batches)
     print(f"\n  FT ppl: {ft['ppl']:.2f}")
@@ -310,7 +351,12 @@ def _eval_single(model_path: str, args, val_ds):
     base_m = None
     if args.base_model and not hasattr(args, '_base_ppl_cache'):
         try:
-            bm = AutoModelForCausalLM.from_pretrained(args.base_model, **load_kwargs)
+            try:
+                bm, _btok, mode = _load_with_unsloth(args.base_model, args.base_model)
+                print(f"  base eval loader: {mode}")
+            except Exception as e:
+                print(f"  [WARN] Unsloth base eval load failed, falling back to HF: {e}")
+                bm = AutoModelForCausalLM.from_pretrained(args.base_model, **load_kwargs)
             base_m = compute_ppl(bm, val_ds, args.batch_size, args.max_batches)
             args._base_ppl_cache = base_m
             del bm; _free_vram()
