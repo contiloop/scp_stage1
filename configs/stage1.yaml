@@ -24,7 +24,7 @@ training:
   warmup_ratio: 0.1
   num_train_epochs: 1
   per_device_train_batch_size: 16
-  gradient_accumulation_steps: 2    # effective batch = 32 × 2048 = 64K tokens
+  gradient_accumulation_steps: 4    # effective batch = 64 × 2048 = 128K tokens
   bf16: true
   gradient_checkpointing: true
   weight_decay: 0.01
