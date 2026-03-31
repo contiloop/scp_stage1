@@ -424,10 +424,14 @@ class GradNormTrainer(SFTTrainer):
 # ── Data collator ──
 
 class PackedCollator:
+    def __init__(self, pad_token_id=0):
+        self.pad_token_id = pad_token_id
+
     def __call__(self, features):
         input_ids = torch.stack([torch.tensor(f["input_ids"]) for f in features])
         labels = torch.stack([torch.tensor(f["labels"]) for f in features])
-        return {"input_ids": input_ids, "labels": labels}
+        attention_mask = (input_ids != self.pad_token_id).long()
+        return {"input_ids": input_ids, "labels": labels, "attention_mask": attention_mask}
 
 
 
@@ -551,7 +555,7 @@ def main():
         model=model, args=training_args,
         processing_class=tok,
         train_dataset=train_ds, eval_dataset=val_ds,
-        data_collator=PackedCollator(),
+        data_collator=PackedCollator(pad_token_id=tok.pad_token_id or tok.eos_token_id),
         callbacks=cbs,
         llrd_decay=stab.get("llrd_decay", 1.0),
         module_lr_multipliers=stab.get("module_lr_multipliers"),

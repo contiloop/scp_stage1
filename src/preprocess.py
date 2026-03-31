@@ -98,8 +98,31 @@ def upsample(docs, weights):
     return out
 
 
+def _find_sentence_boundary(tokens, tokenizer):
+    """토큰 리스트에서 마지막 완전한 문장 경계 위치를 찾는다.
+    "." 기준으로 디코딩하여 마지막 마침표 위치를 반환.
+    못 찾으면 0 반환 (아무것도 넣지 않음).
+    """
+    text = tokenizer.decode(tokens, skip_special_tokens=False)
+    # 마지막 문장 종결 부호 찾기
+    last_boundary = -1
+    for sep in [".", "。", "!", "?", "!}", "?}"]:
+        idx = text.rfind(sep)
+        if idx > last_boundary:
+            last_boundary = idx
+
+    if last_boundary <= 0:
+        return 0
+
+    # 문장 경계까지의 텍스트를 다시 토크나이즈해서 토큰 수 계산
+    boundary_text = text[:last_boundary + 1]
+    boundary_tokens = tokenizer.encode(boundary_text, add_special_tokens=False)
+    return len(boundary_tokens)
+
+
 def tokenize_and_pack(documents, tokenizer, max_len):
     eos = tokenizer.eos_token_id
+    pad = tokenizer.pad_token_id if tokenizer.pad_token_id is not None else eos
     tok_docs = []
     for d in documents:
         ids = tokenizer.encode(d["text"], add_special_tokens=False)
@@ -111,22 +134,69 @@ def tokenize_and_pack(documents, tokenizer, max_len):
 
     packed = []
     cur_ids = []
+    cur_labels = []
+    total_padded = 0
 
     for doc_tokens in tok_docs:
-        while len(cur_ids) + len(doc_tokens) > max_len:
+        if len(cur_ids) + len(doc_tokens) <= max_len:
+            # 문서가 통째로 들어감
+            cur_ids.extend(doc_tokens)
+            cur_labels.extend(doc_tokens)
+        else:
+            # 남은 공간에 문장 단위로 넣을 수 있는 만큼 넣기
             rem = max_len - len(cur_ids)
             if rem > 0:
-                cur_ids.extend(doc_tokens[:rem])
-                doc_tokens = doc_tokens[rem:]
-            packed.append({
-                "input_ids": cur_ids,
-                "labels": cur_ids.copy(),
-            })
-            cur_ids = []
+                fit = _find_sentence_boundary(doc_tokens[:rem], tokenizer)
+                if fit > 0:
+                    cur_ids.extend(doc_tokens[:fit])
+                    cur_labels.extend(doc_tokens[:fit])
+                    doc_tokens = doc_tokens[fit:]
 
-        cur_ids.extend(doc_tokens)
+            # 현재 시퀀스 패딩 후 마감
+            if cur_ids:
+                pad_len = max_len - len(cur_ids)
+                total_padded += pad_len
+                cur_ids.extend([pad] * pad_len)
+                cur_labels.extend([-100] * pad_len)
+                packed.append({"input_ids": cur_ids, "labels": cur_labels})
 
+            # 다음 시퀀스 시작 — 문서가 max_len보다 길면 max_len으로 truncate
+            if len(doc_tokens) > max_len:
+                fit = _find_sentence_boundary(doc_tokens[:max_len], tokenizer)
+                if fit > 0:
+                    cur_ids = doc_tokens[:fit]
+                    cur_labels = list(doc_tokens[:fit])
+                    doc_tokens = doc_tokens[fit:]
+                else:
+                    # 문장 경계를 못 찾으면 max_len으로 자름
+                    cur_ids = doc_tokens[:max_len]
+                    cur_labels = list(doc_tokens[:max_len])
+                    doc_tokens = doc_tokens[max_len:]
+
+                pad_len = max_len - len(cur_ids)
+                total_padded += pad_len
+                cur_ids.extend([pad] * pad_len)
+                cur_labels.extend([-100] * pad_len)
+                packed.append({"input_ids": cur_ids, "labels": cur_labels})
+
+                # 남은 부분은 다음 시퀀스로
+                cur_ids = list(doc_tokens)
+                cur_labels = list(doc_tokens)
+            else:
+                cur_ids = list(doc_tokens)
+                cur_labels = list(doc_tokens)
+
+    # 마지막 시퀀스
+    if cur_ids:
+        pad_len = max_len - len(cur_ids)
+        total_padded += pad_len
+        cur_ids.extend([pad] * pad_len)
+        cur_labels.extend([-100] * pad_len)
+        packed.append({"input_ids": cur_ids, "labels": cur_labels})
+
+    total_tokens = len(packed) * max_len
     print(f"  packed: {len(packed)} seqs × {max_len} tokens")
+    print(f"  padding: {total_padded:,} / {total_tokens:,} ({total_padded/total_tokens*100:.1f}%)")
     return packed
 
 

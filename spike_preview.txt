@@ -1,0 +1,648 @@
+
+====================================================================================================
+STEP 310 | samples 9920-9951 | avg_docs/seq=4.7 | avg_ko=0.25
+====================================================================================================
+  [ 9920] eos=4 MX(0.19) |  measures to ensure the next installment of the nation’s bailout is roiling global markets and pushed the euro to a record-low against the Swiss franc
+  [ 9921] eos=5 KO(0.47) | 37 percent discount to its face value. The Blue City hotel and residential project was stalled after disputes between the shareholders and as the decl
+  [ 9922] eos=4 MX(0.24) | 9월 14일 - 정몽헌 (~ 2003년 ): 한국의 기업인 , 현대그룹 CEO 여상규 : 대한민국의 국회의원 스즈키 토시오 : 일본의 애니메이션 프로듀서 9월 17일 - 고미야마 요코 : 일본의 전직 아나운서, 정치인 9월 18일 - 최동규 (~ 2021년 ): 대한민
+  [ 9923] eos=3 KO(0.65) | 조도 해상 격침 간첩선 인양작전 1979.11.28.: 충남 보령군 오천면 해상 추락 미공군기 탐색 인양작전 1980.6.20.: 격렬비열도 격침 간첩선 인양작전 1980.6.24.: 거제도 북단 광지말 근해 쾌속 여객선 엔젤 1.2호 충돌 참사 구조작전 1980.11
+  [ 9924] eos=5 EN(0.09) |  The projections by AAA are based on research and forecasts from IHS Global Insight. To contact the reporter on this story: Barbara Powell in Dallas a
+  [ 9925] eos=5 EN(0.14) |  영장청구권을 남겨둘 계획인 것으로 전해졌다. 다만 관계자에 의하면 이는 논의 중인 방안 중 하나에 불과하다고 하며 아직 여러 가지 방안이 거론되고 있다고 한다. 8월 28일에 있던 법무부의 업무보고 자리 에서 문재인 대통령은 검·경 수사권 조정과 관련해서 “법무부, 
+  [ 9926] eos=4 EN(0.12) | 인 1946년에 한하여 정치학과의 교과과정이 비교적 순수한 정치학 과목으로만 구성된 점이 흥미롭다. 그러나 얼마 되지 않아, 서울대학교도 고등고시 응시생들의 수요를 충족하기 위해 헌법 등 법학과목을 학과에 개설하게 되었다. 1952.12 숙명여자전문학교 정치학과 신설,
+  [ 9927] eos=4 EN(0.14) |  continued plunging on Sept. 23, losing 4.5 percent to 1,327.19. The dollar-denominated RTS Index dropped 5.2 percent to 1,315.95. Russian Prime Minis
+  [ 9928] eos=5 KO(0.36) |  게임 ‘프로젝트 스피릿’을 개발하고 있다.<|endoftext|>안호상: 이로 인하여 일민주의는 대한국민당 의 당 이념이 되었고 일민주의 보급회에 의한 국민운동으로 나아갔다. 문교부 장관시절인 1949년 2월 18일에는 학도호국단을 창설하였다. 이는 당시 국회의 반대
+  [ 9929] eos=5 MX(0.15) | 미니즘 같은 경우 반체제적 특성이나 심지어 소수자 배제적인 경우 도 있어 일반적인 진보주의와는 거리가 멀다. 상호교차성 페미니즘 의 경우 일반적인 자유주의보다는 킴벌리 크렌쇼 의 포스트모더니즘 에 더 영향을 받았기 때문에 진보,진보주의 개념을 비판 하기도 한다. 물론 
+  [ 9930] eos=5 MX(0.19) | ’s national election according to all polls conducted since the vote was called last month, has said it wants banks to foot the bill for extra spendin
+  [ 9931] eos=4 EN(0.14) | &P/TSX rose 56.65 points, or 0.5 percent, to 12,205.48 at 4 p.m. Toronto time. The gauge lost 4.5 percent during the previous three days. “We have a d
+  [ 9932] eos=6 EN(0.10) | Old Jokes’ No one will accuse “Old Jews Telling Jokes” of bait and switch.<|endoftext|>쉐도우 폭스: 그렇게 발라드는 BD단 소속으로 쉐도우 폭스를 타고 팀 블리츠에게 싸움을 걸지만, 토로스 박사가 돈
+  [ 9933] eos=7 EN(0.07) | .net<|endoftext|>: The market for oil and fuel tankers will be the first to recover from a glut in the shipping industry, reviving over the next 15 to
+  [ 9934] eos=4 MX(0.21) |  유동성이 낮고 발행증권사의 신용 리스크에 노출되는 단점이 있다. 대신 기초자산이 일정수준 이상인 경우 자동 조기상환 되는 조건이 부여되어 있으며 5~10%의 환매수수료를 부담하는 조건으로 발행증권사에 환매를 요구할 수 있다. 한편 증권회사가 발행하는 주가연계증권과 유
+  [ 9935] eos=2 KO(0.70) |  않았기 때문이라고 하며 아버지는 몇 년 전 아들이 간절히 만나 달라고 부탁했으나 매정하게 거절했다고 하는 이야기도 있다. 테러범, 외교관 출신 친아버지에 적개심 노르웨이 법률에 따라 형기가 끝날 때 판사의 결정에 따라 5년에 한 번씩 형기 연장을 무한정으로 결정할 수
+  [ 9936] eos=6 EN(0.12) | xx Europe 600 Index climbed 0.7 percent after posting four straight weeks of losses, with trading volume 20 percent less than the 30-day average. The 
+  [ 9937] eos=4 EN(0.10) | 학술지 브리티시메디컬저널(BMJ)은 “홍역은 백신이 나오기 전 영국에서만 한 해에 100명이 넘는 아이들을 숨지게 한 치명적인 병”이라며 “웨이크필드의 행각은 지난 100년간 의학계에 가장 큰 해악을 끼친 사기”라고 규정하였다. 박근혜 전 대통령측 변호사였던 이동흡 변
+  [ 9938] eos=5 EN(0.08) | 산더 밴더그리프트 : 제2차 세계 대전 중 과달카날 전역 에서 미 해병 제1사단을 지휘했고 이후 해병대 사령관에 올랐다. 에반스 칼슨 : 미국 해병레이더스 의 창립자이며 약 3년가까이 태평양 전쟁에서 공을 세웠다. 올리버 스미스 : 한국전쟁 당시 장진호 전투 를 지휘한
+  [ 9939] eos=5 MX(0.20) | 4, according the survey for ZDF television published today. Finance Minister Wolfgang Schaeuble remained third. Voter support for Merkel’s Christian D
+  [ 9940] eos=5 KO(0.41) |  보이고 있다. 최근 공인중개사협회가 제기한 고발사건의 재항고심에서 불기소 처분이 확정되어 법적 리스크의 부담도 덜어냈다. 이번 투자 유치로 올 하반기 아파트, 오피스텔 위주 사업 영역을 원룸, 빌라 등 주택 전반으로 확대할 계획이다. 내년 초에는 상가 및 사무실 서비
+  [ 9941] eos=5 MX(0.19) |  and some cargo to be lost. Exporters advanced as the yen held losses against the dollar. A weaker yen boosts overseas earnings at exporters when repa
+  [ 9942] eos=4 MX(0.16) |  change their ownership structure under proposed rules by the Commodity Futures Trading Commission. The CFTC is considering capping ownership stakes i
+  [ 9943] eos=5 KO(0.60) | @bloomberg.net. To contact the editor responsible for this story: Michael Sillup at msillup@bloomberg.net .<|endoftext|>국힘 “분칠해도 위헌”…여당 ‘내란재판부법’ 철회 연일
+  [ 9944] eos=5 EN(0.12) |  of about $100 per user for the software, which includes the costs of hosting the service. “We’re now at a tipping point where people are looking at s
+  [ 9945] eos=6 EN(0.09) |  Ernst & Young. While the number of companies issuing profit warnings fell to 45 in the second quarter, the lowest in seven years, they may increase l
+  [ 9946] eos=5 KO(0.39) | ICE SELECT Date Choice Select Trim Grinds Total 600-900 600-900 02/13 103 48 15 49 215 183.68 179.32 02/12 81 53 6 30 169 183.45 179.30 02/11 72 23 13
+  [ 9947] eos=6 MX(0.29) | 과 불안을 키운다는 연구 결과가 누적되고 있기 때문이다. 호주 정부 산하 '이(e)세이프티위원회'에 따르면 지난 7월 기준 10~15세 청소년 2600여 명 중 70%가 온라인에서 혐오 표현, 폭력적 영상, 섭식 장애나 자살 조장 콘텐츠를 접한 경험이 있었다. 한국도 
+  [ 9948] eos=3 KO(0.41) | 층으로 이전되었고 그 자리엔 무인민원발급기가 놓여있다. 그리고 동탄인덕원선 의 승강장은 지하 3층에 들어올 예정이다. 지하 4층에 TMO 가 있었으나 없어졌다. 지하 6층은 타는 곳이 위치해 있다. 엘리베이터는 1층에서 지하 5층까지 운행하는 엘리베이터와 지하 5층에서
+  [ 9949] eos=5 MX(0.22) | 1945년 4월 28일 당수 무솔리니가 밀라노 , 토리노 , 베네치아 에서 일어난 반파시즘 봉기로부터 피신하던 중 좌익 파르티잔에 생포되어 총살당했고, 5월 2일 당원이자 공화국 국방장관인 로돌포 그라치아니가 항복하면서 공화국과 함께 와해되었다.<|endoftext|>
+  [ 9950] eos=4 KO(0.57) |  shot across the bow that will reinforce” the “determination to do what’s necessary.” “Obviously the Treasury was unhappy with the downgrade,” but “le
+  [ 9951] eos=4 MX(0.19) | 한다는 구상이다. 건설사, 시행사, 투자자가 한눈에 확인할 수 있도록 사업장별 권리관계와 연락처 등 상세 정보를 수록할 예정이다. 금융당국이 온라인 플랫폼 구축에 나선 것은 기존 경·공매 방식으로 사업장을 정리하는 데 한계가 있다고 판단했기 때문이다. 실제 정리 속도는
+
+====================================================================================================
+STEP 430 | samples 13760-13791 | avg_docs/seq=4.7 | avg_ko=0.21
+====================================================================================================
+  [13760] eos=4 KO(0.48) |  6.93 4.5 659 NWS HOLDINGS 9 0.10 2.30 4.5 3393 WASION GROUP 12 0.05 1.13 4.5 591 C HIGHPRECISION 34 0.20 4.56 4.4 728 CHINA TELECOM 1448 6.32 144.34 
+  [13761] eos=5 KO(0.49) | ,475 per dollar.<|endoftext|>독일 사회민주당: 이후 기민련 의 헬무트 콜 총리가 연승하면서 장기 집권을 이어 나갔고, 사민당은 다시 한번 오랜 기간 제1야당의 위치를 지켰다. 하지만 콜의 화려한 외교력에 비해 당시 기민련 정부의 내치 능력은 다소
+  [13762] eos=6 KO(0.35) | .48 Canadian cents versus the Aussie. Stocks, Oil, Gold The Standard & Poor’s 500 Index gained 0.9 percent to its highest close since June 28 after th
+  [13763] eos=4 EN(0.09) |  이재명이 38%로 압도적 1위였다. 이어 홍준표 17%, 한동훈·이준석 11%, 오세훈 9% 등의 순이었다. # 이미 낙선한 20대 대선 에서도 이재명은 '절대 찍고 싶지 않은 후보' 조사에서 50%로 윤석열의 42%를 앞선 바 있어 높은 비호감도 역시 대권주자로서의
+  [13764] eos=6 EN(0.00) | 130 4 Chuck, short rib 34 109, 103 190.00 260.00 205.21 160 1 Round, bone-in 8 5, 417 211.50 227.00 217.25 161 1 Round, boneless 4 29, 101 215.00 236.
+  [13765] eos=6 EN(0.08) |  barrels a day in the past two decades, or 32 percent of shipments from the Organization of Petroleum Exporting Countries, he said. The resumption of 
+  [13766] eos=5 MX(0.24) |  according to Liu Xiangning , an analyst at Huatai Securities Co. “Most shares in ChiNext companies are held by venture capital firms and individual s
+  [13767] eos=4 EN(0.03) |  deals with German Bundesliga soccer clubs in less than two weeks. Wirsol, a privately owned photovoltaic retailer, bought the name rights to Hoffenhe
+  [13768] eos=6 EN(0.03) |  원내 4.4.1.1 . 진보당 4.4.1.2 . 기본소득당 4.4.1.3 . 사회민주당 4.4.2 . 원외 4.4.2.1 . 노동당 4.4.2.2 . 녹색당 4.4.2.3 . 미래당 4.4.2.4 . 정의당 5 . 소속 정치인 5.1 . 국회의원 5.1.1 . 17대
+  [13769] eos=6 KO(0.32) |  from NT$110,218,000, according to a statement filed to the Taiwan Stock Exchange. (Figures are in thousands of New Taiwan dollars) ==================
+  [13770] eos=4 KO(0.40) |  명단이 넘어갔으니 자신과 계속 거래를 하기 위해서는 이틀 내에 그걸 가지고 오라고 협박한다. 양아치 들에게는 대머리 라고 불린다. 장군 : 9화 에서 처음으로 등장한, 콴의 냉장고 를 노리는 세 번째 인물. 행성 모압 의 장군이다. 행성 모압의 경무관인 이안 과는 대
+  [13771] eos=3 MX(0.26) |  this story: Kevin Crowley in London at kcrowley1@bloomberg.net To contact the editor responsible for this story: Edward Evans at eevans3@bloomberg.ne
+  [13772] eos=5 MX(0.20) |  is no certainty negotiations will take place.” Financial newspaper Globes reported talks between Potash and Israel Corp. about a controlling stake in
+  [13773] eos=4 MX(0.29) |  조중동 ( 朝 中 東 ) 중탄소년단 (中 彈 少 年 團 ) 중화전신 (中 華 電 信 ): 대만 의 이동통신사 친중 ( 親 中) 친중화민국 ( 親 中 華 民 國 ) 혐중 ( 嫌 中) 활중( 活 中): '활동 중단'의 준말 중양 (中 洋 ) [ zhōng ] 방위사(方位
+  [13774] eos=4 MX(0.26) |  gasoline and diesel inventories are adequate. “Even if the coker is shut down for an extended period of time, we’ll still be able to produce the gaso
+  [13775] eos=6 EN(0.08) |  2011 as the government seeks to safeguard the future of an A$242 billion ($239 billion) industry. The Commission also plans to start a ‘‘compliance c
+  [13776] eos=7 EN(0.11) | atched U.S. television network, reported first-quarter profit that beat estimates as Super Bowl ads, fees from cable systems and streaming deals with 
+  [13777] eos=6 EN(0.09) |  관련자에 대한 제재 절차가 시급하다"며 철저한 조사를 요구했다.<|endoftext|>: employers added 185,000 workers in April after hiring 216,000 the previous month, according to a Bl
+  [13778] eos=4 MX(0.25) |  Devices Inc. (ENER) in May and this month started as chief operating officer at Brooks Automation Inc. (BRKS) , which makes automation systems used i
+  [13779] eos=4 EN(0.03) | leton, a spokesman for Morgan Stanley, declined to comment, as did Credit Suisse’s Duncan King. Deutsche Bank’s Scott Helfman didn’t immediately respo
+  [13780] eos=8 EN(0.00) |  a “major issue” that the result of last year’s federal election, in which no party secured a majority, has made even harder. “You can’t, in any locat
+  [13781] eos=4 EN(0.11) |  of Economic Analysis uncovered an additional $108 billion (annualized) of personal income in the fourth quarter, which had to come from a larger work
+  [13782] eos=5 EN(0.03) |  bank signaled it may leave interest rates at a record low for much of 2012 as a surging currency eases inflation and diminishes the prospect of highe
+  [13783] eos=5 EN(0.07) |  $3 million in new gifts made to the Scholar Rescue Fund, for a total of $6 million.<|endoftext|>김종갑(1951): 대한민국 의 전 기업인 이자 관료. 1951년 8월 10일 , 경상북도 안동
+  [13784] eos=6 EN(0.14) | 0년대 와 1990년대 에 걸쳐 전인 교육 을 실시한 학교가 교원들의 노력으로 적어도 학생들의 행복 및 학생 계도에 있어서 더 좋은 성과가 나오고 있다는 게 알려지자 관리교육의 성과에 대한 의구심이 떠올랐다. 그리하여 1990년대 에 대부분 학교에서 체벌이 금지되었고 
+  [13785] eos=4 EN(0.13) |  평가할 수는 없다. 배출권거래제의 문제점 중 하나인 배출권 시장이 활성화되지 못하여 시장의 자원배분 효과가 충분히 나타나지 못할 경우, 오히려 공정한 경쟁을 방해할 수 있다는 점이 드러났다. 2012년 미국 캘리포니아는 CCA(California Carbon Allo
+  [13786] eos=2 KO(0.66) | 이기 때문이다. 현실은 주식투자를 수십년 공부하고 연구해도 손실만 본 사람들이 대부분이며, 그 외에 주식으로 나름 돈 좀 불려봤다는 사람들도 수십년간 순누적수익 10억 근처도 안되는 사람들이 대부분이다. 웬만하면 주식에 손도 대지 말라는 게 괜히 있는 말이 아니다. 게
+  [13787] eos=2 KO(0.64) |  136 million tons, from 97 million tons last year, with harvests ending last month, it said. “Supplies of soybeans have become ample,” and soybean sto
+  [13788] eos=1 KO(0.40) |  France to sell French perfume and cosmetics retailer Nocibe SA, according to two people with knowledge of the process. Nocibe, the competitor of LVMH
+  [13789] eos=6 EN(0.00) |  the poll, saying there’s no need to agree on the border beforehand because Southern Sudanese across the country will be eligible to vote, not just th
+  [13790] eos=4 KO(0.44) |  동안 루스 차르국 정부는 러시아인들에게 동쪽으로의 이주를 장려하여 시베리아 지역을 개발하려고 했다. 하지만 극동으로 확장하는데 있어 청나라 와의 분쟁도 있었다. 당시 만주족 의 청나라는 만주와 내•외몽골의 영토를 장악했는데 17세기 후반 루스 차르국의 확장으로 인해 
+  [13791] eos=4 MX(0.15) | J Ltd. “China’s easing is a positive factor for the global economy. Developments in Europe remain key for the market’s direction.” The baht added 0.1 
+
+====================================================================================================
+STEP 480 | samples 15360-15391 | avg_docs/seq=4.9 | avg_ko=0.21
+====================================================================================================
+  [15360] eos=5 EN(0.11) | 시아를 싱가포르에서 관리했기 때문에 말레이인들 사이에서는 이에 대한 앙금이 크게 남아 있었고, 말레이시아 연방정부는 말레이계를 우대하는 정책을 취하게 된다. 그러나 싱가포르는 대국들이 많은 동남아시아에서 혼자서 살아가기 어렵다고 보았기에 말레이시아 연방 에 들어가기 위
+  [15361] eos=6 EN(0.10) |  체제를 유지하는 통합안인 대구경북특별시 , 일본 주(도주제 상) 가 지급시다. 지급시 아래에는 구(예: 달서구 ), 시( 경주시 ), 현( 청도군 )이 모두 있을 수 있게 된다. 지급시 제도는 낙수효과 를 노린 것으로 개혁개방 직후 모든 현에 투자할 수 없었기에, 거
+  [15362] eos=4 KO(0.41) | 98 ------------------------------------------------------------------------------- Choice/Select spread: 16.99 Total Load Count (Cuts, Trimmings, Grid
+  [15363] eos=5 MX(0.24) |  SU student-athletes.” “In accordance with NCAA regulations, it is the university’s practice to self-report possible violations to the NCAA,” Quinn sa
+  [15364] eos=6 MX(0.21) |  in Lynnwood, which opposes what is says is a redefinition of marriage and will help gather signatures, said in a telephone interview. “Most people ar
+  [15365] eos=5 KO(0.33) |  20년도에는 미라클의 선수 시절 빛나는 순간으로 결승에서 보인 그 0킬 세레머니 가 가장 많이 회자되고 있지만, 다른 라운드들을 보면 당시에 용준좌나 해변 킴 같은 해설진들이 '저거 미라클 맞냐'고 경악할 정도로 해외의 강팀이고 뭐고 죄다 척추를 접는 두들겨 패는 미
+  [15366] eos=5 EN(0.09) | 자연과학협회 회장,한국과학원 이사, IQSY 한국위원회위원장, 한국과학자협회장, UNESCO 한국위원회 과학부분위원장, IUGG 한국위원회위원장 등을 역임하였다. 1908년 6월 28일 경기도 개성부 풍덕군 서면 사분리(현 황해북도 개풍군 용산리)에서 보통학교 교사를 
+  [15367] eos=6 EN(0.09) | . 이유는 비전임교수에게 교수라는 호칭을 써서 그들이 전임교수로 오인되는 것을 부정적으로 보기 때문. 실제 교수 들 사이에서도 꽤 보이는 의견이다. 兼 任 敎 授 , adjunct professor 본업에 종사하면서 강의를 병행하는 교수다.<|endoftext|>메인보
+  [15368] eos=5 KO(0.40) | , 전 나치 독일 간부들을 찾아가 그들을 고문해 쇼의 행방을 알아낸 후 죽였다. 쇼가 미국에 있다는 것을 알아내고 쇼가 타고 있던 배를 습격했으나 실패했고, 그가 타고 도망가는 잠수함을 잡고 늘어지다가 찰스 자비에 를 만나게 되고 자신의 과거와 생각을 읽어내는 그에게 
+  [15369] eos=2 MX(0.22) |  lender that helped raise dollar deposits from Indians residing abroad at the turn of the millennium, is reluctant to repeat such fundraising because 
+  [15370] eos=1 KO(0.47) | ck Loses Nasonex Patent Case Against Apotex in N.J. Court Merck & Co. (MRK) ’s patent for the allergy drug Nasonex isn’t infringed by Apotex Inc., a f
+  [15371] eos=7 EN(0.05) | 4.16 percentage points today. The central bank hasn’t bought securities from Italy and Spain, which according to Bloomberg data have a combined 2.2 tr
+  [15372] eos=3 KO(0.34) | , 분명 사재기다 2. 어떻게 임재현이 김연자의 아모르파티를 누르고 50대 차트 1위냐. 사재기다 3. 어떻게 팬덤스밍처럼 순위가 급격히 오르느냐, 분명 사재기다 4. 사재기 여부를 떠나 '페이스북 바이럴광고' 자체가 나쁜것 아니냐? 5. 왜 내 플레이리스트에 추가 돼
+  [15373] eos=4 KO(0.40) |  부분을 선도적으로 도입해 미래가치가 있는 아파트를 만들고자 한다”고 강조했다. 정비업계에 ‘MZ바람’이 불며 1990년대생 추진준비위원장까지 등장했다. 서울 성동구 응봉현대 재건축의 곽창민 추진준비위원장(34)이 대표적이다. 방송업계에 종사하는 곽 위원장은 자신만의 
+  [15374] eos=4 EN(0.08) | \mathbf{v}_{1}|}{|\mathbf{u}_{1}-\mathbf{u}_{2}|} \end{aligned} ε = ∣ u 1 ​ − u 2 ​ ∣ ∣ v 2 ​ − v 1 ​ ∣ ​ ​ 우리가 다뤘던 탄성 충돌이고, u 2 = 0 \mathbf{u}_{2}=\m
+  [15375] eos=6 EN(0.08) | ed offshore-drilling contractor will replace Dell Inc. in the S&P 500 after the close of trading on Oct. 28, S&P said in a statement late yesterday.<|
+  [15376] eos=5 MX(0.23) |  to CEZ’s plans comes not from residents fearing atomic power, but from locals who complain the expansion will further spoil the picturesque Bohemian 
+  [15377] eos=6 EN(0.11) | .09 million predicted a month ago, and 135.97 million expected this year, the USDA said. To contact the reporter on this story: Jeff Wilson in Chicago
+  [15378] eos=5 EN(0.08) |  to a two-month high of $37.45 in New York. Policy makers will expand the industries in which insurers can invest as debtholders, the nation’s Caixin 
+  [15379] eos=5 MX(0.17) |  어렵기 때문이다. 특히 초단시간 근로자의 절반을 차지하는 노인 일자리가 급감할 것이라는 분석이 나온다.<|endoftext|>: New York City taxi fleet operators sued the city over rules that make a Nissa
+  [15380] eos=5 MX(0.15) | 시 과 외무고시 출신 관료 및 정치인 중에는 서울대 출신보다 여러 다양한 대학 출신자들이 많은 것과 대비된다. 일본에서 관료의 위상이 높아 동경대 법학부 학생들이 주로 관료를 최고 진로로 여겨 많이 진입한 것도 있고, 애초에 도쿄대학이 관료를 길러내는 대학으로서 전통이
+  [15381] eos=4 KO(0.32) | 에서 변이 코로나19 바이러스가 발견됐다. # 코로나 유행에 대응하는 의료진들을 위해 모금 운동을 벌인 참전용사 톰 무어 경 대위가 코로나에 감염되어 사망했다. # 코로나19 변이 유입을 막기 위해 모든 입국자를 대상으로 진단 검사를 2회 시행하기로 했다. # 잉글랜드
+  [15382] eos=5 EN(0.09) | 타카 는 다르다. 홍콩 달러 의 가치가 마카오 파타카 의 가치보다 미세하게 높기 때문에, 마카오에서는 홍콩 달러 를 쓸 수 있으나 홍콩에서는 마카오 파타카를 쓸 수 없다.<|endoftext|>: Spot California-blend gasoline strengthe
+  [15383] eos=6 MX(0.23) |  reporter on this story: Jeff Plungis in Washington at jplungis@bloomberg.net To contact the editor responsible for this story: Bernard Kohn at bkohn2
+  [15384] eos=6 EN(0.12) |  since the second half of 2011, according to Centaline Property Agency Ltd. Yangzhou introduced home subsidies, Beijing allowed some discounts on mort
+  [15385] eos=5 EN(0.09) |  -- celebrated this week, on Thanksgiving -- is of ancestors who uprooted themselves and crossed the ocean to start a new life. Americans with this ba
+  [15386] eos=5 MX(0.24) |  was primarily responsible for preparation of the report. To contact the reporter on this story: Kristy Scheuble in Washington at kmckeaney@bloomberg.
+  [15387] eos=5 EN(0.03) | . BNP Paribas today cut its growth forecast for India for this fiscal year to 3.7 percent from 5.2 percent, after the Reserve Bank of India engineered
+  [15388] eos=6 MX(0.30) | 를 내놓았지만, Fw190 D형 기반인 Ta152 에 밀려 탈락했다.<|endoftext|>컨소시엄: 컨소시엄은 공통의 목적을 위한 협회나 조합을 말한다. 컨소시엄은 라틴어로 동반자 관계와 협력, 동지를 의미한다. 컨소시엄을 증권업계와 관련해 사용할 때는, 공사채나 주
+  [15389] eos=5 KO(0.38) | 에 난항을 겪으면서 노조가 7년 만에 파업을 벌이기도 했다. 현대차 관계자는 “올해 교섭을 바라보는 고객과 협력사, 다양한 이해관계자들의 관심과 걱정 속에서, 현대차 노사가 미래 생존과 위기 극복의 의지를 담아 잠정합의를 이끌어낼 수 있었다”며 “고객들의 끊임없는 성원
+  [15390] eos=5 MX(0.15) | 한 뒤 일본 도쿄대 전자공학과, 메사추세츠공과대학(MIT) 미디어랩을 거쳤다. 이후 삼성전자의 스카웃 제의를 받고 영상디스플레이(VD) 사업부 인터렉션그룹을 맡아 최연소 그룹장을 지내기도 했다. 스페이셜에 대한 투자자들의 관심도 크다. 스페이셜이 미국 화이트스타, 아이
+  [15391] eos=4 MX(0.26) |  Minister Juan Carlos Echeverry said. Standard & Poor’s raised Colombia one step to BBB-, from BB+. The increase puts Colombia’s rating in line with t
+
+====================================================================================================
+STEP 680 | samples 21760-21791 | avg_docs/seq=4.5 | avg_ko=0.23
+====================================================================================================
+  [21760] eos=4 EN(0.08) | I am marching because we are not a free people,” said Madmad Thahani, a 20-year-old student in Casablanca. “We demand the dissolution of the committee
+  [21761] eos=7 EN(0.00) | .53 01/08 92 82 14 30 218 193.98 183.31 01/07 97 57 21 32 207 193.49 182.60 01/04 94 50 21 31 196 194.26 182.22 01/03 107 62 20 22 211 194.91 183.28 -
+  [21762] eos=4 EN(0.08) | -Bar) 초콜릿은 거의 안 한다고 보면 된다. 알칼리 처리를 어떤 공정 때 하는 지는 공장마다 바이어 요구에 따라 다르다. 알칼리 처리를 거친 카카오닙스를 2차에 걸쳐 분쇄하면 초콜릿 공장 영상 등에서 흔히 보았을 진득하게 흐르는 카카오매스 가 분리가 된다. 여기에 
+  [21763] eos=5 KO(0.34) |  미국의 민간조직인 FASB는 1973년부터 재무회계 및 재무보고에 관한 회계기준을 제정해 왔고, FASB에 위해 제정된 회계기준은 증권관리위원회(SEC)가 인정하는 기준으로서 재무보고서를 작성하는데 반드시 준수해야 할 회계기준이다. 또한 FASB는 회계와 관련된 기본
+  [21764] eos=5 EN(0.07) | , 387 (MILLRATE: .000000001) 0287 DREYFUS N.Y.<|endoftext|>: A123 Systems Inc. (AONE) , the electric-car battery maker that filed for bankruptcy this 
+  [21765] eos=5 EN(0.09) | 국이던 영국의 식민지 독립 정책에 의해서 이웃 아랍국가인 요르단 과 마찬가지로 친영/친서방 성향의 하심 왕가가 통치하는 이라크 왕국 으로 독립했지만 독립 이후에 커다란 내부 혼란을 겪었는데 왕실 지배층인 하심 가와 국민 피지배층 모두 수니파 이슬람이 절대다수였던 요르단
+  [21766] eos=4 KO(0.31) |  challenging the U.S. with well-trained workers who garner lower wages, the authors said. Survey respondents in the manufacturing industry, who are in
+  [21767] eos=6 EN(0.11) |  according to the report, a number expected to double by year-end. And users have coined a new verb to describe their smokeless puffing, the French “v
+  [21768] eos=6 EN(0.05) |  pricing for the industry as competitors shift more vehicle sales to rental companies, De Waard said.<|endoftext|>: “Whether it’s Romney or Gingrich o
+  [21769] eos=5 EN(0.08) |  revenue neutral against current tax policy ,” wrote the senators, led by the panel’s top Republican, Senator Orrin Hatch of Utah. That means a revenu
+  [21770] eos=5 MX(0.16) |  $18.16 a barrel over the Asian benchmark crude today, the biggest premium since Sept. 2, according to data from PVM Oil Associates Ltd., a London-bas
+  [21771] eos=5 MX(0.30) | oughton@bloomberg.net<|endoftext|>: 30 , the same day it was announced that Kenneth Melson, acting ATF director, was also leaving his post. Melson als
+  [21772] eos=4 EN(0.05) | -case basis to support third- party money and mergers,” said Kip Weissman, a partner at Luse Gorman Pomerenk & Schick, P.C. in Washington, who represe
+  [21773] eos=0 KO(0.72) | ‘배달의민족’의 주인이 독일 회사로 바뀐 것을 두고 뒷말이 많은데요. “이제 ‘게르만 민족’이란 얘기 저도 듣고 있습니다. 한국은 자본의 국적에 예민한 나라에요. 저희를 향한 걱정과 비판들을 겸허하게 받아들이려고 합니다. 결국 사업하는 사람은 성과로 증명해야 합니다. 
+  [21774] eos=5 MX(0.28) | 에도 불구하고 이에 대해 사람들이 해명과 사과를 요구하면 억까하지 말라며 오히려 역으로 "억까충"이라고 매도하면서 억까방패를 내세우기도 한다.<|endoftext|>샤 자한 1세: 3녀 이자야 바누 베굼 (1621 ~ 1628): 요절 5남 (1622) 요절 6남 무라
+  [21775] eos=5 KO(0.51) |  파도와 폭풍, 돌풍에도 불구하고, High shall our purpose be 우리의 목적은 높다. " Semper Paratus " is our guide, "언제나 준비"는 우리의 지침이며, Our fame, our glory, too. 우리의 명예이자 영광이다
+  [21776] eos=1 KO(0.61) | 제는 딱히 없으며 주로 평소에 있었던 일이나 하고 싶은 말을 한다. 라디오할 때는 노래를 부를 때가 많다. 트위치 로 넘어간 후 처음으로 생긴 정식 콘텐츠이다. 매주 금요일 밤 10시에 주제에 맞는 사연을 받아 읽어주는 라디오이다. 밤 10시에 사연라디오를 해서 시청자
+  [21777] eos=2 KO(0.54) | 떻게 하면 남들보다 먼저 초기에 투자할 수 있을까"에 대한 고민은 비즈니스의 태생부터도 투자자가 함께할 방법을 연구하게 만들어서, 아예 투자자가 공동 창업 수준의 시점까지도 내려가는 시도들이 나오게 된다. 아래의 방식들은 오늘날 더는 생소하진 않으나, 처음 시도되었던 
+  [21778] eos=2 KO(0.33) |  he said. Dimon said that the risk committee structures and processes were not as robust in the CIO as they should have been. The division’s London te
+  [21779] eos=3 MX(0.23) |  1일 - 에가시라 2:50 : 일본의 개그맨 오만석 : 대한민국 의 배우 정은경 : 대한민국 의 질병관리청장 7월 11일 - 강신조 : 대한민국의 배우 7월 13일 - 나카모리 아키나 : 일본의 가수 니시 린타로 : 일본의 성우 7월 16일 - 탱크 어봇 : 미국의 
+  [21780] eos=7 EN(0.05) |  부산에서 돌풍을 일으키자 지역감정 조장 발언을 했던 허태열 은 당시에도 크게 욕을 먹었음은 물론, 해당 발언을 한 지 20년이 훨씬 넘은 지금도 노무현의 지역주의 타파를 위한 노력이 언급될 때마다 같이 언급되면서 까이는 신세가 되었다. 이후 총재직 폐지. 이회창 총재
+  [21781] eos=4 MX(0.21) |  1.8 billion peso net income in 2010, according to data compiled by Bloomberg News. Philex Mining Corp. (PX) , the largest Philippine metals producer,
+  [21782] eos=4 KO(0.34) | 월 및 연간 소비자물가동향’에 따르면 지난해 12월 소비자물가 상승률은 2.3%로 집계됐다. 환율 영향을 많이 받는 품목의 물가가 크게 올랐다. 석유류 물가는 6.1% 뛰며 2월(6.3%) 후 10개월 만에 최대 상승폭을 기록했다. 수입 소고기(8%), 바나나(6.1%
+  [21783] eos=5 EN(0.11) | , 유럽 연합은 런던에 있던 유럽 연합 기관 EMA(유럽 식약청)와 EBA(유럽 금융 관리청)을 각각 네덜란드의 암스테르담과 프랑스의 파리로 이전시키겠다고 발표했다. 즉, 영국이 Article 50를 번복해도 두 기관은 런던을 영원히 떠났다. 당초 영국 정부는 브렉시트
+  [21784] eos=7 EN(0.13) |  있음을 설명함으로써, 강점은 개발하고 약점은 보완하도록 하여 각 개인의 가능성을 극대화하도록 하는 인식의 변화를 제공하였다.<|endoftext|>: 2208 GOLDWIND 204.80 1.05 10.40 10.1 1115 TIBET 5100 12 0.04 0.36
+  [21785] eos=6 EN(0.00) |  274.83 114E 3 Chuck, clod, arm roast 17 50,<|endoftext|>: The man who bought the world’s most expensive egg is defying setbacks by thinking ever bigg
+  [21786] eos=6 MX(0.15) | 체 금속 형태의 포스. 레이저 에너지를 얻으면 특정 방향으로 포스가 성장한다. 알타입 파이널 최약의 4포스 중 하나. BYDO 계통 에도 서술되어 있긴 하지만, 레이저의 사거리도 짧지만 레이저가 HP가 조금이라도 존재하는(=한방에 안 터지는)적에게 명중하면, 포스에서 
+  [21787] eos=6 EN(0.11) |  as shoppers grow weary of the fashions and risqué marketing. Amid takeover speculation, it’s hard to see Jeffries relinquishing control over the comp
+  [21788] eos=1 KO(0.66) | 과 콘텐츠의 성질 등으로 인해 TRPG와 혼동하는 사람들이 많다. 여까도 플레이어로 참가하는 경우가 많아서 주로 파딱, 역동부, 그 외의 게스트 GM이 진행을 맡는다. 다만 여까가 플레이한 시나리오를 다른 멤버들로 다시 플레이할 경우엔 여까가 진행을 맡는다. 에이다 가
+  [21789] eos=4 KO(0.31) |  재료를 확보하기 위해 35만 개 댓글의 악성 여부를 사람이 일일이 구분했다. ‘패드립’(패륜적 욕설)이 일상적으로 오가는 게임 소통창을 바꾸기 위한 기술적 시도도 이어지고 있다. 넥슨은 AI 연구조직인 ‘인텔리전스랩스’를 통해 사용자의 욕설, 혐오 표현, 도박 광고 
+  [21790] eos=6 EN(0.09) |  of New Taiwan dollars) ================================================================= 12/2011 12/2010 Sales 96,096 83,439 YOY% 15.17% ------------
+  [21791] eos=4 MX(0.23) | uo Shimizu , a Tokyo-based analyst at Iwai Cosmo Holdings Inc. (8707) “No measures to revive these companies have been found yet.” Extra Yield The ext
+
+====================================================================================================
+STEP 960 | samples 30720-30751 | avg_docs/seq=4.7 | avg_ko=0.22
+====================================================================================================
+  [30720] eos=7 EN(0.11) |  해당 행정기관등은 이를 흠이 있는 문서로 보고 보완에 필요한 상당한 기간을 정하여 보완을 요구하여야 하며, 행정기관등이 발송한 전자문서가 판독할 수 없는 상태로 수신자에게 도달된 경우에는 이를 적법하게 도달된 문서로 보지 아니한다. 제29조(행정전자서명의 인증) ① 
+  [30721] eos=4 EN(0.11) | 했다. 코로나19 시기인 2020년(47만7000명 증가) 이후 4년 만의 증가세로 돌아섰다. 특히 건설 불황 여파로 건설업, 부동산업에서 비자발적 실직자가 많이 늘었다. 반면 초단시간 일자리 근로자는 지난해 140만6000명으로 1980년 집계를 시작한 이후 가장 많
+  [30722] eos=6 KO(0.38) | 한다”고 말했다. 과학기술정보통신부 산하 한국연구재단의 지원을 받은 이번 연구 성과는 환경화학 분야 국제학술지 그린케미스트리 표지논문(사진)에 선정됐다.<|endoftext|>: Ukraine, set to become the world’s third-biggest c
+  [30723] eos=4 MX(0.26) | 튬·인산철(LFP)을 대체할 수 있는 배터리 시장의 ‘게임체인저’로 불린다. ◇포드, GM 뛰어든 LMR 이미지 크게보기 GM 배터리 연구원이 실물 크기의 LMR 배터리 셀 시제품을 들고 있다. /GM 제공 GM은 14일 LG에너지솔루션과 함께 개발한 LMR 배터리를 
+  [30724] eos=4 KO(0.36) | 1 모빌리티그룹, 하이넷, 한국자동차환경협회와 ‘수도권 광역노선 수소버스 도입 확대를 위한 업무협약’을 체결했다고 밝혔다. 협약식에는 김승찬 현대차 국내판매사업부장 전무, 신승규 현대차 에너지&수소정책담당 전무, 서영태 기후에너지환경부 녹색전환정책관, 오정민 K1모빌리
+  [30725] eos=4 KO(0.40) |  음식물류 폐기물 배출자는 각각의 사업장에서 발생하는 음식물류 폐기물을 기후에너지환경부령으로 정하는 바에 따라 공동으로 수집ㆍ운반 또는 재활용할 수 있고, 폐기물처리시설을 공동으로 설치ㆍ운영할 수 있다. 이 경우 공동 운영기구를 설치하고 그 대표자 1명을 선정하여야 한
+  [30726] eos=5 EN(0.12) | 4.332 at the previous offering of the bond on April 21. The first round of bidding ends at 12 p.m. local time. To contact the reporter on this story: 
+  [30727] eos=3 KO(0.37) |  그들의 발음 등을 따라하는 쉐도잉 공부방법도 스피킹과 리스닝 공부에 매우 좋다. 절대 경거망동하지 말자 어학연수를 노리고 열심히 어학연수생네 나라 언어를 익혀둔 현지 주민들이 되려 해당 언어를 매우 잘한다고 계속 추켜세우면서 돈만 긁어가는 얌체족 이 있을 수도 있다.
+  [30728] eos=2 KO(0.39) |  는 명예살인 이, 사헬 지대 에 있는 아프리카 국가들은 할례 라는 극악의 악습이 있을 정도로 단순히 성문화가 보수적인 것을 떠나서 최소한의 인권과 기본권을 상실한 지역이다. 심지어 산유국 으로 경제적으로 풍족한 편에 속하는 아라비아 반도 에 있는 국가들이나 중동 , 
+  [30729] eos=5 EN(0.06) |  촛불집회 관련 사건에 대해 '현행법대로' , '신속하게' 재판할 것을 담당 판사들에게 이메일로 보냈다는 것이 KBS에 의해 보도되었다. 대법원은 3월 6일 진상조사단을 꾸려 조사에 착수하였으며 신영철 대법관은 사상 최초로 윤리위원회에 회부되었다.<|endoftext|
+  [30730] eos=5 EN(0.00) |  Ontario-based company, said those options are examples that Heins cited among the possibilities under consideration in a strategic review. The compan
+  [30731] eos=5 EN(0.08) |  산업 수요에 기반한 교육 과정과 재교육·전직을 지원하는 실습 중심 플랫폼으로 변신하는 수밖에 없다. 변신과 생존의 골든타임이 얼마 남지 않았다.<|endoftext|>: In Greece, pro-bailout party New Democracy placed firs
+  [30732] eos=4 MX(0.15) |  her return to Berlin May 24 to reconsider a separate proposal on common liability for sovereign debt. Spain ’s Deputy Prime Minister Soraya Saenz de 
+  [30733] eos=7 MX(0.18) |  미국 협력사에 직원 5명을 파견했다. "한국 청년들에게 태양광 기술을 보급하고 교육해 글로벌 인재로 성장시키겠다"는 취지다. "저희는 압도적 기술력을 기반으로 글로벌 에너지 기업으로 우뚝 서는 것이 목표입니다. 기업의 전략적 투자(SI)나 협력 등을 적극 유치하며 사
+  [30734] eos=3 KO(0.39) |  소개되어 유명해진 말이다. Nudge 원서. Improving Decisions About Health, Wealth and Happiness Paperback(넛지 : 똑똑한 선택을 이끄는 힘) (출처: 게티이미지 코리아) 이들에 의하면 강요에 의하지 않고 자연스럽
+  [30735] eos=6 MX(0.17) |  366 (MILLRATE: .000000001) 0093 DREYFUS INSTITUTIONAL CASH ADV-ADMINISTRATIVE SH 26200V-20-3 0.05 0.05 39 19, 201, 072 (MILLRATE: .000001386) 6187 DR
+  [30736] eos=7 EN(0.14) |  a fan of Nucor's team-focused management style for years and was looking for an example of extreme leadership inside this unique organization. While 
+  [30737] eos=4 EN(0.08) |  says. Geithner plans to leave the administration by the end of January even if the debt ceiling issue hasn’t been settled. White House press secretar
+  [30738] eos=4 MX(0.18) |  HIV virus that causes AIDS was first isolated in 1983. “This can become a very attractive place, a magnet for international recruitment,” said Nurse,
+  [30739] eos=5 EN(0.05) | .8 percent decline in earnings before interest and taxes to A$453.1 million after cooler summer weather damped demand. Carlton & United’s profit margi
+  [30740] eos=5 MX(0.23) | 하면 아이를 적게 가질 수도 있으며, 한국급으로 경제가 성장하면 인도인들도 교육 인플레에 시달리며 한국 못지 않은 저출산 현상이 닥칠 수도 있다는 것이다.<|endoftext|>: In economics, supply and demand equilibrium is th
+  [30741] eos=4 MX(0.25) | 기로 갑자기 밀어붙였다고 한다. 이에 쫄았는지 가까이 오지 않다가 떠났다고. 베를린 봉쇄는 대실패로 끝나고 오히려 미국과 서방의 단합력과 가공할 경제력과 동원력만을 재입증하고 말았다. 미국의 공수작전은 서방세계의 화려한 선전현장이 되었을 뿐이었다. 스탈린은 제대로 체면
+  [30742] eos=5 EN(0.08) |  saying the Dreamliner should return to service as soon as possible. Airbus has pointed to its own share of technical challenges on recent programs, i
+  [30743] eos=5 MX(0.26) | ’t the only country with a parliament; others have them too.” Juncker said today’s meeting is expected to agree on the next disbursement of internatio
+  [30744] eos=5 EN(0.09) | . The stock has climbed 18 percent in the last year, valuing the Munich-based company at 12.9 billion euros. VW was up 0.8 percent at 173.05 euros. Vo
+  [30745] eos=6 MX(0.23) |  voters reject the taxes. The plan involves “much uncertainty” because of Brown’s insistence that the tax and fee extensions go before voters, the sta
+  [30746] eos=7 EN(0.14) |  8천 가량의 사상자를 냈다. 절반 조금 넘는 병력으로 싸웠으면서 사상자는 오히려 북군이 남군의 2배 가량이었다는 말이다. 다만 그랜트는 그런 상황에서도 북부의 우월한 물량을 기반으로 뚝심있게 버티면서 물고 늘어졌다. 그랜트의 북군 전투의 손실면에선 더 컸는데도 불구하
+  [30747] eos=3 KO(0.69) | 부상  한화에어로스페이스 제공 연이은 대형 수주를 앞세워 성장 중인 국내 방위산업 업체들이 시중은행의 핵심 여신 고객으로 떠오르고 있다. 이들 기업은 주로 발주받은 무기를 제조하는 과정에서 필요한 지급보증을 대거 받고 있다. 방산업체들의 급부상으로 반도체, 자동차 등이
+  [30748] eos=4 MX(0.15) | 할 수 있을 것으로 분석된다. 바이오믹스테크는 확보한 자금으로 공장 증설에 나선다. 최근 유통 대기업과의 거래 물량이 급속도로 확대되면서 주문이 급증하고 있다. 투자를 진행한 김석태 키움PE 투자2본부장은 “식물성 대체육 원천 기술을 가진 바이오믹스테크의 기술력에 기업
+  [30749] eos=4 EN(0.07) |  a separate report today. Copper for three-month delivery gained 1.4 percent to $7,393.25 a ton by 3:20 p.m. on the London Metal Exchange and aluminum
+  [30750] eos=5 MX(0.21) | 본드: 그린본드는 발행대금을 기후 및 환경 관련 사업에 사용하는 것을 전제로 발행되는 특수목적 채권이다. 특징은 발행대금의 사용처(use of proceeds)에 있고 발행자가 그린 본드 원칙(GBP; Green Bond Principle)에 따라 채권을 발행하는 경우
+  [30751] eos=4 KO(0.65) |  would include a two-year transition period. The Fed then could issue three, one-year implementation extensions on a case-by-case basis after that.<|e
+
+====================================================================================================
+STEP 1010 | samples 32320-32351 | avg_docs/seq=4.8 | avg_ko=0.24
+====================================================================================================
+  [32320] eos=0 KO(0.67) |  코딩은 IT회사에서 피해갈 수 없는 기술이었다. 혼자 공부하다 미국행을 결심했고, 현지 코딩 부트캠프에 참여했다. 취업하고 교육비를 내는 시스템에 영감을 받아 2015년 창업했다." "하루 빨리 ‘비전공자’라는 프레임에서 벗어나야 한다. 문과생이라고 해서 불리하다는 
+  [32321] eos=5 EN(0.11) | 전 때는 보수주의 이데올로기 동지였던 프랑코 진영으로 1만명 규모의 고대 루시타니아 의 반로마 지도자의 이름을 딴 비리아투스 군단 의용병을 파병하기도 했다. 프란시스쿠 홀랑 프레투 가 이끌던 포르투갈 파시즘 운동과도 한동안 제휴했으나 제2차 세계 대전이 발발하면서 깔끔
+  [32322] eos=6 KO(0.34) |  on dividends and capital gains and end breaks for Americans earning $250,000 or more. Obama signed the largest change in U.S. health-care policy in 4
+  [32323] eos=5 EN(0.04) | PO) said Atlantic superstorm Sandy appears to have caused minimal damage to their properties. Brookfield’s World Financial Center and One Liberty Plaz
+  [32324] eos=5 EN(0.12) |  마이크로소프트(MS) 부사장, 호아킨 두아토 존슨앤드존슨 CEO 등도 함께했다. 이날 세션에선 ‘브리지’(연결)를 주제로 논의가 이뤄졌다. 최 회장은 챗GPT를 ‘AI 쇼크’로 표현했다. 그는 “AI를 (활용)하는지 여부에 따라 개인·기업·국가 간 격차가 커질 것”이
+  [32325] eos=6 EN(0.08) |  new systems. The filing by trueEX , based in New York , covers contracts denominated in U.S. dollars, lasting for 2, 3, 5, 7, 10, 15, 20 and 30 years
+  [32326] eos=3 KO(0.67) |  비싼 생수부터 가성비 높은 생수가 계속 보여지는 식입니다. 이렇게 하면 소비자들이 자신이 원하는 물건을 빠르고 편리하게 쇼핑하고 나갈 수 있지요. 여성 소비자들의 온라인 패션 쇼핑은 장보기와 다릅니다. 원피스도 보고 니트도 보고, 치수 확인도 하며 장바구니에 한가득 
+  [32327] eos=4 MX(0.30) |  about the timing of their moves. Their chief concern on reaching Zango were children missing classes and consistent electricity. “The government shou
+  [32328] eos=3 KO(0.35) | 칭했던 노턴 1세 를 기려 그의 이름을 붙이는 걸 추진한 적이 있었다. 노턴 1세가 전 시민적인 지지를 받고 있었고, 실제로 노턴 1세가 그 자리에 현수교를 지어야 한다고 처음 말했기 때문이다. 그러나 오클랜드 측에서는 노턴 1세가 누군지 몰랐기 때문에 반대하여 무산되
+  [32329] eos=4 KO(0.38) |  초(연장전까지 갔으면 끝내기가 발생한 이닝 초)에 올라온 투수가 승리를 가져간다. 그렇기 때문에 끝내기 이전에 9회말까지 간다는 것 자체로 홈팀의 선발 투수와 마무리 투수 입장에서도 달갑지만은 않은 상황이 된다. 반대로 얘기하면, 끝내기로 끝난 경기의 승리 투수가 그
+  [32330] eos=4 MX(0.16) | 위 법원에 계류 중인 사건 또는 사안에 대한 판결 또는 의결을 신속히 진행하기 위한 체계적인 계획을 채택한다. 유사한 계획을 모든 특별 법원과 준사법기관에 대해서도 채택한다. 제13조 본 헌법이 비준 받기 전 법원의 판결을 위해 제출된 사건 또는 사안의 판결 또는 의결
+  [32331] eos=4 KO(0.35) |  a closing basis since Sept. 1. The bond’s price fell 0.254 centavo to 121.713 centavos per peso. Yields on the benchmark bonds have risen 15 basis po
+  [32332] eos=5 EN(0.14) |  business, which includes trading in futures contracts and buying and selling physical commodities, may be affected by the Volcker rule, which limits 
+  [32333] eos=4 KO(0.36) |  people today, mainly in the northern province of Idlib, Al Arabiya reported, citing activists. About 55 people were killed yesterday, the Local Coord
+  [32334] eos=4 KO(0.65) | 타 등 디저트와 함께 버섯 아란치니, 새우&우니 카나페 등 다양한 메뉴를 만나볼 수 있다. 가든카페 무화과 디저트 4종. 파라다이스시티도 제철 식재료를 활용해 가을과 어울리는 디저트를 출시했다. '가을의 보석'이라 불리는 무화과로 만든 타르트와 에클레르, 파르페, 쇼트
+  [32335] eos=4 MX(0.28) | . 그는 "PBS를 시행할 수밖에 없던 이유가 있을텐데, 장점과 문제점을 동시에 분석할 필요가 있다"고 밝혔다. PBS는 출연연이 정부로부터 받는 출연금 외에 국가 R&D 프로젝트를 수주해 연구비와 연구원 인건비를 충당하는 제도다. 과학계는 PBS로 연구자들이 톱다운(
+  [32336] eos=7 KO(0.35) |  crack down on peaceful protesters in 2011, members of the army started to defect. The FSA includes former regime soldiers and civilian volunteers. Th
+  [32337] eos=5 KO(0.31) | 장회과육(춘장 삼겹살 튀김볶음)으로 우승하여 최소 공동 우승을 확보하였다. 하지만 마찬가지로 3승을 확보한 여경래 대가가 있고, 2승과 1승이었던 유방녕 대가와 진생용 대가 역시 3승이 걸린 마지막 라운드의 코스 요리 대결에서 각자 1승씩 추가하며 3승과 2승으로 올라
+  [32338] eos=6 EN(0.13) | ip Shanghvi, rose the most in 14 months after the U.S. approved the company’s generic version of Johnson & Johnson (JNJ) ’s cancer drug Doxil. The sha
+  [32339] eos=5 EN(0.13) |  prices by 0.2 to 0.3 percentage points in the first quarter, in line with the experience in other countries, the European Union’s statistics office s
+  [32340] eos=6 EN(0.14) |  마음-몸 문제에 대한 잠재적 해법을 제시한다.<|endoftext|>: Judge Donald Parsons Jr. is presiding over the non-jury trial, scheduled to last a week. He hasn’t said when 
+  [32341] eos=5 MX(0.16) | 촌, 청담, 교대, 압구정 등의 장소를 거쳐 현재의 위치로 이전했다. 재즈보컬리스트 말로가 운영하고 있다. 올댓재즈 - 이태원에 위치한 재즈클럽. 한국에 만들어진 최초의 재즈클럽이다. 원스인어블루문 - 청담동에 위치한 재즈클럽. 각종 TV 드라마 및 영화 촬영지로 유명
+  [32342] eos=5 MX(0.17) |  financial crisis. Regulators liquidated Sao Paulo-based Banco Cruzeiro do Sul in September after finding “serious” financial violations. Banco Paname
+  [32343] eos=5 EN(0.01) | 2008. The case is AbitibiBowater Inc., 09-11296, U.S. Bankruptcy Court, District of Delaware (Wilmington). Constar Projects $16.3 Million Operating Ca
+  [32344] eos=6 EN(0.10) |  determine whether he’d broken them. The decision to pursue Soros without the support of the regulator was “rare” for French courts and done more “in 
+  [32345] eos=6 EN(0.08) | 치(Rex Burch)가 발간한 《인도적인 실험 기법의 원칙》에서 처음 소개됐다. 오늘날에는 동물실험에 대안을 찾는 것뿐만 아니라 동물이 반드시 필요한 실험에서는 동물의 복지를 향상시키기 위한 윤리로 확장됐다.<|endoftext|>: The pound strength
+  [32346] eos=5 MX(0.19) | 024년 여름 동안 매일 밤 10시에 5분 동안 나이아가라 폭포에서 불꽃놀이가 진행된다. 또한, 나이아가라 폭포는 매일 밤 다양한 색상의 조명으로 밝게 비춰진다. 조명 프로젝트는 최근 에너지 효율이 높은 LED 기술로 교체되어 더 밝고 효율적인 조명 효과를 제공한다. 
+  [32347] eos=7 MX(0.15) | 낙 커 전복에게 먹이로 줄 수준의 가격대가 아니라는 설명이다. 인건비도 문제다. 업계 관계자는 “한국은 전복을 키우고 수확하는 과정에서 어촌계가 어가별로 돌아가면서 노동력을 품앗이해준다”면서 “일본은 이런 시스템이 별로 없고, 외국인 근로자를 쓰기엔 비용 부담이 크다"
+  [32348] eos=5 EN(0.00) | 98 percent in March from a year earlier, compared with 8.31 percent in February, according to official data last week. A 20 percent gain in the price 
+  [32349] eos=5 KO(0.42) | 구역 인 요동군 에서 비롯된 것이다. 하지만 중국이 정복한 지역에 행정구역을 설치할 때에는 대체로 피정복국가가 옛부터 사용하던 지명+주/현의 형식을 띄고 있었다. 당나라가 멸망시킨 후 설치한 안동도호부 휘하의 행정구역을 보면 개모주, 남소주, 창암주 등등 과거 고구려가
+  [32350] eos=4 KO(0.38) | 등교육, 고등교육 인프라가 있다. 그러나 마카사르 도시권, 마나도, 고론탈로를 제외하면, 술라웨시의 초등교육 및 중등교육 인프라는 전반적으로 심각하게 낙후되어 있다. 특히 서술라웨시는 소순다 열도의 서누사틍가라, 말루쿠 제도의 말루쿠주 등과 함께 경제, 교육 등 종합적
+  [32351] eos=5 EN(0.10) | : Seth Stern in Washington at sstern14@bloomberg.net To contact the editor responsible for this story: Mark Silva at msilva34@bloomberg.net<|endoftext
+
+====================================================================================================
+STEP 1080 | samples 34560-34591 | avg_docs/seq=4.8 | avg_ko=0.22
+====================================================================================================
+  [34560] eos=4 MX(0.26) | 0 405.00 364.37 184 1 Loin, top butt, bnls, heavy 7 11, 094 235.00 254.88 238.67 184 3 Loin, top butt, boneless 22 50, 584 244.05 271.00 252.09 185A 4
+  [34561] eos=5 EN(0.06) |  in Syria, Egypt and Angola. To contact the reporter on this story: Jasmina Kuzmanovic in Zagreb at jkuzmanovic@bloomberg.net To contact the editor re
+  [34562] eos=1 KO(0.65) | 갔다.<|endoftext|>상호관세: 도널드 트럼프 미국 행정부가 다른 나라의 관세 및 비관세 무역장벽에 따라 미국 기업이 받는 차별을 해소한다는 명목으로 부과한 관세로, 전 세계를 대상으로 하는 기본관세 10%와 이른바 최악 국가에 대한 개별관세로 구성돼 있다. 그
+  [34563] eos=6 EN(0.11) |  income. Dufry Group surged 6.7 percent to 110.4 francs, the biggest gain since February last year, as Kepler Capital Markets said the shares are at “
+  [34564] eos=5 KO(0.32) | 조될 것이 분명하다. 실제로 북한이 국제사회에서 고립된 두 가지 이유 가운데 하나가 핵 개발 이고, 다른 하나가 이를 운반할 ICBM의 개발이다. 따라서 현실적으로는 대한민국이 ICBM을 개발할 가능성은 매우 낮으며, 대신 사거리 1,000~3,000km 수준의 준중거
+  [34565] eos=5 KO(0.32) |  agreement is reached that’s more than just something minimal, he said, it would likely include a process for tax-code changes. Camp’s approach all al
+  [34566] eos=4 KO(0.66) |  히친스나 블레어도 당연히 여기에 속한다. 자유국제주의 와 항상 일치하는 개념은 아니다. 모든 자유주의적 매파는 자유국제주의자이지만 그 역은 성립하지 않기 때문이다. 자유민주주의와 인권을 이유로 타국에 대한 적극적 개입을 지지하면서도 무자비한 강경책에 대해서는 부정적인
+  [34567] eos=5 MX(0.18) | 8 percent year-over-year increase in April, according to the median of 26 forecasts in a Bloomberg News survey. Estimates ranged from 2.9 percent to 5
+  [34568] eos=6 MX(0.28) |  played by Seth Rogen , on a 3,000-mile road trip. Yvonne Strahovski and Colin Hanks co-star. Among returning films, “Rise of the Guardians” had sales
+  [34569] eos=4 MX(0.22) |  apart, Hayat said. Even before the acquisition was disclosed, Pharmasset had gained 234 percent this year, twice as much as any other company in the 
+  [34570] eos=4 MX(0.23) |  1093 CHINA PHARMA 58 0.28 11.06 2.6 659 NWS HOLDINGS 14 0.17 6.76 2.5 241 CITIC 21CN 74 0.06 2.26 2.5 653 BONJOUR HOLD 60 0.08 3.07 2.5 345 VITASOY I
+  [34571] eos=3 KO(0.65) |  긱스(Geeks)가 7일 스타트업 뉴스를 브리핑합니다. 사진=빔모빌리티 홈페이지 빔모빌리티, 장마철 대비 안전 가이드라인 강화 퍼스널모빌리티(PM) 공유 서비스 회사 빔모빌리티가 장마철을 대비해 이용자들의 안전한 주행을 위한 가이드라인을 강화했다. 집중호우가 시작되기
+  [34572] eos=4 MX(0.20) | 년 재할당 사례도 등장했다. SK텔레콤 또한 2021년 전파법에 따라 2.1GHz LTE 주파수 대역을 ‘재재할당’받았다는 것이다. SK텔레콤도 당시 동일한 원칙에 따라 할인율을 적용받았다. LG유플러스 측은 당시에는 원칙에 대해 아무런 반박도 하지 않은 SK텔레콤이 
+  [34573] eos=7 MX(0.21) |  in London at agerlin@bloomberg.net To contact the editor responsible for this story: Phil Serafino at pserafino@bloomberg.net<|endoftext|>: J TOUCH C
+  [34574] eos=5 MX(0.17) |  니코틴 함유량을 줄여나가 담배 의존증을 줄일 수 있다는 것이다. 또한 담배에 포함된 타르, 일산화탄소 등 다양한 유해 화학물질이 전자담배의 카트리지에는 포함되지 않으므로 건강을 덜 해친다고 주장한다. 그러나 세계보건기구는 전자담재가 안전한 대체품이라는 연구 근거가 부
+  [34575] eos=6 MX(0.22) | 다고 한다. 이때의 미나와 아키라의 이야기가 미나가 소유한 사진을 유키에게 보여주는 시나리오로서 6권에 다시 나오는데, 이 말에 따르면 이미 꼬맹이일 때부터 누나를 보고 좋아했었다는 말. 은근히 연상 취향인 듯?<|endoftext|>: The move will als
+  [34576] eos=7 EN(0.14) | 23년 2월, 512GB를 3만 원대로 살 수 있게 되었고, 그 아래의 256GB는 1만 원 후반, 128GB는 제조사에 따라 5천 원 정도의 가격으로도 구입할 수 있다.<|endoftext|>: aid if the case isn’t resolved. This yea
+  [34577] eos=4 MX(0.16) |  household debt growth too much,” Karl Steiner, a currency strategist at SEB AB in Stockholm , said in an e-mailed response to questions today. “Our c
+  [34578] eos=4 KO(0.38) |  사건 조례안을 의결하면서 당시 문화재청장(지금의 국가유산청장)과 협의를 거치지 아니하였다 하더라도 법령우위원칙에 위반된다고 할 수 없다. 4. 예비적 청구에 대한 판단 가.<|endoftext|>: Embraer SA (EMBR3) , the world’s top r
+  [34579] eos=4 EN(0.04) |  these law firms we’re dealing with, we have reason to believe, actually forged documents, committed fraud, did all kinds of things,” McCollum said in
+  [34580] eos=5 EN(0.08) |  to ask Minister Lian: if there’s a man always making love to your woman when you’re not at home, would you consider him your brother?” It was a coars
+  [34581] eos=4 EN(0.06) | 止靑] 𭴼 [⿰火靑] 𰠟 [⿰片靑] 𰗂 [⿰書靑] 𮃇 [⿰禾靑] 𫏏 [⿰𧾷靑] 𲄤 [⿰身靑] 𫕻 [⿰靑靑] 𮧞 [⿰革靑] 𫘋 [⿰馬靑] 오리온 초코파이 에 등장하는 情이 흡사 '아홉'과 비슷하게 생겨서 情을 '아홉'으로 치환하는 야민정음 이 있다. 그리고 뒤집으면 뷁 
+  [34582] eos=5 KO(0.39) | 유업체인 고젝이 시장 1위를 달리고 있다. 고젝도 동남아 지역에서 식품배송, 소형화물 배송, 디지털 결제 등의 사업을 운영하고 있어 그랩과 경쟁 구도를 펼치고 있다. 그랩이 고젝의 ‘안방’을 직접 공략하는 전략으로 견제에 나섰다는 분석이 나온다. 앤서니 탄 그랩 최고경
+  [34583] eos=6 EN(0.12) |  popular social-networking site, gained 0.6 percent in its trading debut. Yingli Green , China’s third-biggest solar-energy equipment maker, lost 29 p
+  [34584] eos=5 EN(0.06) |  of 10 percent, the U.S. Department of Agriculture said yesterday. Winter wheat, used to make bread, goes dormant until March and is harvested startin
+  [34585] eos=5 EN(0.02) | hannisyan told to more than 1,000 people in the southern city of Kapan Feb. 27. Addressing a crowd 10 times that size in Yerevan’s Liberty Square yest
+  [34586] eos=4 EN(0.14) | .25 percent dollar securities due in 2027 has fallen 68 basis points, or 0.68 percentage points, to 13.07 percent, since closing June 10 at 13.75 perc
+  [34587] eos=5 MX(0.24) | 1 that ousted the government of Muammar Qaddafi and recovered again last year as the oil industry started to get back to normal. Libya’s oil productio
+  [34588] eos=6 MX(0.28) |  신관들이었던 것과 연관이 있다. 일본 검술의 3대 원류 중에서는 유일하게 원형이 전해지는 계열. 신토류 계열에서 사료적으로 가장 오래된 유파인 가토리신토류가 끊어지지 않고 전해지고 있다. 넨류와 카게류는 소멸했고 그 분파인 마니와 넨류와 신카게류만 남아있는 것과는 대
+  [34589] eos=6 EN(0.07) |  요청했다고 한다. 양시쿤이 매카너기에 했다는 말에 따르면 장제스가 처음에는 크게 반대하지 않았다고 한다.<|endoftext|>: The Canadian Forces suspended the training operation, called Nanook , and wi
+  [34590] eos=5 EN(0.14) |  states and generally offer tax- free gains on earnings if used to pay for eligible college expenses. Assets in 529 savings plans totaled about $158 b
+  [34591] eos=6 EN(0.10) | 거장을 만들 계획을 세웠다. 그리고 이 우주 정거장을 지을 때 사용할 우주선으로 우주왕복선 이 개발되었으나, STS-51-L 이후 이 우주 정거장 계획이 백지화되며 우주 왕복선만 남게 된다. 이후 소비에트 연방이 해체되면서, 러시아 SSR이 독립된 지위를 가지게 되면서
+
+====================================================================================================
+STEP 1210 | samples 38720-38751 | avg_docs/seq=4.9 | avg_ko=0.23
+====================================================================================================
+  [38720] eos=6 EN(0.13) |  krone gains. A short position is a bet that an asset will decline in value. Norges Bank Governor Oeystein Olsen said Feb. 27 in a speech in Moss, Nor
+  [38721] eos=6 KO(0.33) | 정을 부추길 때는 섬짱개 운운하면서 까기도 한다만 2020년대 이후 빈도수가 확실히 줄었다.<|endoftext|>: So it would be the multivitamin you take at the store, or omega-3 or omega-6 capsule
+  [38722] eos=6 EN(0.03) | 했다. 이어 “의무휴업 정책 효과가 미미하다면 과감하게 개선하거나 대안을 모색해야 한다”며 “온라인, 대형마트, 전통시장이 함께 성장할 수 있는 유통 생태계 구축이 절실하다”고 강조했다.<|endoftext|>: Two years later, AT&T bought Do
+  [38723] eos=4 MX(0.21) | 리단체 골드하우스가 선정한 ‘가장 영향력 있는 아시아인 100명(A100)’ 가운데 한 명으로 꼽혔다. A100은 아시아·태평양 지역 문화예술인을 지원하는 골드하우스가 매년 미국 문화와 사회에 큰 영향을 끼친 아시아인을 추린 명단이다. 김 대표는 2004년 네이버에 개
+  [38724] eos=5 EN(0.06) | 년을 맞아 새 로고를 만들고 사용자경험(UX) 디자인을 고객 친화적으로 개선했다고 25일 밝혔다. 2015년 한국에서 서비스를 시작한 LG채널은 현재 33개국에서 총 4000여 개 채널을 무료로 제공하고 있다. LG채널의 새로운 로고는 C와 H를 겹친 디자인이다. LG
+  [38725] eos=5 KO(0.45) | , 1인 방송 등에서도 쓰이고 있다. 네오사피엔스는 AI 음성 전문 기업이다. 지난 2월 컴퍼니케이파트너스, 우리기술투자 등으로부터 시리즈A 투자를 유치했다. 누적 투자금은 62억원이다.<|endoftext|>: Kenya’s All-Share Index rose fo
+  [38726] eos=7 EN(0.11) |  줄 순 없었는지 군장은 일반 보병들이 쓰는 하네스에 자신들이 입는 옷의 위장색과 맞추기 위한 흰칠을 조금씩 해서 사용한다. 필리핀 내 반군과의 전쟁을 다룬 바이스 다큐멘터리. 최근에는 그래도 디지털 컴뱃셔츠에 옵스코어도 간간이 착용한다. M653 이라는 M16A1 카
+  [38727] eos=7 EN(0.08) | . 공군 인트라넷 등의 체계상에서 위 부대를 단급 으로 분류한다. 그러나 엄밀히 따지자면 비행단급 으로 분류하는 것이 옳다.<|endoftext|>울레자즈: 하지만 이로 인해 라드라닉스 를 비롯한 셸나 크리하스 는 전멸했고, 두 테란을 따라 차원관문으로 뛰어든 몇몇 전
+  [38728] eos=9 EN(0.14) |  percent in Paris trading, the biggest intraday gain since Oct. 12, 2011. The stock was up 4.6 percent at 8.546 euros as of 11:15 a.m. local time, tri
+  [38729] eos=5 MX(0.21) | , rated A-, was among issuers to win lower relative borrowing costs when it sold bonds in March on behalf of Pocono Medical Center. The agency issued 
+  [38730] eos=5 EN(0.13) | 도적으로 적었던 것이다. 지금보다 기후가 따뜻한 편이었던 원삼국시대(전한·후한)에도 요동반도에 위치했던 요동군이 한반도 북부의 낙랑군보다 인구가 적었다. 특히나 지금이야 지구 기후가 ( 지구 온난화 로 인해 더더욱) 좀 따뜻한 편이지만 기후가 한랭해지는 시기에는 더더욱
+  [38731] eos=4 EN(0.00) |  it cut its earnings forecast. The S&P 500 erased 1.3 percent to 1,440.67, the biggest weekly slump since June 1. The benchmark index still climbed 2.
+  [38732] eos=4 EN(0.09) |  Kuomintang lawyer Chen Ming said the party’s appeal may be heard next week. Detailed Review Wang, 72, earlier agreed to demands by opposition lawmake
+  [38733] eos=5 EN(0.04) |  개 대학에서도 코딩 교육 및 역량 평가를 위해 채택되고 있다. 브랜치앤바운드를 설립한 이승용 대표는 서울대학교에서 컴퓨터공학을 전공했으며 국제정보올림피아드(IOI)에서 은메달을 수상한 코딩 전문가다. 이 대표는 “코딩 교육 시장 성장세는 빠른 반면 체계적인 학습 커리
+  [38734] eos=6 KO(0.38) | 드록 등 최신 기술을 활용한 혁신적 솔루션 개발과 엔터프라이즈 현대화에 기여한 점을 높이 평가했다”고 설명했다. 그에게 자극을 준 건 일본인 엔지니어들이었다. 그는 “AWS 커뮤니티에서 활동해보니 일본인 엔지니어들은 기술력과 활동 실적 모두 뛰어났다”며 “한국과 일본이
+  [38735] eos=7 MX(0.26) |  있다.<|endoftext|>오컬트: 그러나 현대적 표현인 occultism이 등장한 것은 그보다 3세기 가량 후인 19세기 프랑스로, 대표적으로 앙투안 쿠르(Antoine Court)가 이 표현을 사용한 예를 찾을 수 있다. 이 표현은 프랑스의 에소테리시즘 그룹들 
+  [38736] eos=5 EN(0.07) | eral Industries Group postponed dollar bond offerings as investor appetite for risk diminishes, according to two people familiar with the sales. Fujia
+  [38737] eos=5 KO(0.56) | 년 ): 일본 의 만화가 날아라 호빵맨 의 작가 1922년 - 호세 파니소 (~ 1990년 ): 스페인 의 전 축구 선수 김용 (~ 2018년 ): 중화권 소설가, 언론인 빌리 라이트 (~ 1994년 ): 잉글랜드 의 전 축구 감독 1931년 - 립 톤 (~ 2019년
+  [38738] eos=4 MX(0.18) |  full-time Nascar debut. Patrick said that inspires her. “When pressure’s on, when the spotlight is on, I do feel like it ultimately ends up becoming 
+  [38739] eos=5 KO(0.36) | 불가 라는 판정을 받은 안중근 의사 유묵 경천을 최고 감정가로 보는 견해도 있지만, 공식감정가는 값을 매길수 없어서 0원으로 책정되었으므로 공식감정가 순위에서는 제외된다.<|endoftext|>KBS경인방송센터: (인천에서 내는) 수신료가 595억원이면, 전국 3번째 
+  [38740] eos=4 MX(0.20) |  패왕 쪽 일이 아닌 자신의 청탁이라며 그 사물 퀑 이 다차원 구조가 맞다면 자신이 찾는 물건 이 그 안에 있는지 샘플만 몇 개 가져다 주면 된다고 부탁한다. 공자가 무슨 물건이냐고 묻자 그런 오지랖 좀 버리라며 그저 확인만 해주고 1장 받으라고 대답한다. 공자는 만일
+  [38741] eos=5 MX(0.20) | 드는 지난 3년간 총 투자액이 6500억원을 돌파하게 됐다. 넥스트라운드는 산은 주도로 국내 벤처기업과 VC를 연결, 모험자본을 육성하고 스타트업 생태계 활성화를 돕는 벤처투자플랫폼이다. 2016년 8월부터 679개 기업을 발굴해 총 128곳의 스타트업이 산은과 민간 
+  [38742] eos=5 MX(0.17) | 2.5 percent, to close at 1,706 pence in London. To contact the reporter on this story: Kari Lundgren in London at klundgren2@bloomberg.net To contact 
+  [38743] eos=5 KO(0.48) |  살 수 있는 유료 콘텐츠 플랫폼 퍼블리가 누적 유료 가입자 7만 명을 돌파했다고 15일 밝혔다. 2015년 설립된 퍼블리는 문자 기반의 콘텐츠를 기획·유통하는 플랫폼이다. 커리어 학습 플랫폼 ‘퍼블리 멤버십’, 정보기술(IT)업계 업무 관련 SNS ‘커리어리’ 등을 
+  [38744] eos=3 KO(0.47) | 기가 절대로 고장이 날 리가 없다는 비현실적인 말만 계속 반복하며 아무런 대비를 해 놓지 않았기 때문에, 관객들 입장에서는 핍진성을 조금이라도 생각하는 순간 절대로 영화에 몰입할 수가 없다.<|endoftext|>네이버 "자체 생태계" vs 카카오 "외부 혈맹"  K빅
+  [38745] eos=3 MX(0.27) | 블록을 사용하면 초당 최대 15기가바이트(GB)의 위성, 항공 영상 데이터를 AI 기반으로 분석할 수 있고, 다양한 이미지 분석 업무를 자동화할 수 있다. 옴니스랩스는 싱가포르 정부 지원 사업인 '지형 공간 분석' 산업의 빠른 성장에 서비스 확장 기회를 노리고 있다. 
+  [38746] eos=4 MX(0.18) |  돈을 벌어서 집안의 보탬이 되길 바라는 경우가 많은데, 이 경우 졸업 이후로도 오랜 시간 취업을 못 하면 압박감이 점점 커진다. 승진 없이 박봉으로 다니면 물론 시간이 지나면서 최저시급은 계속 오르면 오르지 절대 낮아지지는 않지만 아무리 올라도 수도권 자가 집값을 생
+  [38747] eos=3 KO(0.49) |  지난달 소비자물가지수는 전년 동월 대비 2.1% 상승했다. SK텔레콤 유심 해킹 사고에 따른 통신료 할인이 끝나면서 지난 8월(1.7%)에 비해 상승폭이 0.4%포인트 커졌다. 소비자 체감도가 높은 가공식품과 외식 물가는 전체 물가상승률을 웃돌았다. 가공식품에선 김치
+  [38748] eos=4 MX(0.19) |  다리어외에도 키르기스어 , 와키어, 사리콜리어도 쓰이고 있다. 바다흐샨 지역 동쪽으로 길게 뻗은 와칸 회랑 의 최동단 지역은 키르기스족의 비중이 높은 지역으로 소련-아프간 전쟁 당시에는 전쟁의 여파가 미치지 않았고, 아프가니스탄 이슬람 토후국 시절에도 북부동맹 의 세
+  [38749] eos=5 EN(0.09) | ’s largest consumer of the metal, may take more steps to tighten credit. The People’s Bank of China said stabilizing prices and managing inflation exp
+  [38750] eos=3 KO(0.39) | 렸다. 첫번째 버전의 경우 제작자가 참여한 팟캐스트에서 일부분이나마 들을 수 있다. 영상의 3분 0초부터 3분 12초까지 가 해당 음원의 일부이다. 독일 재통일 직후 동독 국유재산의 민영화 를 담당하던 신탁청 장관 데틀레프 로베더 의 암살 사건을 다룬 넷플릭스 오리지널
+  [38751] eos=4 MX(0.29) |  10-year gilt rose nine basis points, or 0.09 percentage point, to 2.05 percent at 4:54 p.m. in London after falling to a record 1.917 percent yesterd
+
+====================================================================================================
+STEP 1240 | samples 39680-39711 | avg_docs/seq=4.8 | avg_ko=0.25
+====================================================================================================
+  [39680] eos=5 EN(0.09) |  방위비 분담금 인상, 미국산 액화천연가스(LNG) 구매, 알래스카 가스관사업 참여 등을 얻어내겠다는 속셈을 드러낸 셈이다. 뾰족한 반격 카드가 없는 우리로선 일괄협상이 유리하다고 볼 수 없다. 오히려 미국이 대폭 양보를 얻어내 상대적으로 협상이 어려운 중국, 유럽연합
+  [39681] eos=3 KO(0.64) | 먼트, 인터밸류파트너스, 디티앤인베스트먼트, IBK증권, 이지자산운용 등이 참여했고, 기존 투자자로 인트로바이오, 로이투자파트너스, 뮤어우즈벤처스, 유경PSG자산운용 등이 참여했다. 리스큐어는 이번 투자금을 간질환 치료제 후보물질 ‘LB-P8’의 미국 임상2상 진행과 
+  [39682] eos=5 EN(0.00) | 04) unit over $22.3 million in notes. A lower-court judge, which ruled against WestLB in trial in November, declined to grant it permission to appeal,
+  [39683] eos=5 MX(0.24) |  “provide economic insights and analysis that will help with the formulation of policies conducive to broadly shared growth.” Shapiro, who has recentl
+  [39684] eos=5 EN(0.08) |  and aquatics venues in east London, do not have as many options. During the games, Patrick Marche won’t be allowed to hand out flyers opposite one re
+  [39685] eos=5 MX(0.28) |  more effective governance,” New Delhi-based Rao said. “They are exploring the possibility of early elections.” The BJP, which ruled Karnataka for the
+  [39686] eos=1 KO(0.65) |  were about 40 percent fewer mergers, according to data compiled by Bloomberg.<|endoftext|>전 세계 온라인 여행 90% 장악했다…빅4의 성공 비결 [긱스]  에어비앤비, 부킹닷컴, 익스피디아. 이젠
+  [39687] eos=6 KO(0.49) |  (Open Book) 시험 방식도 도입되었는데, 말 그대로 대학에서 보는 오픈북 시험처럼 시험 문제를 풀 때 시험 대비용 교과서를 가져와서 참고할 수 있다.<|endoftext|>효도 카즈타카: 사람 하나 담그는 것따위는 일도 아닌 막강한 권력을 갖고서도 반드시 공정
+  [39688] eos=7 EN(0.11) | 의 역사는 대체로 1950년대부터로 간주되나, 실제로 일정한 기반을 갖추고 독자적으로 번성한 것은 이하의 당둣이 나온 1970년대이다. 그러나 그 이전에도 고품질의 대중음악이 없었던 것은 아니다. 1957년작 뮤지컬 영화 세 소녀(Tiga Dara)의 사운드트랙이 좋은
+  [39689] eos=5 EN(0.07) | 11.7 390 CHINA RAILWAY 1289 2.79 23.80 11.7 5 HSBC HOLDINGS 519.60 34.76 299.59 11.6 1333 CHINA ZHONGWANG 70.80 0.24 2.09 11.6 2331 LI NING 137 1.40 1
+  [39690] eos=5 EN(0.08) |  estimate of $1.06. Rubicon Technology Inc. (RBCN) fell 8.6 percent, the most since Oct. 17, to $12.07. The maker of crystalline products was cut to “
+  [39691] eos=0 KO(0.69) | 발족시킨 집단방위기구이다. 특히 1955년 서독이 나토에 가입하자 소련 등의 공산권 국가들은 이에 대한 대항 조치로 ' 바르샤바조약기구 '를 창설했고, 이 두 기구는 냉전 시기 치열히 대항했다. 그러나 바르샤바조약기구는 구소련의 해체와 동유럽의 자유화로 1991년 해체
+  [39692] eos=4 KO(0.32) |  the area, they should also have the right to vote. The court also set key oilfields run by the Greater Nile Petroleum Operating Co. , which is 40 per
+  [39693] eos=5 EN(0.05) | 루루 국제공항, 싱가포르 창이국제공항, 김포국제공항에 이어 인천국제공항까지 국내외 대표적인 국제공항 4곳에 입점하는 쾌거를 이뤘다. 해외에서도 꾸준한 성장을 기록 중이다. 첫 해외 진출국인 인도 법인의 가파른 성장과 매장 확대로 현재 약 60여개의 직영 매장을 운영하고
+  [39694] eos=6 KO(0.38) | 스만 제국 이 연합군에 항복했다. 1918년 - 1912년 법률 에 의해 경계가 정해진 콘스탄티노플 시 프레페크튀어 관할 구역 내에 1918년 10월 30일 이전에 이미 정착한 모든 그리스인은 콘스탄티노플 거주 그리스인으로 간주된다. 1961년 - 차르 봄바 를 실험했
+  [39695] eos=5 KO(0.35) |  영향을 미친 게 확실해 보인다"면서 재계 인사들이 뇌물로 관세를 낮추고 사적 이익을 챙기려 했다고 주장했다. 스위스 형법상 외국 공무원이나 국제기구 관계자에게 공무 관련 부당한 이득을 제공하면 5년 이하 징역에 처할 수 있다. 시계업체 롤렉스의 장프레데릭 뒤푸아 최고
+  [39696] eos=5 KO(0.34) |  SA (PETR4) , told Globo TV that the company may need to “adjust” prices because international prices are high and fuel imports have increased. For Re
+  [39697] eos=5 EN(0.01) |  & High Yield Index was started in 1998. The firm’s index of sovereign bonds shows yields dropped to 2.79 percent this week from 4.28 percent in Novem
+  [39698] eos=6 MX(0.18) |  수인·분당선 을 이용할 수 있는 왕십리역 에 더욱 빠르고 편안하게 접근할 수 있게 된다. 동북선은 제기동역에서 이용할 수 있다. 용두역은 지선 에 있는 역이기도 하고, 청계천 하저터널 구간에 위치하기 때문에 동북선 환승역이 설치되지 않는다. 왕산로 와 천호대로 에 중
+  [39699] eos=4 KO(0.38) |  this story: David Papadopoulos at papadopoulos@bloomberg.net<|endoftext|>마키아토(소녀전선2: 망명): 샛별의 축복 뉴럴 헬릭스・ 네메시스 공격 보너스 3.0% 액티브 공격으로 적 처치 시, 자신이 통찰 효과를
+  [39700] eos=6 MX(0.21) | 직을 끝으로 공직을 퇴임하여 2025년 3월, 한덕수 권한대행 체제 에서 보건복지부 산하 공공기관인 한국공공조직은행 의 행장으로 임명되었으나 2025년 6월 29일, 이재명 정부 출범 이후 보건복지부 제2차관 으로 발탁되었다.<|endoftext|>: Bank inve
+  [39701] eos=5 MX(0.20) |  58.6 percent from 59.6 percent, the company said. Isla said he’s satisfied with first-half gross margin and predicted it will be “stable” in the seco
+  [39702] eos=4 KO(0.43) | , 한국과 일본이 과거사 문제와 일본발 수출규제, 지소미아(GSOMIA·한일군사정보보호협정) 연장 보류 등으로 갈등한 상황에 대해 "큰 그림에서 한일 양국은 물론 미국도 지는 상황이었다. 북한과 중국만 내분으로 이익을 봤다"고 불만을 토로했다. # 이인영 통일부 장관이
+  [39703] eos=5 KO(0.35) | 1.2 percent security due December 2020 lost 0.354 yen to 99.378. The yield reached the highest level since June 4. A basis point is 0.01 percentage po
+  [39704] eos=5 MX(0.22) | 가 재정적ㆍ기술적 또는 지리적 조건 등으로 인하여 일반수도의 수도시설을 설치할 수 없거나 그 설치가 곤란하다고 인정하면 직접 일반수도의 수도시설을 설치할 수 있다.<|endoftext|>: Oliver Yates, the former Macquarie Group Ltd
+  [39705] eos=5 EN(0.01) |  investors speculated the new regulations would cap ownership stakes for foreign banks and scuttle the deal. Majority Stake Foreign banks and other in
+  [39706] eos=6 MX(0.16) |  및 노후점포 환경개선’ 업무협약의 일환으로, 건설 분야 교육생들이 현장에서 실습 경험을 쌓는 동시에 지역 소상공인의 점포 환경개선에 기여할 수 있도록 마련됐다. 서울특별시 기술교육원 동부캠퍼스의 ‘건물보수과’와 ‘디지털콘텐츠디자인과’ 교육생 50여 명은 9월부터 건축
+  [39707] eos=5 MX(0.18) |  was vital given the complexity of the case, the people said. Such data would be evidence in the commission’s file, such as e-mails and other messages
+  [39708] eos=5 MX(0.21) | 에게는 소량을 먹인 경우 별 탈이 없다. 미국의 비영리 조직인 컨슈머 리포트에 의하면 일부 카카오 베이스 제품들에 들어간 납과 카드뮴의 함량을 주의해야 할 필요가 있다고 한다. # 카카오톡 에서 '카카오' 및 'kakao'는 대화명( 닉네임 )에 쓰지 못한다.<|end
+  [39709] eos=5 KO(0.34) | 지는 기어 3가 어디까지나 기술의 영역에 머무르는 것과 달리 기어 4는 외형이 크게 변하며 작중에서 이를 본 이들은 기어 4를 아예 변신이라고 칭한다. 기어 4를 사용하는 동안 기어 5 를 암시하는 듯한 묘사가 있다. 도플라밍고나 카이도가 기어 4 루피와 싸울 때 '고
+  [39710] eos=5 MX(0.21) |  started Capstone in 2004 when he bought the U.S. business of Mako Global, a London-based trading company. The firm’s $1.1 billion hedge-fund business
+  [39711] eos=4 EN(0.06) | 4.6 1898 CHINA COAL 2371 24.09 169.08 14.2 970 SPARKLE ROLL 1064 1.50 10.64 14.1 753 AIR CHINA 1494 11.54 82.34 14.0 297 SINOFERT 4376 13.74 98.25 14.
+
+====================================================================================================
+STEP 1370 | samples 43840-43871 | avg_docs/seq=5.1 | avg_ko=0.17
+====================================================================================================
+  [43840] eos=5 EN(0.12) |  함혈분인( 含 血 噴 人 ) 훈가미 유야 (噴 上 裕 也 ) 칠공분혈 ( 七 孔 噴 血 ) 濆 (뿜을 분) 𤂿 [⿰氵選] (뿜을 선) 噀 / 潠 / 𠹀 [⿰口孫] (뿜을 손) 鱝 (가오리 분) 𪎰 [⿰麻賁] (겨릅대 분) 膹 / 𦡛 [⿰肉賁] (고깃국 분) 𤗸 [⿰片
+  [43841] eos=5 KO(0.35) |  메이플을 하면서 스킬명을 외친다. '나와라 용가리의 맛', '나와라 다섯 개의 침' 등등.<|endoftext|>규제프리존: 정부가 27개 전략산업을 육성하기 위해 14개 시도별로 지역전략산업 관련 규제를 과감히 철폐, 자유로운 기업활동을 보장한 지역. 규제프리존은 
+  [43842] eos=6 EN(0.00) |  funded by the Saudi Fund for Development and the Arab League ’s Kuwait- based Arab Fund for Economic and Social Development at a cost of $80 million.
+  [43843] eos=5 EN(0.10) |  Dunn’s resignation, remains a director and becomes chairman of the audit committee , Best Buy said. Best Buy’s board initially demanded that Schulze 
+  [43844] eos=5 EN(0.13) | 니파트 전투에서 두라니 왕조 에게 대패한 뒤 남쪽으로 후퇴한 상황이었다. 당시 마이소르 왕국은 하이데르 알리 와 그 아들 티푸 술탄 아래에 있었다.<|endoftext|>: Oil fell from a two-day high in New York as concern t
+  [43845] eos=4 EN(0.10) | 86 HUIYUAN JUICE 33 0.11 6.79 1.6 363 SHANGHAI IND H 16 0.41 26.38 1.6 2 CLP HOLDINGS 12 0.81 52.17 1.6 737 HOPEWELL INFRA 4 0.02 1.07 1.6 23 BANK OF 
+  [43846] eos=5 MX(0.19) |  쇼군 , 인세이를 만기친람 (萬機親覽)을 어지럽힌 주범으로 규정해 섭정 은 황실전범 에서 황태자 나 황태손 으로 제한하고, 관백 및 쇼군 직위를 폐지하고 양위를 다루는 규정을 넣지 않아서 다시는 만기친람을 어지럽히는 일이 나올 수 없게 하였다. 이로써 인세이의 전제가
+  [43847] eos=6 EN(0.04) |  year, the second UN official said. Saudi Arabia , Qatar and the United Arab Emirates -- three Gulf countries that are funding Syrian rebel groups -- 
+  [43848] eos=8 EN(0.09) |  To contact the editor responsible for this story: Jodi Schneider at jschneider50@bloomberg.net<|endoftext|>: The temporary factors I mentioned earlie
+  [43849] eos=5 MX(0.22) |  2016, according to the New York Fed’s website. To contact the reporters on this story: Daniel Kruger in New York at dkruger1@bloomberg.net ; Cordell 
+  [43850] eos=7 MX(0.22) |  때, 여러분은 작가가 의도한 대로 그것을 만들 책임이 있습니다. 그리고 거기서부터 더하고 확장해서 3차원적인 능력을 만들어내야 합니다. # 내가 말했듯이, 나는 정말 무서워하는 것이 있지만 그것은 나를 잃기 위해 열심히 일하게 만든다. 나는 배우로서나 캐릭터 플레이어
+  [43851] eos=4 EN(0.06) |  joint session of Congress. Israeli-Palestinian negotiations stalled shortly after they resumed in September 2010 when Netanyahu refused to extend a 1
+  [43852] eos=5 MX(0.23) |  시다르타(Otto Sidharta, 1955–), 인도네시아적 모티브를 활용한 야지드 자민(Yazeed Djamin, 1950–2001) 등이 있다.<|endoftext|>: However, those billions could have helped create jo
+  [43853] eos=6 EN(0.01) | ), 택배물품 세대 배달 등 개별 세대의 업무를 직접 수행하거나, 관리사무소 일반 업무를 보조하는 것은 원칙적으로 제한된다. 이를 위반하는 경우 입주자, 입주자대표회의 또는 관리주체 등에 1000만원 이하의 과태료가 부과될 수 있다.<|endoftext|>: (PFE)
+  [43854] eos=4 MX(0.27) | 三危太校勘伯可以 弘益人間 乃授天符印三箇遣徃理之 옛날에 환인 (제석을 말한다.) 의 서자인 환웅이 천하에 자주 뜻을 두어, 인간세상을 구하고자 하였다. 아버지가 아들의 뜻을 알고 삼위태백을 내려다보니 사람들이 사는 세상을 널리 이롭게 할 만한지라 , 이에 천부인 세 개를
+  [43855] eos=6 MX(0.18) |  DEATHWING , RAVENWING , TACTICUS , GRAVIS , PHOBOS , TERMINATOR , CHAPTER MASTER , CAPTAIN , LIEUTENANT , REGIMENT , OFFICER , PLATOON , CULTMECHANIC
+  [43856] eos=7 EN(0.08) | <|endoftext|>: Michael Vick threw four touchdown passes and ran for two more scores as the Philadelphia Eagles beat the Washington Redskins 59-28 to t
+  [43857] eos=5 MX(0.24) |  for Japan's credit rating and fiscal policy. Colquhoun, speaking from Tokyo, also discusses China's shift in currency policy, and its implications fo
+  [43858] eos=4 KO(0.39) |  사건은 성 착취 범죄로 보이며, 관할 수사기관 및 상파울루주 검찰청과 함께 책임자에 대해 적법한 조처를 하기 위한 노력을 하고 있다"고 말했다. 현지 수사기관은 불법 행위로 연결될 수 있는 만남을 주선하는 해당 사이트 운영과 관련한 인물로 "일본계 브라질 국적 남성"
+  [43859] eos=5 EN(0.03) |  2018년에 반다이에서 분사한 계열사로 반다이 시절부터 이미 건담 프라모델 로 유명한 회사. 프라모델계에선 기술력, 생산력 모두 전세계 No.1 이다. 시장 점유율을 보면 반다이와 그 나머지라고 해도 될 정도. 거기에 2025년 여름 가동을 목표로 기존보다 큰 규모의
+  [43860] eos=3 MX(0.28) | anssen)에 1조 4000억 원 규모로 글로벌 판권을 기술 수출했다. 이후 2021년 식품의약품안전처의 허가를 받아 국내에 출시됐고, 2023년에는 미국 식품의약국(FDA)으로부터 희귀의약품 지정(Orphan Drug Designation)을 획득했다. 그리고 20
+  [43861] eos=6 EN(0.08) |  열렸으며, 미래 먹거리 확보에도 두 나라가 함께 한발 앞서나가게 됐다. 이제 양국 관계를 '기술경제동맹'이라고 부를 수 있을 것"이라며 "이재명 대통령의 이번 미국 방문으로 한미동맹은 군사를 넘어 안보·경제·기술을 아우르는 미래형 포괄적 전략동맹으로 진화했다"고 평가
+  [43862] eos=6 EN(0.13) | , Kwon said.<|endoftext|>: Gold demand in China, the world’s largest consumer after India , may slow in the second half of this year after surging in 
+  [43863] eos=4 EN(0.10) |  《 No one likes us 》, 스카이민혁 의 《 해방 》, 랍온어비트 의 Young Boy (Feat. oygli) 등이 주요 후보로 거론되고 있으며 그외의 후보로는 원슈타인 의 《 쿨 등이 주목받고 있다. 올해의 레이블 부문은 컴필레이션 앨범 2장과 소속 아
+  [43864] eos=4 MX(0.19) |  형인 아자이가 비행기의 다른 줄에 앉아 있었다며 그를 찾기 위해 도움을 요청했다. 아마다바드의 고위 경찰관인 비디 차우드하리 또한 비스와시쿠마르가 "비상구 근처에 있었고 이를 통해 뛰어내려 탈출했다"고 확인했다. 영국에 사는 비스와시쿠마르의 사촌인 아자이 발기는 영국
+  [43865] eos=4 MX(0.26) |  dropped to 369.5 million barrels last week, the API data show. Supplies are forecast to increase 2.2 million barrels to 373.9 million, according to t
+  [43866] eos=6 EN(0.02) |  수단을 활용한 거래를 시도한 것으로 풀이된다. 이란은 과거에도 암호화폐를 통해 석유를 판매하는 등 제재 회피 수단으로 디지털 자산을 사용해왔다. 미국 재무부는 지난해 9월 이란 혁명수비대와 연계된 개인에게 제재를 가하며 이들이 암호화폐를 이용한 ‘그림자 금융’ 네트워
+  [43867] eos=5 KO(0.52) | 을 묶은 형식이라 강풍을 비롯한 악천후에 밧줄 하나가 풀린경우 그 현수막이 날려 보향자나 주차차량을 포함하여 차량에게 위협을 가한다. 불법 현수막은 고정을 위해 양쪽 끝이 보통 각목등 나무가 하나이상 들어가 있는데 이것이 흉기가 된다. 다른 불법 현수막은 그냥 지자체에
+  [43868] eos=5 EN(0.02) |  등 암기 파트에서 지엽성이 강화되는데, 특정 동물을 주고 상위 분류를 묻는다든지, 특정 분류, 이를테면 진수하강(Eutheria)에 속하지 않는 동물이 무엇인지를 고르게 시키는 식이다. (이상의 역사, 생물 예시는 2019년 기출에서 발췌) 인도네시아의 사립대학은 저
+  [43869] eos=3 KO(0.43) |  예외적으로만 허용되는 지금도 헌법재판소가 업무 과중으로 허덕이는데 재판소원이 무제한으로 허용되기에 이른다면 지금보다 몇 배 이상의 업무 과중이 헌법재판소를 덮칠 우려가 있으며, 이 경우 헌법재판소의 개개사건에 대한 충실한 심리는 그만큼 저해될 수밖에 없다. 물론, 이
+  [43870] eos=6 EN(0.11) |  economies, “policy makers should allow exchange rates to respond to changing fundamentals but may need to guard against risks of disorderly adjustmen
+  [43871] eos=5 MX(0.16) | 도가 낮다는 이유로 보완 명령을 내리면서다. 22일 공정위는 대한항공과 아시아나항공이 기업결합 승인 조건으로 부과된 시정조치 가운데 '2019년 대비 공급 좌석 수 90% 미만 축소 금지'를 위반했다며 이행강제금 64억6000만원을 부과한다고 밝혔다. 항공사별로는 대한
+
+====================================================================================================
+STEP 1430 | samples 45760-45791 | avg_docs/seq=5.4 | avg_ko=0.25
+====================================================================================================
+  [45760] eos=4 MX(0.22) | 면서 마자파힛 제국은 다하와 인근의 자바 중동부 지역만을 실질적으로 영유한 군소 세력으로 전락했다. 이러한 이유로 1478년을 제국으로서 마자파힛의 붕괴 시점으로 잡는 역사가도 있다. 그리고 이를 기점으로 마자파힛 제국 후기의 정치사는 매우 불명확해지게 된다. 《 바밧
+  [45761] eos=6 MX(0.22) |  말재주가 좋았다. 후에 보수당을 탈당하고 노동당 으로 당적을 옮겼으며, 노동당에서도 당 내에서 급진파에 속하던 독립노동당 에서도 활동한다. 노동당 당원으로서 모즐리는 재선에 성공하고 제2차 램지 맥도널드 노동당 내각에 입각해서 랭커스터 공국상이 된다. 하지만 노동당의
+  [45762] eos=3 MX(0.26) | , 이달 4~6일 울산 제조솔루션 시운전공장과 글로벌 트레이닝 센터(ME-GTC)에서 현대차그룹 임직원, 협력사, 대학 및 연구기관 관계자들이 대거 참석한 가운데 진행됐다. 로봇이 자동차 도장면을 정밀하게 연마해 완벽하고 균일한 품질을 구현하는 상도 샌딩폴리싱 자동화 
+  [45763] eos=8 MX(0.22) |  and liabilities, the allocation of profits or losses, and the adjustment of partners' capital accounts.<|endoftext|>: Symantec Corp. (SYMC) said a mi
+  [45764] eos=4 KO(0.44) |  Inc. and BNP Paribas SA raised forecasts for economic expansion after efforts to tackle Europe’s debt crisis succeeded in bringing down borrowing cos
+  [45765] eos=4 MX(0.25) |  표기법이기 때문에 이에 대해 안 좋은 감정을 가진 사람들이 많은 것도 있다. 그리 큰 나라가 아닌데도 표기가 여태 중구난방인 데에는 이런 사정이 있었던 것. 대만에서는 중앙정부가 아닌 지방정부 소유 시설에 대해서는 로마자 표기 결정도 지방정부의 권한이라 민주진보당 의
+  [45766] eos=6 MX(0.19) | ’s Jonathan Golub , who has a 2013 prediction of 1,425. Seven out of 10 groups in the S&P 500 slid. Telephone, energy and consumer-staple companies po
+  [45767] eos=6 MX(0.30) | 서트는 공연 분야의 새로운 대안으로 떠오르고 있다. 신종 코로나바이러스 감염증(코로나19) 확산 여파로 콘서트 투어 취소 등 타격을 받은 아티스트들의 수요가 늘어나면서다. 기존 콘서트는 준비에서 투어까지 수 개월 이상 걸렸지만 VR 이머시브 콘서트는 하루 이틀만 투자하
+  [45768] eos=5 MX(0.15) |  data. Demand, measured by deliveries to wholesalers, slipped to the lowest level since February 2010. “Even with the refinery issues, look at the lev
+  [45769] eos=4 EN(0.05) | 12.19 17.0 1117 CH MODERN D 140 0.38 2.24 16.8 6808 SUNART RETAIL 443.50 4.89 29.44 16.6 916 CHINA LONGYUAN 1154 9.35 56.63 16.5 267 CITIC PACIFIC 443
+  [45770] eos=3 KO(0.54) |  등을 확대하였다. 그러나 이러한 자금조달 및 운용 행태는 주택담보대출 등 대출을 과도하게 늘려 부동산 버블을 야기하고 은행의 경영 건전성을 저해할 우려가 있으므로 금융당국은 2012년 6월부터 은행들이 예금 범위내에서 대출을 하도록 예대율을 100% 이내로 규제하고 
+  [45771] eos=6 MX(0.15) |  고분자소재를 다루는데 기초가 되기 때문에 배운다. 여러 가지 탄소화합물의 거동과 화학적 특성을 배우는 과목이다. 고체역학이나 양자역학 등 물리 베이스와 달리 정말 진성 암기과목이다. 실제 전자의 거동은 양자역학적으로 행동하므로 유기화학에서의 메커니즘과 정확히 들어맞지
+  [45772] eos=6 MX(0.23) |  BA said. The plane concerned is powered by engines made by the International Aero Engines venture led by the Pratt & Whitney unit of U.S.-based Unite
+  [45773] eos=6 MX(0.24) | , the regulator asked the bank to be kept updated, the person said. A request for information is the first step the regulator takes when an issue need
+  [45774] eos=5 KO(0.58) |  之 心 )의 사전적 의미는 자신이 해놓은 것에 대해 흡족해 하지 않는 마음이다. #1 #2 열등감과 자격지심 모두 어떠한 것에 의해 자신을 낮춘다는 것에 공통점이 있지만, 동의어가 아닌 서로 다른 단어이다. 자격지심은 자신 스스로가 평가하여 자신이 해놓은 것이 부족함
+  [45775] eos=7 EN(0.03) |  markets, and “the correct financial terms,” he said.<|endoftext|>: Shares of the following companies had unusual moves in Malaysia trading. Stock sym
+  [45776] eos=4 MX(0.24) | 4 million tons in 2009 and the lowest since 5.3 million tons the year before, customs data show. Palm Cheaper Consumption of cooking oils will expand 
+  [45777] eos=8 KO(0.34) |  or controlling stake, Moraes said yesterday in a telephone interview from Sao Paulo. “We are trying to capitalize the company to improve the debt con
+  [45778] eos=6 EN(0.08) | URING INDEX SUMMARIES PMI Manufacturing expanded in January as the PMI registered 53.1 percent, an increase of 2.9 percentage points when compared to 
+  [45779] eos=4 KO(0.62) |  한 가지 아쉬움이 있었다. 신 대표는 "SI 업체의 특성상 항상 그들을 위해 서비스를 만들어주는 일을 했는데, 나만의 '제품'을 만들어보고 싶었다"고 했다. 창업에 나선 건 2011년이었다. 우연히 미국 '턴잇인'이라는 표절 검사 웹사이트를 봤다. 전 세계가 이용하는
+  [45780] eos=7 MX(0.18) |  will slow to 8.5 percent next year, after growing 10.4 percent in 2010, the Organization for Economic Cooperation and Development projected on Nov. 2
+  [45781] eos=4 MX(0.25) |  운행하는 것으로 변경된다. 운행횟수가 1일 6회로 조정된다. 청주 버스 213-2 , 214 : 운행대수는 1대. 두 노선이 통합되어 미륵사~은행리 구간을 미경유하여 동부종점까지 운행하는 것으로 변경되고 운행횟수가 1일 7회로 조정된다. 청주 버스 215 : 운행대수
+  [45782] eos=5 MX(0.22) |  Standard & Poor’s 500 Index, after the maker of Clinique and Bobbi Brown makeup lines forecast profit in 2012 will be below the average analyst estim
+  [45783] eos=6 EN(0.04) | 7, returned more than 50 percent between April 1, 2008, the first time it appeared in Ivy’s portfolio, and Dec. 17, 2009, the date of the second upgra
+  [45784] eos=8 MX(0.28) | 물 개량 등에 관한 내용이 포함된 주거환경개선계획을 세워 건설교통부 장관에게 보고해야 한다. 주거환경개선사업은 시장 등이 시행하는 것을 원칙으로 하되, 주택건설과 건축물 개량 등에 관한 사업은 주민이 시행할 수 있다. 주거환경개선지구 안의 토지나 건축물 소유자는 주거환
+  [45785] eos=4 KO(0.47) |  "연말까지 기다릴 것 없이 구체적인 사업재편 그림을 조속히 보여달라"고 촉구했다. 은행권은 석화 기업 채권의 자산건전성 분류 기준을 명확히 할 것을 정부에 건의했다. 금융지원 과정에서 채권이 ‘고정’ 등급 이하로 부실화하더라도 ‘정상’ 또는 ‘요주의’로 분류할 수 있
+  [45786] eos=7 EN(0.09) | . Tudou Holdings Ltd. (TUDO) extended gains after surging 157 percent to a record on March 12, when bigger competitor Youku Inc. said it would buy the
+  [45787] eos=5 KO(0.36) |  헌법: 國務大臣及政府委員ハ何時タリトモ各議院ニ出席シ及發言スルコトヲ得 국무대신 및 정부위원은 언제라도 각의원에 출석하여 발언할 수 있다. 國務各大臣ハ天皇ヲ輔弼シ其ノ責ニ任ス 凡テ法律勅令其ノ他國務ニ關ル詔勅ハ國務大臣ノ副署ヲ要ス 국무 각 대신은 천황을 보필하며 그 책임을 진다.
+  [45788] eos=5 MX(0.24) |  인구는 급속히 줄어드는데 교부금은 증가하고 있어, 교육청이 예산을 함부로 쓴다는 비판까지 나온다. 반면 중앙정부는 적자에 허덕인다. 관리재정수지 적자가 2022년 117조원, 2023년 87조원에 달했다. 상황이 이렇다면 교육청이 무상교육 비용을 더 부담하는 게 상식
+  [45789] eos=5 EN(0.01) |  The currency fell 0.1 percent to 116.59 per euro, after earlier posting the sharpest intraday decline since April 27. The dollar was little changed a
+  [45790] eos=5 MX(0.27) |  ) 서방세계( 西 方 世 界 ) 서방십만억토( 西 方 十 萬 億 土 ) 서방안락국( 西 方 安 樂 國 ) 오방( 五 方/ 午 方) 오방색 ( 五 方 色 ) 일방( 一 方) 일방적( 一 方 的 ) 일방통행 ( 一 方 通 行 ) 장방형 ( 長 方 形 ) 전방( 前方 / 
+  [45791] eos=6 EN(0.09) |  Stolberg, Germany , after cable projects for the petrochemical industry in Iran were canceled because of international trade sanctions, the wiremaker
+
+====================================================================================================
+STEP 1650 | samples 52800-52831 | avg_docs/seq=5.0 | avg_ko=0.22
+====================================================================================================
+  [52800] eos=5 EN(0.07) |  2SM radio in Sydney today. “The most humane way to deal with asylum seekers and refugees is to do everything you can to deter people from getting on 
+  [52801] eos=6 MX(0.19) |  2017년 6월 7일 ~ 2019년 5월 24일 40대 김강립 (金剛立) 2019년 5월 25일 ~ 2020년 9월 11일<|endoftext|>: Reserve Bank of India Governor Raghuram Rajan has turned the rupee
+  [52802] eos=4 KO(0.45) | 4.6 million. MegaFon’s global depositary receipts meet criteria for early entry into the Russia index, effective Dec. 12, MSCI said in an e-mailed rep
+  [52803] eos=5 MX(0.25) | 국 시대인 1913년 8월 1일 에 항구도시 킬 에서 태어났다. 스무 살이 되던 1933년 에 독일 국방군 에 육군 보병 으로 입대했으나, 2년 후인 1935년 에는 공군 총사령관 헤르만 괴링 으로부터 직접 권유를 받고 새로 창설된 루프트바페 로 이적했다. 1936년 
+  [52804] eos=4 KO(0.64) | 005년에 참관국 자격으로 참가하려 했지만 거부되기까지 했다. 밑의 목록의 국가들을 보면 대부분이 아시아 국가들이다. 인도와 파키스탄의 정회원국 가입에 이어 우크라이나 , 몰디브 , 이스라엘 , 이집트 , 아르메니아 , 네팔 , 캄보디아 , 시리아 등 9개국도 대화파트
+  [52805] eos=2 KO(0.57) |  it receives a legally binding order or subpoena. Apple spokesman Steve Dowling said the Cupertino, California-based company doesn’t give government a
+  [52806] eos=7 MX(0.19) |  a year earlier as of Aug. 12, according to data compiled by Bloomberg, exceeding the central bank’s 18 percent projection. Mobile-phone operators inc
+  [52807] eos=4 MX(0.21) |  since March 26, 2010. Increasing Numbers More than 78 million U.S. adults are obese , according to the Centers for Disease Control and Prevention in 
+  [52808] eos=4 KO(0.53) | PGA 대회 개최 연장 계약 협약식에서 기념 촬영을 진행하고 있다 BMW코리아는 국내 유일의 미국여자프로골프(LPGA) 투어 정규대회인 ‘BMW 레이디스 챔피언십 (BMW Ladies Championship)’ 개최를 2029년까지 연장 확정했다고 12일 밝혔다. 대회
+  [52809] eos=5 EN(0.13) |  much as 4.2 percent, or 45 cents, and were up 3.1 percent to 11 euros at 1:07 p.m. in Paris trading. The stock has doubled this year, boosting the co
+  [52810] eos=5 MX(0.26) | 공식별구역에 구애받지 않을 것임을 밝혔다. 박근혜 정부의 출범 이래 적극적인 관계 개선을 추구하고 있는 한중 양국 관계에 부정적인 영향을 가져올 것임은 분명. 11월 29일에 중국에게 이어도 주변에 대한 방공식별구역 중첩의 시정을 요구했으나 중국 정부는 거절했다. 이보
+  [52811] eos=5 EN(0.14) | 기록 송부, 사건 송치 등을 요구할 수 있다. 다만, 이게 "정부"의 발표는 맞지만, 문재인 정부 의 발표라 보긴 어렵다. 경찰개혁위원회 가 기존에 발표한 권고안처럼, 법무·검찰개혁위원회가 발표한 권고안도 말 그대로 "권고안"일 뿐이기 때문이다. 그냥 법무부 가 "우리
+  [52812] eos=6 EN(0.13) |  year of slowing economic growth missed more debt payments. Brazil’s economy will probably expand 3.3 percent in 2013, compared with 1 percent this ye
+  [52813] eos=4 EN(0.08) | 016 to pay for the medical care of responders to the Sept. 11 terrorist attacks who are diagnosed with breast, liver and other types of cancers. About
+  [52814] eos=5 EN(0.07) |  almost three times that of wine, Boston Consulting Group estimates. Germans drank 6.4 kilograms (14.1 pounds) of coffee each in 2010, compared with 5
+  [52815] eos=5 MX(0.17) |  정부 보조금을 받을 수 있도록 규정했다. 이 법안은 많은 일자리를 창출하고, 온실가스 (GHG) 배출량을 줄였으며, 온타리오주에서 재생 에너지 산업을 크게 확대했다. 일본 과 유럽연합 은 이 요구사항에 이의를 제기했고, 세계무역기구 (WTO)는 온타리오주가 법에서 L
+  [52816] eos=5 KO(0.55) |  professor of labor law at Luiss University in Rome. “People are starting to understand that there is no more time for ideological conflicts. It is ti
+  [52817] eos=6 MX(0.21) |  Liberty Stake Billionaire John Malone ’s Liberty Media Corp. (LMCA) invested $204 million in Barnes & Noble in August 2011, allowing the company to s
+  [52818] eos=5 KO(0.34) | , at 55.2 percent, with revenue rising 0.4 percent to 850 million euros amid a continuing client shift from pre-paid to post-paid. Revenue from landli
+  [52819] eos=6 MX(0.23) | 43, all worked as paid consultants for Primary Global without their employers’ knowledge, the SEC said. The regulator described Jiau as having worked 
+  [52820] eos=4 MX(0.15) |  받았지만, 1960년대 초반까지는 이민에 제한이 걸려있었기 때문에 이민자는 연 수천명 내외였다. 대규모 이민은 1960년대 이민법 개정 이후부터로 이때부수 수가 크게 증가한다. 주요 거주지역은 캘리포니아 와 하와이 , 텍사스 , 네바다 , 뉴욕 , 일리노이 , 알래스
+  [52821] eos=6 MX(0.23) | ansson said. “I hope and believe that they will stay in the euro zone .” Central Bank Action If the Greeks don’t remain, global central banks may also
+  [52822] eos=6 EN(0.00) |  of Iraq in 2007. The proceedings at the London Court of International Arbitration relate to outstanding receivables owed by the Kurdish government, D
+  [52823] eos=7 EN(0.14) | )까지의 금융 업무를 자문한다. BPP는 총 3차례의 모집 공고를 거쳐 같이같이 프로그램에 참가할 스타트업을 선발할 예정이다. 현재 1차 접수를 받고 있으며 접수 마감 기한은 5월18일까지다. 1차 선발 기업은 5월31일에 발표된다. 프로그램 참여는 온오프믹스 접수페이
+  [52824] eos=4 MX(0.26) | 이다. 기존의 상임이사국 가운데 미국과 영국, 프랑스, 러시아 등 4개국은 인도의 제안에 긍정적이지만, 중국은 미온적인 반응을 보여 주목받았다. # 이런 가운데, 2017년 중국-인도 국경분쟁 이 벌어지며 중국이 다시 반대 입장으로 돌아설 가능성이 높아졌다. 2017년
+  [52825] eos=4 EN(0.11) |  as the yen weakened to the lowest level against the dollar in six months. Australian stock futures were little changed. American depositary receipts 
+  [52826] eos=5 EN(0.14) |  이병철 의 3남. 판전공파. 이명희 - 신세계그룹 초대 회장·現 총괄 회장 . 삼성그룹 창업주 이병철 의 5녀. 판전공파. 장남은 신세계그룹 회장 정용진 . 장녀는 신세계그룹 백화점부문 총괄사장 정유경 . 이동형 - DAS 부사장. DAS 대표이사 회장 이상은 의 아
+  [52827] eos=4 EN(0.05) | 50 million in 2011, he said. The fertilizer market in Turkey is expected to grow 3 percent this year after it shrank 2 percent in 2011 with increased 
+  [52828] eos=5 EN(0.07) | 4.5%↑ 글로벌 냉난방 시장에선 일본과 중국, 미국 기업이 각축전을 벌이고 있다. 세계 1위는 일본 다이킨공업. 경쟁자로는 미쓰비시와 파나소닉, 중국의 그리, 아일랜드의 트레인 등이 꼽힌다. 5위권인 미국 존슨컨트롤스의 HVAC사업부가 최근 약 9조원에 독일 보쉬에 
+  [52829] eos=5 EN(0.10) |  the IGC said. The global rice harvest may amount to 466 million tons, compared with a January prediction of 464 million tons. To contact the reporter
+  [52830] eos=5 MX(0.23) | 52 3.4 3933 UNITED LAB 64 0.20 5.95 3.3 805 GLENCORE-S 0.50 0.02 0.64 3.3 506 CHINA FOODS 36 0.26 8.00 3.2 728 CHINA TELECOM 354 1.29 40.11 3.2 1115 T
+  [52831] eos=6 EN(0.10) |  소노 시온 ( 園 子 温) 신온유 ( 辛 溫 柔 ): 성우 심온 ( 沈 溫) 아쿠네 하루세 ( 阿 久 根 温 世 ) 영온옹주 ( 永 溫 翁 主) [A] 오오미치 하루키 ( 大 道 温 貴 ) 옥사온 ( 玉 斯 溫) 온달 (溫 達 ) 온대아 (溫 大 雅 ) 온사문 (溫 
+
+====================================================================================================
+STEP 1800 | samples 57600-57631 | avg_docs/seq=4.8 | avg_ko=0.17
+====================================================================================================
+  [57600] eos=4 MX(0.18) |  범위(제3항), 국가유산청장 및 시․도지사가 역사문화환경 보존지역에서 지정문화유산의 보존에 영향을 미칠 우려가 있는 행위에 관한 구체적인 행위기준을 정하여 고시하여야 할 의무(제5항), 그와 같은 행위기준이 고시된 지역에서 문화유산 보존 영향 검토가 생략되는 건설공사
+  [57601] eos=6 MX(0.28) |  and December $80 puts with 40,953. To contact the reporter on this story: Margot Habiby in Dallas at mhabiby@bloomberg.net. To contact the editor res
+  [57602] eos=7 MX(0.23) | 일 5 대 1 액면분할을 하기로 했다. 최소 투자금액은 약 130만엔에서 26만엔 수준으로 낮아질 전망이다. 유통업체 돈키호테의 모회사 팬퍼시픽인터내셔널홀딩스도 같은 날 5 대 1 액면분할을 한다. 요시다 나오키 팬퍼시픽인터내셔널홀딩스 사장은 “신(新)소액투자비과세제도
+  [57603] eos=4 MX(0.17) | , said HD Moore, chief research officer at Rapid7, a Boston-based cybersecurity company. ZTE products, as well as those from Huawei and Cisco Systems 
+  [57604] eos=3 KO(0.36) | 세트를 사전예약하는 사람들은 매년 늘고 있다. 2023년 추석 기준 사전 예매율은 약 55%, 지난해에는 60%를 넘어섰다. 올해는 최장 10일에 달하는 연휴로 여행과 일정 준비가 앞당겨지며 수요가 더욱 커지고 있다. 롯데마트는 올해 총 800여 종의 선물세트를 준비했
+  [57605] eos=6 EN(0.13) | 2 percent target in a March 31 speech. Philadelphia’s Charles Plosser and Richmond’s Jeffrey Lacker both said in recent weeks that they favor a target
+  [57606] eos=6 EN(0.08) |  consumers and make credit available for small firms to help support the economy. “There are many devastating stories of how RBS has wrecked good busi
+  [57607] eos=4 EN(0.11) |  디스플레이를 켜면 넷플릭스, 불룸버그 등 뉴스나 온라인동영상서비스(OTT)를 즐길 수 있는 기능이 마련됐다. 시승할 때 같이 탄 동승자는 뒷좌석에 앉아 요즘 유행하는 넷플릭스 '흑백요리사'를 시청했다. 심지어 노래방 기능인 TJ미디어 애플리케이션(앱)을 틀어 노래방처
+  [57608] eos=7 EN(0.10) | seeded German Angelique Kerber became the first player to reach the quarterfinals, where she’ll play Flavia Pennetta, the 26th seed from Italy. Kerber
+  [57609] eos=6 MX(0.22) | 6 percent, to $2.8014 a gallon on trading volume that was 5 percent above the 100-day average for the time of day. Futures dropped as much as 1 percen
+  [57610] eos=5 MX(0.25) | 5 and 2010 and continues to battle in court with holdout creditors including billionaire hedge fund manager Paul Singer seeking full payment. The extr
+  [57611] eos=4 EN(0.00) | , the newspaper reported. To contact the reporter on this story: Jeff Black in Frankfurt at jblack25@bloomberg.net To contact the editor responsible f
+  [57612] eos=5 MX(0.25) |  파트너가 없었기 때문에 이 부분은 동료 스트리머들에게 놀림받는다. 곤충 에 대한 지식이 매우 풍부하다. 그래서 한국의 파브르 라는 별명이 있다. # 각종 유튜브 등에 곤충 전문가로 포장되어서 출연할 때가 있는데 관련 학과를 전공했거나 석박사 학위를 가진건 아니기 때문
+  [57613] eos=4 MX(0.19) |  grid assets in the region. “Definitely transmission assets we have a high degree of interest in,” Canada Pension Plan Investment Board Chief Executiv
+  [57614] eos=5 EN(0.09) | ETA라고 읽는다 크로니클즈 시리즈 한정으로 나올때마다 이 작품도 계속 될 듯. 근데 04에서 이걸 내팽겨치고 하이블이 나와버렸다. 전차급도 의인화 되었는데 이쪽은 쌍둥이로 등장한다. 그리고 전격 마브러브에서 연재를 시작한 4컷 만화 하이블! 역시 BETA를 모에화한 
+  [57615] eos=4 EN(0.02) | ore producer Vale SA rose to a one-week high. The Ibovespa added 0.8 percent to 49,464.94 at the close of trading. The real weakened 0.5 percent to 2.
+  [57616] eos=5 EN(0.12) |  would increase the rate by a quarter point to 6.5 percent; three estimated a half-point increase and one said it would be unchanged. The decision wil
+  [57617] eos=6 EN(0.09) | 동산 외 취득의 세율) 을 참조 하는 것이 좋다. 특이하게 취득세에서는 목장용지도 농지로 취급한다.<|endoftext|>: German bunds returned 0.8 percent this year through yesterday, according to inde
+  [57618] eos=4 MX(0.15) |  and about $7 million in New York. The London total exceeded $14 million if sales by Bonhams and Spectrum Group International Inc. are included, closi
+  [57619] eos=4 EN(0.03) |  담았다는 설명이다. 기후위는 명칭 변경과 함께 위원회 기능과 운영 방식 개편도 추진하고 있다. # 2026년 2월 28일, 국회 기후특위 주관 공론화위 의제숙의단이 온실가스 감축경로를 논의했으나, 합의 도출에 실패했다. # 2026년 3월 12일, 위원 수를 50명 
+  [57620] eos=4 KO(0.69) |  중국 과 적의 적은 나의 친구 라는 논리로 화해를 이루었다. 6.25 전쟁 이래 적대관계를 유지하던 미국과 중국은 1971년 키신저-저우언라이 회담 에 이어 1972년 리처드 닉슨 이 중국을 방문하고 닉슨-마오쩌둥 회담 이 개최되는 등 화해가 이루어졌으며 당시 소련은
+  [57621] eos=5 EN(0.06) |  Plant and Machinery, and Buildings, along with their respective values.<|endoftext|>: He’d enrolled after earning a degree in electrical engineering 
+  [57622] eos=5 MX(0.15) |  declined to comment. Chris Kanarick, a spokesman for Taymor, said she wasn’t available. A representative for Tsypin, who has designed operas worldwid
+  [57623] eos=5 KO(0.43) |  to 7.5 percent in 2013 and 6.6 percent in 2014, falling each year until 2017, when unemployment is expected to be 5.3 percent. The jobless rate unexp
+  [57624] eos=4 MX(0.24) |  should be ready to vary the pace of its $85 billion in monthly bond purchases, according to the minutes of the central bank’s Jan. 29-30 meeting rele
+  [57625] eos=6 MX(0.18) |  이상, 세상에 동일한 부동산은 존재하지 않기 때문이다. 수익방식 무형자산, 유가증권 등 평가의 주된 방식으로 '가치는 장래 기대되는 편익의 현재가치'이라는 피셔의 정의에 부합하는 이론상 가장 우수한 방법이다. 대상물건이 장래 창출할 것으로 기대되는 순수익이나 현금흐름
+  [57626] eos=5 KO(0.31) | 였다고 평가하기도 한다.<|endoftext|>국제단위계: 이 둘은 그 어떤 논리로도 같은 것으로 간주할 수 없으며, 마찬가지로 '평면각'과 '입체각'은 단위의 지수가 다르기 때문에 ( s r = r a d 2 ) ({\rm sr} = {\rm rad^2}) ( sr 
+  [57627] eos=4 EN(0.08) |  no case for Perry’s versatility. The popular, granny-dressing star of the “Madea” comedies is bland and affectless in his against-type action debut. 
+  [57628] eos=4 EN(0.11) | 2개월 만기)로 카드가맹점 입금실적 보유기간과 가맹점 입금 카드사 수에 따라 최고 연 6%포인트를 우대금리로 더 받을 수 있다. 가입금액은 월 1만~30만원이다. 포인트를 많이 주는 ‘사장님 전용 체크카드’도 눈길을 끈다. iM뱅크의 개인사업자 전용 체크카드인 ‘굿럭 
+  [57629] eos=5 EN(0.12) |  in Singapore, halting a six-day, 4.7 percent advance. India ’s Bombay Stock Exchange Sensitive Index retreated 1.8 percent after crude oil rallied as
+  [57630] eos=4 EN(0.08) | .17 percent in India, 7.7 percent in Russia and 12.53 percent in Brazil. Twelve-month non-deliverable yuan forwards weakened 0.2 percent to 6.4576 per
+  [57631] eos=5 EN(0.04) |  possible combination with AMR. Alaska Airlines has said for years that its “preference is to remain a strong, vibrant, independent company,” said Bob
+
+====================================================================================================
+STEP 1900 | samples 60800-60831 | avg_docs/seq=4.9 | avg_ko=0.25
+====================================================================================================
+  [60800] eos=5 EN(0.02) |  International Economics in Washington , said China’s external current account surplus has been declining in a way that could mean “it gets harder to 
+  [60801] eos=6 MX(0.19) |  & Derivatives Association of India. Contributed via: Bloomberg Publisher WEB Service Provider ID: 69d38ee356da4e8eaf28abff1cc291fe<|endoftext|>: Cont
+  [60802] eos=6 MX(0.19) |  대통령 선거/부정선거 음모론: # 케일리 매커내니 백악관 대변인은 성명에서 현재 진행되고 있는 부정선거 조사는 모든 미국인이 이번 선거 결과와 앞으로 있을 모든 선거 결과에 납득하기 위함이라고 말했다. # 미국 연방선거위원회 회장(Chair of the Federal
+  [60803] eos=5 KO(0.35) | BS, the world’s second-biggest currency trader. “There will be more countries outright intervening and others inadvertently weakening their currencies
+  [60804] eos=6 EN(0.00) |  year. NATURAL GAS Natural-gas prices fell for a fifth day as Hurricane Isaac made landfall, potentially curbing demand and bringing colder weather. G
+  [60805] eos=6 KO(0.34) |  protection before being sold to Gol in 2007. With Gol now struggling to cut costs and return to profit, the Smiles IPO diminished the risk of the air
+  [60806] eos=7 KO(0.31) |  안녕과 복을 기원하는 '관처용' 순으로 이어졌다. 이번 공연은 나례의 시작을 천지에 고하는 '고천지', 역신(전염병을 의인화한 존재)을 달래는 '세역신', 역신을 쫓는 놀이로 구성된 구나희, 태평신년을 기원하는 기태평의 총 4장의 순서로 구성된다. 각 장에는 국립국악
+  [60807] eos=3 KO(0.34) |  level on record amid speculation that an investor facing a margin call may have sold shares. OAO Severstal, Russia’s second-largest steel producer, r
+  [60808] eos=7 MX(0.15) |  a year earlier, the Finance Ministry said in a report today. Bank of Japan (8301) Governor Masaaki Shirakawa has said that Europe’s debt crisis is th
+  [60809] eos=5 KO(0.34) |  trajectory of the economy is typically much more important in presidential elections than the actual unemployment rate, Wlezien said. “The point is r
+  [60810] eos=5 EN(0.13) |  to the Federal Statistics Office. While the oil won’t turn Germany into another Saudi Arabia , CEP’s best-case scenario of about 500 million euros a 
+  [60811] eos=5 KO(0.36) | 거나 하는 기록이 있지만, 다른 국가들에 비하면 지극히 적은데다 전쟁에 가장 중요한 자원인 국민의 지지 를 모으기 위한 의미도 컸다. 무기대여법 으로 수많은 물자가 영국과 소련에 지원될 때 스팸 도 주요 구호물자였는데 그 양이 얼마나 많았는지 영국인들이 영국은 스팸랜드
+  [60812] eos=4 MX(0.25) |  활발한 별 형성지역은 10Kpc 고리 오른쪽 지역에 밀집되어 있으며 수소알파선 관측에서 성운 구조가 나선팔을 따라 연속적으로 연결되어 있음이 확인되었다.<|endoftext|>: EON SE (EOAN) , Germany’s biggest utility, plans 
+  [60813] eos=5 MX(0.18) | 09 0.2 1055 CHINA SOUTH AIR 8 0.03 17.33 0.2 1333 CHINA ZHONGWANG 7.20 0.02 12.24 0.2 189 DONGYUE GROUP 7 0.04 24.07 0.2 603 CHINA OIL & GAS 20 0.02 1
+  [60814] eos=4 KO(0.60) | : 1959년 설립되어 자본금이 1,000억달러에 달하는 세계 최대의 지역개발은행으로, 중남미 지역의 경제 · 사회 개발 촉진과 경제통합을 목적으로 하고 있다. IDB는 미주지역 개도국의 경제발전과 사회개발 추진 및 미주지역 경제통합을 위해 설립되었고 설립 당시 미주지
+  [60815] eos=4 EN(0.07) |  without precedent and in my opinion seriously embarrassing for yourself," Ahlenius wrote in the 50-page memo to Ban, a copy of which was obtained by 
+  [60816] eos=4 KO(0.44) |  하였으나 기각된 경우에 제청신청 당사자가 헌법재판소에 제기하는 규범통제형(위헌심사형) 헌법소원(법 제68조 제2항에 의한 헌법소원)으로 나누어 규율되고 있다. 헌법소원 대상 ​ 국가나 지방자치단체 등이 행사하는 모든 공권력 작용은 헌법소원의 대상이 될 수 있다. 그러
+  [60817] eos=3 KO(0.44) |  left its benchmark rate at 5.5 percent on Jan. 18 even as inflation stayed outside its 3 percent to 6 percent target band for a second month in Decem
+  [60818] eos=7 EN(0.11) |  discuss the measure at their next meeting on Nov. 15 and may hold a vote in December, according to a senior EU official, who declined to be named, qu
+  [60819] eos=5 MX(0.29) |  '어떻게 하면 나의 천직을 알 수 있을까?'라는 글 을 읽은 것을 계기로 임업이라는 학문에 전념하게 되었다. 수원고등농림학교에서 만나 의형제를 맺은 정희섭 의 재정적 도움을 받아 1933년 수원고등농림학교를 졸업하자마자 규슈제국대학 농학부 임학과에 진학하였고, 193
+  [60820] eos=4 MX(0.26) |  contact the editor responsible for this story: Shaji Mathew at shajimathew@bloomberg.net<|endoftext|>SK이노, "울산CLX에 스마트 플랜트 적용해 연 100억원 비용 절감"  SK이노베이
+  [60821] eos=3 KO(0.66) | 9월 5일 법안의 적용 대상 기관 4만 919곳을 공개했다. 공공 분야는 ▷국회·법원·헌법재판소·감사원·선관위·인권위 등 6곳 ▷중앙행정기관 42곳 ▷광역·기초 지방자치단체와 시·도교육청 260곳 등이다. 직유관단체 982곳과 공공기관 321곳도 포함됐으며, 국회의원도
+  [60822] eos=3 MX(0.28) |  승 : 阪神 피터 번사이드 (1승) ● 패 : 南海 미나가와 무츠오 (1패) ※ 선발 투수 阪神 : 피터 번사이드 : 1⅓이닝 25구 3피안타 2볼넷 1실점(1자책) 南海 : 미나가와 무츠오 : 2⅓이닝 46구 5피안타 1볼넷 1사구 1탈삼진 4실점(4자책) ※ 홈런
+  [60823] eos=5 MX(0.20) |  4 hour 6 minute round-trip. “It felt more like an aircraft at the end of its flight-test program than one on its first flight,” he said, although som
+  [60824] eos=5 MX(0.18) |  Crude oil dropped, snapping a three- week rally that took prices to the highest levels since May, as the dollar strengthened against the euro and the
+  [60825] eos=4 MX(0.20) | 거트 마카롱 메가초코 마카롱 핫도그 버터버터 소금빵 버터버터 뜯어먹는 식빵 버터버터 마늘 크로크무슈 버터버터 소보로 스콘 버터버터 에그베이컨 샌드위치 마카다미아 쿠키 초콜릿칩 쿠키 초코스모어 쿠키 말차스모어 쿠키 그래놀라스모어 쿠키 크로플 아이스크림 크로플 몽쉘케이크 
+  [60826] eos=5 EN(0.09) | 에서 계속해서 선진국과 개도국간 격론이 이어졌다. 결국, 대다수의 국가가 협정 이행 목표와 실행 방안을 담은 온실가스 배출 감축계획 보고서를 제출하지 않으면서 무산되었다.<|endoftext|>유로폴: 국제형사경찰기구 인 인터폴의 유럽 특화 버전. 유럽연합 결성의 시금
+  [60827] eos=5 EN(0.08) |  which plans to announce final conditions for the auction in June, estimates the value of the frequencies at 10 billion koruna ($536 million), the new
+  [60828] eos=6 EN(0.04) | 화로 인해 국내에 영향이 미친 사례는 없었으나 만일의 상황에 대비해 국민께서는 화산재 낙하 시 행동요령을 사전에 숙지해 달라"고 당부했다.<|endoftext|>: Structure Unchanged “The positive contribution of foreign 
+  [60829] eos=5 MX(0.26) | 215.21 214.07 120A 3 Brisket, point/off, bnls 123A 3 Short Plate, short rib 4 13, 473 260.00 376.00 326.44 130 4 Chuck, short rib 6 11, 699 212.75 253
+  [60830] eos=5 MX(0.19) |  aviation industry. Along with having two international airports, O’Hare and Midway, Chicago is the headquarters for Boeing Co. (BA) and United Contin
+  [60831] eos=4 KO(0.50) |  월권 행외라며 갈로를 체포하겠다고 으름장을 놓는다. 다행히 버닝 레스큐의 리더 이그니스 엑스가 그를 저지하자 발칸은 농담이었다고 하며 매드 버니시들을 데리고 유유히 현장을 떠난다. 이후 갈로는 매드 버니시의 리더를 체포한 공적을 인정받아, 프로메폴리스의 지도자 '크레
+
+====================================================================================================
+STEP 2080 | samples 66560-66591 | avg_docs/seq=4.8 | avg_ko=0.2
+====================================================================================================
+  [66560] eos=5 EN(0.08) |  appointees of the Afghan government and its donors, who use the group’s reports to assess Afghanistan ’s anti-corruption efforts. Yet contracts alone
+  [66561] eos=5 KO(0.32) |  나치가 물러날 때까지 예수회 수도원에서 숨어지냈다. 종전 후, 부다페스트 대학교 철학 박사 과정에 진학하여 1947년 박사 학위를 수여했다. 수여 직후 1년간 부다페스트 대학 사회학 연구소의 교수로 재직했으며, 이곳에서 아내인 Anne Klauber를 만났다. 하지만
+  [66562] eos=5 EN(0.01) |  춤을 잘추면서 동시에 웃기게 추는 능력도 가지고 있음을 보여준다. # #1 #2 #3 인터넷 방송인 활동 이전에 2016년부터 보드게임 갤러리 에서 만화 'Legend of Bumjun(네오 물의 범준)'을 연재했다. 보러가기 모티브가 된 글은 '이게 왕따였던 나를 
+  [66563] eos=2 KO(0.34) | 후되어 있어서 우선적으로 600만 캠퍼가 쉽게 이용할 수 있는 실시간 캠핑 예약서비스를 시작했습니다." Q. 해외 유사 사례가 있나요. "미국 북미가 대표적인 캠핑 천국입니다. 인구 50%가 캠핑을 즐기고 있습니다. 그들에게는 이미 라이프스타일로 정착됐죠. '캠프스팟'
+  [66564] eos=5 MX(0.17) |  today in an e-mailed statement, citing data from Time Warner Inc. (TWX) ’s Warner Bros. To contact the reporter on this story: Michael White in Los A
+  [66565] eos=2 KO(0.42) |  , among others. Two weeks later, she expropriated Brazil’s All America Latina Logistica SA (ALLL3) ’s concession linking western Argentina with Atlan
+  [66566] eos=5 EN(0.09) | 2004 by Edward Eisler, who studied Chinese and Chinese medicine at university in London. Eisler, 34, estimates he has visited China between 50 and 100
+  [66567] eos=4 EN(0.10) | 할 수 있어서다. 고환율 영향을 크게 받은 지난해 10~11월 물가 상승률은 2.4%까지 오르기도 했다. 박석길 JP모간 본부장은 “인플레이션에 대한 환율의 전이 효과가 예상보다 강하다”고 분석했다. 이윤수 서강대 경제학과 교수는 “원화 약세가 지속되면서 물가가 오를 
+  [66568] eos=5 KO(0.33) |  올 여름 '뉴시어(New Sheer)' 컬렉션에서 오간자 의복을 데일리용으로 확장했다. '소프트 엘레강스'를 테마로 삼아 고급스러운 오간자 소재를 맑은 페일 파스텔 컬러로 가공해 부드러운 여성미를 강조했다. 오간자 포인트 반팔 블라우스, 오간자 포인트 미니 스커트 등
+  [66569] eos=6 MX(0.18) | 제로 전환하면서 더 이상 엘리자베스 2세를 자신들의 국가원수 로 인정하지 않게 되었다. Clifford Dupont. John Wrathall. Henry Everard. # , 2021년 기준으로 $2,664.08 '아프리카의 곡물창고'라는 별명은 내전 이 끝나고 '
+  [66570] eos=5 MX(0.28) |  in July, the board said. “In the near term, there is some upside potential” for prices, Ben Santoso , a plantation analyst at HwangDBS Vickers Resear
+  [66571] eos=5 KO(0.31) |  부하들을 처리하며 쫒는다. 로버트는 조엘과 테스를 보자마자 도망가지만 금방 잡히고, 마를렌에게 무기를 넘겼다고 실토한다.<|endoftext|>: Jaiprakash Power Ventures Ltd. (JPVL) is in talks to sell two hydro
+  [66572] eos=6 MX(0.22) | 00 from NT$9,932,000, according to a statement filed to the Taiwan Stock Exchange. (Figures are in thousands of New Taiwan dollars) ==================
+  [66573] eos=3 KO(0.59) | FM 의 MBC 뉴스와 경제 와는 타이틀이 동일하다. 이전의 저녁 뉴스 프로그램은 평범한 스트레이트 뉴스 프로그램( MBC 뉴스 , MBC 오늘의 뉴스 )이었다. 1995년 4월 17일에 MBC 오후 5시 30분 뉴스 를 흡수하고 시간대를 오후 5시 30분으로 이동, 
+  [66574] eos=8 EN(0.01) | <|endoftext|>: Debentures are a type of debt instrument that companies use to borrow money from investors. They are typically issued with a fixed inte
+  [66575] eos=5 MX(0.15) |  10%에서 50%까지 높이면 제조업 전기요금이 연간 약 5조원 증가할 것으로 내다봤다. 석유화학과 철강 등 제조업 중심인 비발전 회사의 유상할당 비율은 10%에서 내년부터 15%로 높아진다. 전체 탄소배출권 구입 금액은 현재 5400억원에서 2029년 1조5000억원
+  [66576] eos=4 MX(0.16) |  a contract requirement only for Seattle-based Amazon. The GAO recommended that the CIA reopen negotiations with the companies. The decision, which ag
+  [66577] eos=4 EN(0.14) | ’ 전시회가 일본 도쿄 긴자 소니파크에서 오는 28일까지 열린다. 재일교포 이상일 감독이 연출한 ‘국보’는 지난해 11월 173억7000만엔(약 1633억원)의 흥행 수입을 올려 기존 흥행 수입 1위였던 ‘춤추는 대수사선 더 무비2’(173억5000만엔)의 기록을 갈아
+  [66578] eos=4 EN(0.09) |  the Massachusetts attorney general, said this year that she’s investigating MERS. The probe includes complaints by registers of deeds in the state ov
+  [66579] eos=5 MX(0.18) |  as it has in Ireland, then that’s a major problem,” said Olly Burrows, a credit analyst at Rabobank International in London. “Because of the size of 
+  [66580] eos=6 MX(0.18) |  borrower fail to adhere to debt agreements. An increase signals worsening perceptions of creditworthiness. A basis point equals $1,000 annually on a 
+  [66581] eos=4 MX(0.17) | el, managing director of equity derivatives in New York. Alberici declined to comment when reached at his office. He worked at Merrill Lynch, Pierce, 
+  [66582] eos=4 KO(0.48) |  power plants, while Romania was eyeing about 75 million free allowances in the seven years starting in 2013 and the Czech Republic wanted to give its
+  [66583] eos=5 EN(0.07) |  year, according to Atul Bagga, an analyst at ThinkEquity LLC in San Francisco. Russia’s Digital Sky Technologies led a $180 million investment in Zyn
+  [66584] eos=5 MX(0.16) |  this week. “Even senior regulators now recognize that the current proposed rules are unworkable and will be impossible to implement.” Combined Revenu
+  [66585] eos=4 EN(0.08) | : R. Allen Stanford’s attorneys must defend him at a $7 billion investment fraud trial that will begin Jan. 23 in Houston federal court, said a U.S. j
+  [66586] eos=6 MX(0.21) | 17 . 후지카와 슌스케(俊介, ?~‘21) 7.18 . 우에모토 히로키 (上本博紀, '13~‘20) 7.19 . 후쿠도메 코스케 (福留孝介, ‘13~’20) 7.20 . 노미 아츠시 (能見篤史, ?~’20) 7.21 . 저스틴 보어 (ボーア, ‘20) 7.22 . 이
+  [66587] eos=5 EN(0.09) |  방언으로 취급하는 방식이다. 일본어족 (Japonic languages) 또는 일류어족(Japanese-Ryukyuan languages)을 설정하고 그 밑에 두 개의 개별 언어로서 일본어와 류큐어를 설정한 뒤 이 '일본어'와 '류큐어' 아래로 각각 여러 방언들을 분
+  [66588] eos=6 EN(0.12) |  변화되는 부위에 따라 페티시를 느끼는 곳이 다르나 어느 정도 공통적으로 임신 시 시간의 변화에 따라 솟아오는 배의 라인에 대해 매력을 느낀다. 그 외에는 유방 이 커지고 모유가 나오며 유륜 이 착색이 생기는 점, 배의 임신선 (흑선 포함), 툭 튀어나온 배꼽, 배가 
+  [66589] eos=5 EN(0.11) | 카 성 테오다르도 성녀 파나세아 성녀 파시엔시아 성 페레그리노 라치오시 1633년 - 세바스티앙 르 프레스트르 드 보방(~ 1707년 ): 부르봉 왕조 의 군인 1872년 - 후고 알벤 (~ 1960년 ): 스웨덴 의 작곡가 1769년 - 아서 웰즐리 (~ 1852년 
+  [66590] eos=7 KO(0.39) | 식품으로 각광 받고 있으며, 이에 따라 헛개를 이용한 숙취음료, 커피음료, 두유 등 음료업계를 중심으로 시장이 확대되고 있는 추세다.<|endoftext|>: The following is a list of companies whose shares may have un
+  [66591] eos=5 EN(0.13) | ’s website. Harar Brewery, which is in the east of the country, can produce 200,000 hectoliters (5.28 million gallons) of the beverage annually, it sa
+
+====================================================================================================
+STEP 2110 | samples 67520-67551 | avg_docs/seq=4.8 | avg_ko=0.21
+====================================================================================================
+  [67520] eos=5 MX(0.19) |  to act together to tackle Europe ’s debt crisis, spurring optimism about the global economic outlook. The G7 agreed yesterday to coordinate their res
+  [67521] eos=3 KO(0.40) | 적으로 부동산 대출 공급이 억제될 것으로 본다. ◇ “수요 규제로는 한계” 국정기획위가 은행 자본 규제를 검토하는 건 기존 수요 규제만으로는 한계에 다다랐다는 문제의식에서다. 정부가 정책적으로 돈을 빌리기 어렵게 했지만 부동산 시장을 가라앉히기엔 역부족이라는 판단이 작
+  [67522] eos=2 KO(0.40) |  data compiled by Bloomberg. The cost is based on a cargo of 55,000 metric tons. Saudi Arabia to Japan Tanker Rates Rises 0.3% to 33.88 Points The cos
+  [67523] eos=5 EN(0.10) |  compares with 81 percent in the U.S. If the market in Brazil grows to 16 percent of GDP by 2020, that would mean a 1 trillion reais market, Banco do 
+  [67524] eos=5 EN(0.10) | 저럭 괜찮은 편임에도 외국인이 여행하는 데 까다로운 조건이 붙어서 여행자제로 분류된 경우도 있다. 사우디아라비아 는 이슬람 에서도 강경파인 와하브파 가 주류이기 때문에 현지 관습에 어긋나는 행동을 하면 처벌받거나 추방당할 위험이 컸었던게 큰데, 무함마드 빈 살만 이 리
+  [67525] eos=6 MX(0.20) | 's success and ensured that plans were carried out effectively.<|endoftext|>신입 연수: 이 5대 대기업들은 전사 연수 1~2주+직무별 연수 3주 같은 식으로 진행한다. 17주: 5급 공개경쟁채용시험 을 통과한
+  [67526] eos=3 MX(0.20) |  색을 칠하는 과정이다. 일반적으로 페인트를 말리기 위해 180도 넘는 고온이 필요해 화석연료인 가스를 사용하곤 한다. 하지만 BMW는 도장 공정에 사용되는 에너지를 획기적으로 줄이기 위해 재생에너지를 활용하는 방법을 택했다. BMW그룹 헝가리 데브레첸 공장서 가스가 
+  [67527] eos=4 EN(0.09) |  visits this year through September reached 48.8 million, the highest for the nine-month period since at least 2000, Spain’s tourism institute said la
+  [67528] eos=4 MX(0.18) |  The bonuses of board members may suffer after earnings last year missed the company’s target, he said. Employee numbers probably won’t vary much afte
+  [67529] eos=6 MX(0.29) |  tribunal in London, tests transparency in the licensing process, the accountability of U.K. companies and the release of information in the public in
+  [67530] eos=6 EN(0.12) |  website’s co-founder Duerrenberger, who is in talks to expand the project to neighboring countries. “I’ll never forget the elderly lady who goes to t
+  [67531] eos=1 KO(0.48) |  경제적 실질에 따라 ‘증권형’과 ‘비증권형’으로 구별해 규제 체계를 마련하되, ‘증권형 코인’은 ‘자본시장법’의 규율 체계에 따라 발행할 수 있도록 시장 여건 및 규율체계를 확립하고 ‘비증권형 코인’은 국회 계류 중인 ‘업권법’을 통해 발행, 성장, 불공정거래 방지 
+  [67532] eos=5 EN(0.14) | 220 U-PRESID CHINA 46 0.35 3.05 11.3 1093 CSPC PHARMA 272 1.28 11.34 11.3 587 HUA HAN 308 0.55 4.94 11.2 2828 HS H-SHARE ETF 26.60 2.86 25.58 11.2 285
+  [67533] eos=6 MX(0.28) | 에 대해 일절 거론하거나 개입하지 않으며, 중동은 한반도 정세에 대해 일절 거론하거나 개입하지 않는다"가 대한민국과 중동 간 외교의 기본적인 기조로 자리잡았다. 석유를 연료로 쓰는 자동차 산업에도 많은 영향을 끼쳤는데, 일명 ' 말레이즈 시대 ' 라고 불리는 암흑기가 
+  [67534] eos=6 MX(0.18) |  and lied about it in media interviews during the lead-up to the national title game. Te’o said he was fooled into believing his fake girlfriend had d
+  [67535] eos=5 MX(0.25) |  deadline. Steffen Seibert, German Chancellor Angela Merkel ’s spokesman, said “dreams” of an imminent resolution aren’t likely, and Merkel and French
+  [67536] eos=4 MX(0.30) | 리코 (石 原 絵 理 子 ) 이시하라 유지로 (石 原 裕 次 郎 ) 이시하라 카오리 (石 原 夏 織 ) 이시하라 사토미 (石 原 さとみ) 이시하라 리나 (石 原 莉 奈 ) 이시하라 아키히로 (石 原 章 弘 ) 이시하라 군페이 (石 原 軍 平 ) 이시하라 유카리 (石 原
+  [67537] eos=5 MX(0.15) |  on the ground.” Even so, Madden, enterprising and newly divorced, bought a wreck on the corner of Main and Cross Streets, then spent a few months caj
+  [67538] eos=4 EN(0.10) |  , according to statements on the two rail companies’ websites. The strike, which began at 10 p.m. local time last night, has shut down all tram, subw
+  [67539] eos=5 MX(0.25) |  of September, according to Clarkson Plc. That included 11.19 million deadweight tons of dry-bulk ships, or 58 vessels, the second-highest tally world
+  [67540] eos=4 KO(0.31) |  extra capacity in most production and transportation networks to compensate for government-induced holdups, says Yossi Sheffi, director of the Center
+  [67541] eos=7 EN(0.10) | , according to the Daily Mail. The case is Nixson v. News Group Newspapers, High Court of Justice Queens Bench Division, Case No. HQ11X03843. To conta
+  [67542] eos=5 MX(0.16) | 58 pesos today, the highest since May 15 on a closing basis. Earlier, the shares jumped as much as 3.6 percent in intraday trading. The company will p
+  [67543] eos=5 EN(0.07) | 려 폭압적으로 반대세력들을 때려잡았기에 정권을 유지 할 수 있었다. 물론 국민들이 원하는 반서방 이슬람주의 정책은 기본 밑바탕에 깔고 간다. 1999년과 2009년, 2011년에 이란 내에서도 세 차례 있었으나 대부분 진압, 토벌되었다.<|endoftext|>시드니: 
+  [67544] eos=6 EN(0.13) | 비리·특혜·청탁 논란<|endoftext|>: Google Inc .’s classified- advertisement service, Google Trader, accounts for as much as 8 percent of all searches from Ghan
+  [67545] eos=4 KO(0.35) | 은 계승되고 있다. 이 분야의 유명한 학자 중 하나인 에이브러햄 매슬로우 (A.Maslow)가 제안한 욕구계층이론 은 심리학 외에도 경영학 , 행정학 등의 다른 사회과학 분야들에서도 적극적으로 활용되고 있다. 돈의 논리 혹은 배금주의 와도 대척점에 서 있다. 당장 인간
+  [67546] eos=7 MX(0.15) |  rapid increase in meat demand boosts consumption of grains to feed chickens and pigs, the United Nations said May 3. Corn consumption jumped 53 perce
+  [67547] eos=5 MX(0.22) | 25,000 from Bank of America-Merrill Lynch in 2010 and 2011, according to his financial disclosure with the Office of Government Ethics. He also was pa
+  [67548] eos=5 EN(0.06) | ] 한 때는 임실읍과 인구가 비슷했을 정도로 임실군 내에서는 꽤 번화한 면 지역이었지만 지금은 임실읍에 비해 반도 안된다. 그러나 임실 인구가 감소하는 와중에도 다른 면들 역시 더 쪼그라들었기 때문에 지금도 임실군 내 인구 2위 읍면이긴 하다 지역의 이름은 큰 개 와 
+  [67549] eos=5 KO(0.31) |  seeking “relatively fast” growth, a policy in place since 2006, in a report yesterday by the state-run Xinhua News Agency after the annual central ec
+  [67550] eos=5 MX(0.25) | 철수 의 군의관 시절 외박 위수지역 이탈(?) 논란도 이런 맥락과 연결되어 있다. 게다가 황기철 항목에서 볼 수 있듯 유달리 해군이나 공군, 특히 해군에 대해 흠집 못 내서 불확실함에도 해군에게 불리한 정보가 하나라도 있으면 갖다 붙이고 까기에 여념이 없는 양반들도 수
+  [67551] eos=7 MX(0.26) | 인(SME)들이 보유한 고유의 문화와 이야기를 인공지능(AI) 기술로 확장할 수 있도록 지원한다. 네이버는 “로컬 SME가 가진 역사·문화 콘텐츠가 지역 대표 브랜드로 자리잡을 수 있도록 AI 교육과 기술, 인프라를 제공할 계획”이라고 30일 밝혔다. 최수연 네이버 대
+
+====================================================================================================
+STEP 2160 | samples 69120-69151 | avg_docs/seq=5.0 | avg_ko=0.2
+====================================================================================================
+  [69120] eos=3 KO(0.45) | den Financial. As many as 58 vessels are waiting to load sugar at Brazil’s main ports, according to ICAP Futures LLC. The line-up is a result of a lac
+  [69121] eos=5 KO(0.33) |  バリス・トラス) 역 - 이나다 테츠 / 존 에릭 벤틀리 중장기 기어 담당 대원이자 근육질의 거한으로 30대다. 어마어마한 괴력을 자랑하며 항상 몸 단련을 거르지 않는다. 그 거구와 스태미너를 활용하여 현장에 출동할 때 루치아를 들처메고 이동할 때도 있다. 루치아 펙스
+  [69122] eos=7 MX(0.19) |  said in an interview with the South China Morning Post published April 8. Soros cut his stake in the SPDR gold fund by 55 percent in the fourth quart
+  [69123] eos=6 EN(0.13) | 1732화 89 . 1739화 90 . 1749화 91 . 1757화 92 . 1793화 93 . 1824화 94 . 1858화 95 . 1867화 96 . 1890화 97 . 1892화 98 . 1904화 99 . 1916화 100 . 1924화 101 .<|endo
+  [69124] eos=5 MX(0.20) |  markets have fallen in the last two years, and Buffett, Berkshire’s chairman and chief executive officer, said in October that investors buying bonds
+  [69125] eos=5 EN(0.00) | Overall, a robust expansion of the economy can be expected in the third quarter of 2011,” the Frankfurt-based central bank said in its monthly report 
+  [69126] eos=4 MX(0.21) | 기획총괄, 경영지원실장, 환경·사회·지배구조(ESG) 전략경영연구소장 등 주요 보직을 두루 거쳤다. iM금융의 대표적인 전략통으로 평가받는다. 조강래 임추위원장은 “iM뱅크의 지속 가능한 성장을 이끌면서 지역에 기반을 둔 시중은행으로 도약하는 데 기여할 최적임자를 찾는
+  [69127] eos=4 EN(0.11) | 232.67 217.71 Primal Brisket 119.44 118.30 Primal Short Plate 130.04 132.22 Primal Flank 111.68 109.20 -----------------------------------------------
+  [69128] eos=3 KO(0.35) | 이버 검색창에 '14도 날씨 옷차림'을 입력한 뒤 검색을 진행하자 이 같은 답변이 제시됐다. 네이버가 27일 오후 정식 출시한 인공지능(AI) 검색 서비스 'AI 브리핑'은 옷차림을 검색한 사용자의 특성을 고려해 이미지로 된 콘텐츠를 먼저 제시한 다음 바로 아래 요약·
+  [69129] eos=6 MX(0.18) |  의 정규 2집 戀人 의 타이틀곡 ' 미안해 널 미워해 ' 를 샘플링 하였다.<|endoftext|>: Financial ratios are tools used to evaluate the financial health and performance of a compan
+  [69130] eos=3 KO(0.45) |  said today. Economists predicted a reading of minus 2, according to the median of 14 forecasts in a Bloomberg survey. The euro was bolstered by a dra
+  [69131] eos=6 MX(0.22) |  국회 에서 제정되었으며 2007년도부터 시행했다. 예산 , 기금 , 결산, 성과관리, 국가채무 등의 운영에 관해 규정하였으며 과거에 예산회계법이 예산과 회계를 중심으로 한 법률에서 예산, 기금, 결산, 채무 등으로 그 범위를 확산시켰다. 효율성, 성과지향, 투명성, 
+  [69132] eos=4 EN(0.06) |  purchases to stimulate the economy. Jobs Report Companies added 198,000 workers in February, according to a private report based on payrolls. The inc
+  [69133] eos=5 MX(0.20) |  , 영화감독 . 토미 리 존스는 많은 배우들이 그러하듯 처음에는 연극 무대에서 연기 경력을 쌓기 시작해서 1970년 《 러브 스토리 》로 영화에서 단역으로 첫 발을 디뎠다. 주인공 라이언 오닐 의 친구이자 룸메이트로 등장했고 몇 마디 하던 단역이었다. 미국에서 4년 
+  [69134] eos=5 EN(0.13) | 관의 서측에 신축된 건물로, 총 6층으로 구성되며, 2019년 말에 준공되었다. 1층에는 행정실이 있고, 2층에는 카페 및 라운지가 있다. 연합전공 벤처경영학 학생들을 위한 공간이 위치해 있다. 2층과 3층은 구름다리를 통해 58동 신관과 연결되어 있다. LG 경영관 
+  [69135] eos=5 EN(0.06) |  May with a one-vote margin, to overhaul the pension system and employment policies as the country emerges from the deepest recession in six decades. 
+  [69136] eos=5 MX(0.30) | 체국 금융창구 제휴가 되어 있는데 우체국 금융창구에 씨티은행 통장을 들고 가면 수수료없이 입출금 및 통장정리를 할 수 있다. 또한 2011년 7월 1일 부터 우체국과 협약하여 한미은행 시절 금융창구 거래에 한정되었던 것을 ATM 공동망까지 전면 개방해 놓는 등 우체국 
+  [69137] eos=5 MX(0.21) | ) of bonds, the maximum amount, at yields below the prevailing market rates, and attracted bids worth as much as 2.45 times the securities on offer. “
+  [69138] eos=5 KO(0.36) | dale, Mississippi , which oversees about $50 million of assets.<|endoftext|>포도주/호주: 다른 신세계 포도주 생산국들과 마찬가지로 유명 생산자들이 새로운 포도주 산지에 밭을 구매하여 자신들의 상표를 박고 생산
+  [69139] eos=6 MX(0.15) | 1 부대가 따라붙었으나 256호기는 13일 오전 0시 32분에 이륙에 성공했다. 이륙하면서 비행기 오른쪽 날개가 급유차와 부딪쳐 유도등이 떨어져나갔다. 한편 예췬과의 통화를 끝낸 후 저우언라이는 오법헌과 이작붕을 불러 트라이던트기가 자신과 이작붕, 황영승, 오법헌의 공
+  [69140] eos=5 MX(0.29) | 02 yen in Tokyo trading at 2:53 p.m. local time. A spokesman for the Tokyo-based company declined to comment on the agreement between Teva and Rabaxy,
+  [69141] eos=5 EN(0.12) | 라고 간청했던 국가들의 명단을 천천히 읽어 나갔다. 독일 총통이 우스꽝스러운 어조로 국명을 하나씩 발음하자 제국의회에서 웃음이 터져 나왔다. 히틀러는 더 나아가 루스벨트의 편지에 적힌 각각의 국가들에게 그들이 실제로 위협을 느꼈는지 물어봤다. 그중에 많은 나라들이 히틀
+  [69142] eos=4 MX(0.21) |  currently drills in Texas, Louisiana and Oklahoma. A stake in a shale-gas project in China would help deepen the company’s operations, Faulkner said.
+  [69143] eos=6 MX(0.27) | ade” and Symphony No. 2 by Rachmaninoff. Even as his career has gone global, Fischer has stayed devoted to the orchestra he founded 30 years ago, and 
+  [69144] eos=7 EN(0.00) |  fries, burgers and chicken McNuggets, and will also roll out new foods, Thompson said during an investor conference in New York on May 29. “We’ve got
+  [69145] eos=5 EN(0.09) | , which were pricing in rate increases last month. Carney reiterated last week in a Halifax, Nova Scotia , speech that he may raise interest rates as 
+  [69146] eos=5 EN(0.03) | away Inc. (BRK/B) The order came in a trademark-infringement lawsuit Russell Brands and Union Underwear Co. filed in federal court in Kentucky in Octo
+  [69147] eos=6 EN(0.11) | 썸레이는 올해 안으로 국내 지하철 역사에 자체 개발 장치를 공급하고, 내년에는 해외 진출과 대량 생산공장 설립에 나선다는 계획이다. 김기준 카카오벤처스 부사장은 “어썸레이의 검증된 기술력과 사업 역량을 높게 평가해 후속 투자를 결정했다”고 설명했다. 윤희은 기자 sou
+  [69148] eos=6 KO(0.47) | 년 초반에도 잠시 눈발이 흩날린 적이 있다. 물론 쌓이기는커녕 땅에 닿자마자 바로 녹았다. 차량이 미끄러지는 것을 방지하기 위해 상습 결빙지역에 얼음을 깨는 일이나 모래를 뿌리는 일 정도는 한다. 그러나 1994년과 1997년, 2009년부터 2010년경에는 기상이변인
+  [69149] eos=5 EN(0.13) | possible to calculate because of the unpredictability of economic policy,” Bebesy said. “Still, the events of the recent weeks and months show that po
+  [69150] eos=3 KO(0.46) | 19) red washing machine, to attract China’s increasingly affluent consumers. That may help them draw local shoppers, and eventually global ones, from 
+  [69151] eos=5 EN(0.03) |  이전 제품에 사용했던 시리즈명인 'DVF', 'SMX', 'DNM', 'DNT'가 아닌 완전 새로운 이름을 채택했다는 게 회사 측 설명이다. 전시 부스는 접근성이 좋은 주 전시장 맨 앞열에 위치했다. 면적은 1700㎡로, 신제품을 비롯해 최신 기술을 적용한 장비를 1
+
+====================================================================================================
+STEP 2350 | samples 75200-75231 | avg_docs/seq=4.9 | avg_ko=0.19
+====================================================================================================
+  [75200] eos=5 MX(0.17) | 대전을 개최했다고 밝혔다. # 2020년 10월 30일에 주 필리핀 한국 대사관은 10월 31일에 온라인으로 한국-필리핀 문화교류축제를 개최한다고 밝혔다. # 2021년 6월 3일에 주필리핀 한국대사관과 필리핀 에너지부는 그린에너지를 주제로 웹 세미나를 진행했다. # 
+  [75201] eos=7 EN(0.04) |  dispute with some of its cabin crew that has triggered 22 days of strikes over the past two years, the BBC reported, without attribution. The stock r
+  [75202] eos=4 MX(0.19) | k A/S, owner of the world’s biggest container shipping line, and 14 other carriers will seek a peak-season surcharge two months later than previously 
+  [75203] eos=3 KO(0.33) |  to “push” their own products on clients, he said, adding it may be too late for some smaller companies to change their business models. To contact th
+  [75204] eos=4 KO(0.36) | 윤 부회장이 아버지에게 최근 벌어진 소송전과 관련해 '죄송하다', '향후 아버지의 경영철학을 받들어 그룹을 이끌어나가겠다'는 뜻을 전했고, 윤 회장도 이에 대해 진지하게 들으며 대화를 나눴다"고 했다. 부자관계인 윤 회장과 윤 부회장은 지난 4월 말 콜마홀딩스가 건강기
+  [75205] eos=5 MX(0.22) | 하는 조치를 취하기로 하였다. 내국인 역시 백신 접종 여부에 관계없이 시설 격리된다. 또한 8개 국가 외 입국자라도, 아프리카 에서 입국한 경우에는 임시생활시설에서 의무적으로 1일차 PCR 검사를 실시해야 한다. 이 조치는 바로 다음날인 11월 28일 출발 편부터 적용
+  [75206] eos=5 EN(0.00) |  told Reading’s website. “We go into the game as underdogs again. That is exactly what we want -- we do well from that.” To contact the reporter on th
+  [75207] eos=6 EN(0.02) |  March 11 earthquake, limiting business activity, Citigroup Inc. said. “Particularly worrying is the serious blow to the power supply in eastern Japan
+  [75208] eos=5 MX(0.27) | 점을 추가로 개관할 계획이다. 헤드락VR 관계자는 “헤드락VR이 가진 탄탄한 콘텐츠와 기술력을 바탕으로 싱가포르의 랜드마크가 될 수 있기를 기대한다”고 말했다. 배태웅 기자 btu104@hankyung.com<|endoftext|>'美해군 파트너' 오스탈 업은 한화…상
+  [75209] eos=4 EN(0.08) | 1 percent drop in 1988-89, it said. The plans will see the fiscal stance supporting monetary policy as Prime Minister Julia Gillard’s government seeks
+  [75210] eos=6 EN(0.07) | 해주는 랩노트, 28억 투자 유치 연구 데이터 기록·관리 솔루션 '랩노트' 운영사 앤트가 28억원 규모 프리 시리즈A 투자 유치에 성공했다. 스트롱벤처스, 베이스인베스트먼트, 스마일게이트인베스트먼트 등이 투자에 참여했다. 2020년 설립된 앤트는 바이오, 나노, 화학 
+  [75211] eos=4 EN(0.05) | 족과 관련이 있는 눈이라는 설정 외에는 공개된 바가 없다. 우라시키가 알고 있던 것을 보면 오오츠츠키 내에서도 알려진 눈임은 확실하다. 일단 TVA 8화에서 토네리가 언급한 바에 의하면 곧 수확의 때가 가까워져가고 있다고 하며, 희망이 되는 건 '그 아이'라면서 보루토
+  [75212] eos=5 MX(0.26) |  this story: Faris Khan at fkhan33@bloomberg.net<|endoftext|>: Rubber futures in Shanghai advanced to a record. The March-delivery contract gained as 
+  [75213] eos=6 MX(0.19) |  멩스크 의 오른팔로 활동했다. 최종 보직은 최고 사령관 . 멩스크가 중요한 전투를 모두 듀크에게 위임한 것을 보면, 그가 얼마나 대단한 장군인지를 보여준다. 게다가 앵거스 시절부터 멩스크를 따라 생사고락을 함께한 코랄의 후예 출신 개국공신들을 제치고 전향한지 1년도 
+  [75214] eos=5 KO(0.48) | 초등학교 득점왕 출신이자 유튜버 풋살 모임에서 활약 중이라고 한다. 집에 관련 물품들도 꽤 많은 편인데 2002년 월드컵 관련 기념품들도 많이 가지고 있고, 국내외 선수들을 비롯한 축구 관련 인물들 친필 사인이 담긴 물품도 여럿 보유 중이다.<|endoftext|>개포
+  [75215] eos=4 EN(0.09) | - year loans, with the interest determined by the average of the benchmark rate over that period. Societe Generale SA estimates that cutting the key r
+  [75216] eos=5 MX(0.21) |  compared with 40 Hong Kong cents a year earlier. To contact the reporters on this story: Kelvin Wong in Hong Kong at kwong40@bloomberg.net To contact
+  [75217] eos=5 EN(0.04) |  mainly to East Africa, Robert Whyte, a manager for the World Bank’s investment program, said today in an interview in Nairobi, Kenya’s capital. Compa
+  [75218] eos=6 KO(0.42) |  원화 약세에 따른 관광산업 가격 경쟁력 상승이 맞물리며 호텔 시장이 다시 주목받는 주요 지역이다. 인근에선 코로나19 팬데믹 이후 운영을 멈추었던 호텔이 속속 새단장을 하고 다시 문을 여는 경우가 늘었다. 근처 '보코 서울 명동'(옛 티마크그랜드호텔 명동)은 코로나1
+  [75219] eos=5 KO(0.38) | 며 "LG디스플레이만의 차별화 기술과 제품을 선제적으로 발굴해 고객가치를 제공하고 시장을 선도하겠다"고 말했다.<|endoftext|>와이오밍: 한편 미국 역시 서부로 확장해나가면서 충돌했는데, 두 나라는 1819년 에 애덤스 오니스 조약을 맺어 경계를 확정했고 이를 
+  [75220] eos=6 MX(0.19) |  a five-year slump as an unemployment rate of 25 percent weakens domestic demand. As the government seeks to reduce the nation’s dependence on foreign
+  [75221] eos=4 MX(0.21) |  staffing study , completed last year. Newark’s tower had 26 controllers while the FAA estimates it needs 31 to 38 to staff all its shifts. The tower 
+  [75222] eos=5 MX(0.15) |  good and the quantity demanded. Movements along the demand curve occur due to changes in the price of the good, while shifts in the demand curve happ
+  [75223] eos=5 MX(0.19) | The weakening of the shilling is tied to market nervousness over the ruling by the international criminal court, with buyers seeking to buy dollars in
+  [75224] eos=5 MX(0.21) | . Net liquidity at the end of September fell 57 percent to 9.22 billion euros. Analysts said the money may be used to complete the takeover of German 
+  [75225] eos=6 EN(0.09) |  to take some time for Finland to recover from the shock and get used to the new Nokia.” Still, mounting losses at the company made it clear to many F
+  [75226] eos=5 MX(0.30) | 3월 지급된 실업급여는 1조510억원을 기록했다. 작년 3월(9696억원)보다 8.4% 증가한 규모다. 3월 기준으론 역대 최대를 기록한 2021년 3월(1조1790억원)에 이어 두 번째다. 1조원을 돌파한 건 지난 2월(1조728억원)에 이어 두 달 연속이다. 3월 
+  [75227] eos=5 MX(0.25) |  상황"이라고 덧붙였다. 한은이 할 수 있는 금융지원책으로는 피해 중소기업을 대상으로 금융중개지원대출(금중대)을 확대하는 방안 등이 거론된다. 금융중개지원대출은 금융통화위원회가 금융경제상황과 중소기업 및 지역 금융동향 등을 감안해 정한 한도 범위 내에서 은행의 중소기업
+  [75228] eos=3 KO(0.31) | 다 고금리 등 국내 경제 상황이 좋지 않다. 또한 전기차 캐즘(일시적 수요 정체) 장기화까지 겹쳤다. 스텔란티스코리아의 전기차인 지프 어벤저와 푸조 e-2008은 지난해 의미 있는 성과를 내지 못했다. 브랜드 경쟁력 문제도 있단 얘기다. 방 대표는 "매일 환율에 따라 
+  [75229] eos=5 EN(0.06) |  who don’t disclose enough information to the IRS. “There is incredible frustration at the audacity and imperial overreach of this law,” said David Ku
+  [75230] eos=4 EN(0.05) |  and No. 2 factories in Soma, Fukushima prefecture, where it produces aircraft parts and turbines. Hong Kong’s Hang Seng Index (HSI) climbed 1.7 perce
+  [75231] eos=6 MX(0.15) |  같은 가치측정방법론은 뉴욕대학교 애스워스 다모다란 교수의 'investment valuation'에서 좀 더 자세하게 공부할 수 있다.<|endoftext|>: March 14 (Bloomberg) -- This table displays the latest dail
