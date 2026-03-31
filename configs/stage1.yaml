@@ -16,7 +16,7 @@ lora:
 
 training:
   learning_rate: 5.0e-6
-  optim: "adamw_8bit"
+  optim: "adamw_torch"
   optim_args: null
   lr_scheduler_type: "cosine_with_min_lr"
   lr_scheduler_kwargs:
@@ -45,8 +45,8 @@ stability:
   llrd_decay: 0.95
   module_lr_multipliers:
     attn: 1.0
-    mlp: 0.5
-    deltanet: 0.25
+    mlp: 1.0
+    deltanet: 1.0
     other: 1.0
 
 data:

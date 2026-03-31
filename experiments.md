@@ -218,14 +218,14 @@
      - `lr/*`: 실제 param group 기준 lr 범위
   4. optimizer 설정 명시화: `optim`, `optim_args`
 - **초기 설정안 (첫 비교 run)**:
-  - `optim=adamw_8bit`
+  - `optim=adamw_torch`
   - `llrd_decay=0.95`
-  - `module_lr_multipliers={attn:1.0, mlp:0.5, deltanet:0.25, other:1.0}`
-  - 첫 run부터 실제 감쇠를 적용하고, 새 로깅으로 `pre/post clip` 및 `update_proxy` 패턴을 함께 확인
+  - `module_lr_multipliers={attn:1.0, mlp:1.0, deltanet:1.0, other:1.0}`
+  - 배치/packing 개선 후에는 optimizer를 표준 AdamW로 두고, module-wise 감쇠 없이 새 로깅으로 `pre/post clip` 및 `update_proxy` 패턴을 먼저 확인
 - **후속 ablation 계획**:
-  1. 필요 시 `mlp=1.0`, `deltanet=1.0`으로 되돌려 baseline과 직접 비교
+  1. 필요 시 `mlp=0.5`, `deltanet=0.25`를 다시 적용해 module-wise 감쇠 유무를 직접 비교
   2. 필요 시 `llrd_decay=1.0`과 비교하여 "LLRD only vs LLRD + module-wise" 분리
-  3. 필요 시 `optim=adamw_torch` A/B로 optimizer 영향 분리
+  3. 필요 시 `optim=adamw_8bit` A/B로 optimizer 영향 분리
 - **중점 관찰 포인트**:
   - `grad_pre`와 `grad_post` 차이가 실제로 얼마나 큰지
   - `update_proxy/deltanet`, `update_proxy/mlp`가 후반 step에서 지수 증가하는지
