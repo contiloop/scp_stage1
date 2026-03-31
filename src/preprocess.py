@@ -11,6 +11,7 @@ Usage:
 
 import random
 import argparse
+import re
 from pathlib import Path
 
 import yaml
@@ -40,8 +41,11 @@ def load_source(src_cfg):
     repo = src_cfg["repo"]
     file = src_cfg["file"]
 
-    ds = load_dataset("json", data_files=f"hf://datasets/{repo}/{file}", split="train")
+    data_path, local_only = resolve_local_dataset_file(repo, file)
+    ds = load_dataset("json", data_files=data_path, split="train")
     records = ds.to_list()
+    location = "local cache" if local_only else "HF Hub"
+    print(f"  {name}: loaded from {location}")
 
     # Reassemble chunked docs if needed
     reassemble = src_cfg.get("reassemble")
@@ -104,9 +108,9 @@ def _find_sentence_boundary(tokens, tokenizer):
     못 찾으면 0 반환 (아무것도 넣지 않음).
     """
     text = tokenizer.decode(tokens, skip_special_tokens=False)
-    # 마지막 문장 종결 부호 찾기
+    # 마지막 문장/문단 경계 찾기
     last_boundary = -1
-    for sep in [".", "。", "!", "?", "!}", "?}"]:
+    for sep in [".", "。", "!", "?", "!}", "?}", "\n\n", "\n"]:
         idx = text.rfind(sep)
         if idx > last_boundary:
             last_boundary = idx
@@ -121,14 +125,99 @@ def _find_sentence_boundary(tokens, tokenizer):
 
 
 def _sentence_fit(tokens, tokenizer, limit):
-    """Return the largest prefix <= limit that ends at a sentence boundary."""
+    """Return the largest prefix <= limit that ends at a sentence boundary.
+
+    Returns 0 if no safe boundary exists within `limit`.
+    """
     if limit <= 0:
         return 0
 
     fit = _find_sentence_boundary(tokens[:limit], tokenizer)
-    if fit > 0:
-        return fit
-    return min(len(tokens), limit)
+    return fit if fit > 0 else 0
+
+
+def _rstrip_trailing_whitespace_tokens(ids, tokenizer, suffix_window=128):
+    """Trim trailing whitespace/newlines from the tail of a token sequence."""
+    if not ids:
+        return ids
+
+    window = min(len(ids), suffix_window)
+    prefix = ids[:-window]
+    suffix = ids[-window:]
+    suffix_text = tokenizer.decode(suffix, skip_special_tokens=False)
+    trimmed = suffix_text.rstrip(" \t\r\n")
+    if trimmed == suffix_text:
+        return ids
+    return prefix + tokenizer.encode(trimmed, add_special_tokens=False)
+
+
+TERMINAL_LINE_RE = re.compile(r'(?:[.!?。…]|[.!?][\'"”)\]\}]+)$')
+PAREN_NOTICE_RE = re.compile(r'^\([^()\n]{5,200}\)$')
+DATE_ONLY_RE = re.compile(
+    r'^(?=.*\d)(?:\d{4}\s*년)?(?:\s*\d{1,2}\s*월)?(?:\s*\d{1,2}\s*일)?\s*$'
+)
+CAPTION_LINE_RE = re.compile(
+    r'^(?:사진|이미지|자료|출처)\s*[:=]|(?:사진|이미지|자료)\s*[=/].*|.*(?:캡처|제공|출처)\s*$'
+)
+
+
+def _is_drop_tail_line(line: str) -> bool:
+    normalized = " ".join(line.split())
+    if not normalized:
+        return False
+    if PAREN_NOTICE_RE.fullmatch(normalized):
+        return True
+    if DATE_ONLY_RE.fullmatch(normalized):
+        return True
+    if len(normalized) <= 160 and CAPTION_LINE_RE.search(normalized):
+        return True
+    return False
+
+
+def _strip_trailing_header_lines(ids, tokenizer, suffix_window=1024):
+    """Drop trailing short non-sentence blocks such as headers/captions/tables before EOS."""
+    if not ids:
+        return ids
+
+    window = min(len(ids), suffix_window)
+    prefix = ids[:-window]
+    suffix = ids[-window:]
+    text = tokenizer.decode(suffix, skip_special_tokens=False)
+    lines = text.split("\n")
+    changed = False
+    dropping_tail_block = False
+
+    while lines:
+        last = lines[-1].strip()
+        if not last:
+            lines.pop()
+            changed = True
+            continue
+        if _is_drop_tail_line(last):
+            lines.pop()
+            changed = True
+            dropping_tail_block = True
+            continue
+        if dropping_tail_block:
+            if len(last) <= 120 and not TERMINAL_LINE_RE.search(last):
+                lines.pop()
+                changed = True
+                continue
+            break
+        if len(lines) <= 1:
+            break
+        if not (3 <= len(last) <= 120):
+            break
+        if TERMINAL_LINE_RE.search(last):
+            break
+        lines.pop()
+        changed = True
+
+    if not changed:
+        return ids
+
+    new_text = "\n".join(lines)
+    return prefix + tokenizer.encode(new_text, add_special_tokens=False)
 
 
 def _sort_docs_for_packing(tok_docs, pool_size=4096):
@@ -147,6 +236,7 @@ def _sort_docs_for_packing(tok_docs, pool_size=4096):
 def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
     eos = tokenizer.eos_token_id
     pad = tokenizer.pad_token_id if tokenizer.pad_token_id is not None else eos
+    payload_limit = max_len - 1
     tok_docs = []
     for d in documents:
         ids = tokenizer.encode(d["text"], add_special_tokens=False)
@@ -161,11 +251,21 @@ def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
     cur_ids = []
     cur_labels = []
     total_padded = 0
+    skipped_boundaryless_docs = 0
 
     def flush_current():
         nonlocal cur_ids, cur_labels, total_padded
         if not cur_ids:
             return
+
+        base_ids = cur_ids[:-1] if cur_ids[-1] == eos else cur_ids
+        base_ids = _rstrip_trailing_whitespace_tokens(base_ids, tokenizer)
+        base_ids = _strip_trailing_header_lines(base_ids, tokenizer)
+        base_ids = _rstrip_trailing_whitespace_tokens(base_ids, tokenizer)
+
+        cur_ids = base_ids + [eos]
+
+        cur_labels = list(cur_ids)
 
         pad_len = max_len - len(cur_ids)
         total_padded += pad_len
@@ -180,7 +280,7 @@ def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
         remaining = list(doc_tokens)
 
         while remaining:
-            rem = max_len - len(cur_ids)
+            rem = payload_limit - len(cur_ids)
 
             if len(remaining) <= rem:
                 cur_ids.extend(remaining)
@@ -193,9 +293,10 @@ def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
                     cur_ids.extend(remaining[:fit])
                     cur_labels.extend(remaining[:fit])
                     remaining = remaining[fit:]
-                    if remaining and remaining[0] == eos and len(cur_ids) < max_len:
-                        cur_ids.append(remaining[0])
-                        cur_labels.append(remaining[0])
+                    if remaining and remaining[0] == eos:
+                        if len(cur_ids) < payload_limit:
+                            cur_ids.append(remaining[0])
+                            cur_labels.append(remaining[0])
                         remaining = remaining[1:]
                     flush_current()
                     continue
@@ -204,13 +305,17 @@ def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
                 flush_current()
                 continue
 
-            fit = _sentence_fit(remaining, tokenizer, max_len)
+            fit = _sentence_fit(remaining, tokenizer, payload_limit)
+            if fit == 0:
+                skipped_boundaryless_docs += 1
+                break
             cur_ids.extend(remaining[:fit])
             cur_labels.extend(remaining[:fit])
             remaining = remaining[fit:]
-            if remaining and remaining[0] == eos and len(cur_ids) < max_len:
-                cur_ids.append(remaining[0])
-                cur_labels.append(remaining[0])
+            if remaining and remaining[0] == eos:
+                if len(cur_ids) < payload_limit:
+                    cur_ids.append(remaining[0])
+                    cur_labels.append(remaining[0])
                 remaining = remaining[1:]
             flush_current()
 
@@ -220,7 +325,46 @@ def tokenize_and_pack(documents, tokenizer, max_len, pool_size=4096):
     total_tokens = len(packed) * max_len
     print(f"  packed: {len(packed)} seqs × {max_len} tokens")
     print(f"  padding: {total_padded:,} / {total_tokens:,} ({total_padded/total_tokens*100:.1f}%)")
+    if skipped_boundaryless_docs:
+        print(f"  skipped (no boundary within {max_len}): {skipped_boundaryless_docs:,}")
     return packed
+
+
+def resolve_local_hf_snapshot(model_name: str) -> tuple[str, bool]:
+    """Prefer a locally cached HF snapshot if present, otherwise fall back to repo id."""
+    if "/" not in model_name:
+        return model_name, False
+
+    org, repo = model_name.split("/", 1)
+    snapshots_dir = Path.home() / ".cache" / "huggingface" / "hub" / f"models--{org}--{repo}" / "snapshots"
+    if not snapshots_dir.exists():
+        return model_name, False
+
+    snapshots = [p for p in snapshots_dir.iterdir() if p.is_dir()]
+    if not snapshots:
+        return model_name, False
+
+    latest = max(snapshots, key=lambda p: p.stat().st_mtime)
+    return str(latest), True
+
+
+def resolve_local_dataset_file(repo: str, file: str) -> tuple[str, bool]:
+    """Prefer a locally cached HF dataset snapshot if present."""
+    repo_cache = repo.replace("/", "--")
+    snapshots_dir = Path.home() / ".cache" / "huggingface" / "hub" / f"datasets--{repo_cache}" / "snapshots"
+    if not snapshots_dir.exists():
+        return f"hf://datasets/{repo}/{file}", False
+
+    snapshots = [p for p in snapshots_dir.iterdir() if p.is_dir()]
+    if not snapshots:
+        return f"hf://datasets/{repo}/{file}", False
+
+    for snapshot in sorted(snapshots, key=lambda p: p.stat().st_mtime, reverse=True):
+        candidate = snapshot / file
+        if candidate.exists():
+            return str(candidate), True
+
+    return f"hf://datasets/{repo}/{file}", False
 
 
 def main():
@@ -274,7 +418,12 @@ def main():
     # Tokenize
     print(f"\n  Loading tokenizer: {model_name}")
     from transformers import AutoTokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    tokenizer_path, local_only = resolve_local_hf_snapshot(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(
+        tokenizer_path,
+        trust_remote_code=True,
+        local_files_only=local_only,
+    )
     packed = tokenize_and_pack(upsampled, tokenizer, max_seq_len)
 
     # Split

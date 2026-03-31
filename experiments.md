@@ -222,6 +222,13 @@
   - `llrd_decay=0.95`
   - `module_lr_multipliers={attn:1.0, mlp:1.0, deltanet:1.0, other:1.0}`
   - 배치/packing 개선 후에는 optimizer를 표준 AdamW로 두고, module-wise 감쇠 없이 새 로깅으로 `pre/post clip` 및 `update_proxy` 패턴을 먼저 확인
+- **Preprocessing 업데이트**:
+  - raw text에서 URL / 이메일 / bare domain 제거
+  - `hard cut` 제거, 문장/문단 경계 기반 packing 유지
+  - `padding 제외 마지막 non-pad = EOS` 보장
+  - trailing newline, 괄호형 고지문, 날짜 단독 라인, 캡션/출처 라인, 긴 연표 tail block 제거
+  - HF 원격 대신 로컬 dataset/tokenizer cache를 우선 사용하도록 변경
+  - 최종 packed dataset: `71,831 seqs x 2048`, `padding 1.0%`, `train 70,395 / val 1,436`
 - **후속 ablation 계획**:
   1. 필요 시 `mlp=0.5`, `deltanet=0.25`를 다시 적용해 module-wise 감쇠 유무를 직접 비교
   2. 필요 시 `llrd_decay=1.0`과 비교하여 "LLRD only vs LLRD + module-wise" 분리

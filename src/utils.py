@@ -8,6 +8,12 @@ from collections import defaultdict
 from pathlib import Path
 
 
+URL_RE = re.compile(r"(?:https?://|www\.)\S+", re.IGNORECASE)
+EMAIL_RE = re.compile(r"\b[\w.+-]+@[\w-]+(?:\.[\w-]+)+\b")
+DOMAIN_RE = re.compile(r"\b(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,24}(?:/[^\s]*)?\b")
+ONLY_PUNCT_RE = re.compile(r"^[\s\-\–\—:=|/\\•·.,;~()\[\]{}<>]+$")
+
+
 def load_jsonl(path: Path) -> list[dict]:
     with open(path, "r", encoding="utf-8") as f:
         return [json.loads(line) for line in f if line.strip()]
@@ -67,6 +73,20 @@ def clean_text(text: str) -> str:
     text = html.unescape(text)
     text = re.sub(r"<[^>]+>", "", text)
     text = re.sub(r"[\u200b\u200c\u200d\ufeff]", "", text)
+    text = URL_RE.sub(" ", text)
+    text = EMAIL_RE.sub(" ", text)
+    text = DOMAIN_RE.sub(" ", text)
+
+    cleaned_lines = []
+    for line in text.splitlines():
+        line = re.sub(r"[ \t]+", " ", line).strip()
+        if not line:
+            continue
+        if ONLY_PUNCT_RE.fullmatch(line):
+            continue
+        cleaned_lines.append(line)
+
+    text = "\n".join(cleaned_lines)
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = re.sub(r"[ \t]+", " ", text)
     return text.strip()
