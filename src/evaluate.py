@@ -208,7 +208,8 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
 
 
 def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str = BENCHMARK_TASKS,
-                             korean: bool = True, limit: int = 400, run_base: bool = True):
+                             korean: bool = True, limit: int = 400, run_base: bool = True,
+                             batch_size: int = 8):
     """Run lm-eval on CPT, optionally comparing against the base model."""
     all_tasks = tasks
     if korean:
@@ -239,7 +240,7 @@ def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str
                 "--model", "hf",
                 "--model_args", f"pretrained={base_model},trust_remote_code=True",
                 "--tasks", all_tasks,
-                "--batch_size", "8",
+                "--batch_size", str(batch_size),
                 "--limit", str(limit),
                 "--output_path", str(base_out),
             ]
@@ -253,7 +254,7 @@ def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str
     # 2. CPT 모델 평가
     step = "[2/2]" if run_base else "[1/1]"
     print(f"\n{step} CPT model evaluation...")
-    cpt_results, cpt_stdout = run_lm_eval(model_path, all_tasks, limit=limit)
+    cpt_results, cpt_stdout = run_lm_eval(model_path, all_tasks, batch_size=batch_size, limit=limit)
 
     # 3. 결과 저장 (lm-eval stdout 표 포함)
     label = _ckpt_label(model_path)
@@ -401,6 +402,7 @@ def _eval_single(model_path: str, args, val_ds):
                 args.benchmark_tasks,
                 korean=args.include_korean_benchmarks,
                 run_base=not args.skip_base_benchmarks,
+                batch_size=args.batch_size,
             )
         except Exception as e:
             print(f"  [WARN] benchmarks skipped: {e}")
@@ -449,6 +451,7 @@ def main():
             args.benchmark_tasks,
             korean=args.include_korean_benchmarks,
             run_base=not args.skip_base_benchmarks,
+            batch_size=args.batch_size,
         )
         return
 

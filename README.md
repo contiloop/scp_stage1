@@ -66,10 +66,10 @@ make eval
 make eval-benchmarks
 
 # 벤치마크만 (영어 + 한국어, CPT만)
-python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks
+python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks --batch_size 1
 
 # 벤치마크만 (영어만, CPT만)
-python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks --no_korean_benchmarks
+python -m src.evaluate --model_path checkpoints/stage1_cpt --config configs/stage1.yaml --benchmarks_only --skip_base_benchmarks --no_korean_benchmarks --batch_size 1
 
 # 특정 체크포인트만
 python -m src.evaluate --model_path checkpoints/stage1_cpt/checkpoint-750 --base_model unsloth/Qwen3.5-4B-Base --config configs/stage1.yaml --batch_size 1 --skip_benchmarks
