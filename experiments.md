@@ -199,46 +199,50 @@
   - ⚠️ 영어/한국어 모두 base와 거의 동일. 998 step (~64M tokens) 학습했으나 벤치마크에 반영 없음. gradient explosion 전에 끊은 것이므로, 벤치마크 유지는 LLRD 효과가 아니라 단순히 아직 망가지기 전인 상태
 - **교훈**: LLRD는 어느 방향으로 적용해도 gradient explosion을 근본적으로 해결하지 못함. max_grad_norm=3.0 + 7x 데이터(124M tokens)에서의 누적 update가 핵심 원인일 가능성.
 
-## Run 12 — Qwen3.5-4B CPT + DeltaNet adapter v5 (planned: module-aware stabilization)
+## Run 12 — Qwen3.5-4B CPT + DeltaNet adapter v5 (explosion 해소, benchmark 하락)
 - **목표**:
-  1. 표준 LLRD 방향은 유지하면서 gradient explosion을 더 늦추거나 억제
-  2. catastrophic forgetting 없이 hot module만 선택적으로 약화
-  3. "어느 layer가 뜨거운가?"보다 "어느 module의 effective update가 뜨거운가?"를 먼저 확인
-- **핵심 가설**:
-  - 현재 문제는 LLRD 방향 자체보다, 특정 module(특히 MLP/DeltaNet)의 update가 누적되며 커지는 데 있음
-  - 따라서 `depth-wise scaling(LLRD)` 위에 `module-wise scaling`을 추가하면, 일반 지식 보존을 유지하면서도 폭주를 완화할 수 있음
-  - 기존 `grad_norm/*`는 clipping 이후 값일 가능성이 높으므로, `pre-clip` / `post-clip` / `update_proxy`를 분리해 봐야 실제 hot spot을 식별할 수 있음
-- **변경 예정**:
-  1. LLRD 유지: layer 0 = min lr, layer 31 = max lr
-  2. Module-aware LR 추가: optimizer group을 `layer x module_type(attn/mlp/deltanet/other)` 기준으로 재구성
-  3. 새 로깅 추가:
-     - `grad_pre/*`: clipping 전 grad norm
-     - `grad_post/*`: clipping 후 grad norm
-     - `update_proxy/*`: `lr x grad_post` 기반 proxy
-     - `lr/*`: 실제 param group 기준 lr 범위
-  4. optimizer 설정 명시화: `optim`, `optim_args`
-- **초기 설정안 (첫 비교 run)**:
+  1. 표준 LLRD 방향은 유지하면서 gradient explosion을 억제
+  2. CPT 데이터 품질 개선으로 bad batch 요인을 제거
+  3. standalone eval / benchmark 경로까지 안정적으로 재현 가능하게 만들기
+- **설정**:
   - `optim=adamw_torch`
   - `llrd_decay=0.95`
   - `module_lr_multipliers={attn:1.0, mlp:1.0, deltanet:1.0, other:1.0}`
-  - 배치/packing 개선 후에는 optimizer를 표준 AdamW로 두고, module-wise 감쇠 없이 새 로깅으로 `pre/post clip` 및 `update_proxy` 패턴을 먼저 확인
-- **Preprocessing 업데이트**:
-  - raw text에서 URL / 이메일 / bare domain 제거
-  - `hard cut` 제거, 문장/문단 경계 기반 packing 유지
-  - `padding 제외 마지막 non-pad = EOS` 보장
-  - trailing newline, 괄호형 고지문, 날짜 단독 라인, 캡션/출처 라인, 긴 연표 tail block 제거
-  - HF 원격 대신 로컬 dataset/tokenizer cache를 우선 사용하도록 변경
-  - 최종 packed dataset: `71,831 seqs x 2048`, `padding 1.0%`, `train 70,395 / val 1,436`
-- **후속 ablation 계획**:
-  1. 필요 시 `mlp=0.5`, `deltanet=0.25`를 다시 적용해 module-wise 감쇠 유무를 직접 비교
-  2. 필요 시 `llrd_decay=1.0`과 비교하여 "LLRD only vs LLRD + module-wise" 분리
-  3. 필요 시 `optim=adamw_8bit` A/B로 optimizer 영향 분리
-- **중점 관찰 포인트**:
-  - `grad_pre`와 `grad_post` 차이가 실제로 얼마나 큰지
-  - `update_proxy/deltanet`, `update_proxy/mlp`가 후반 step에서 지수 증가하는지
-  - hot spot이 "후반 layer 일반"인지, "특정 module 전반"인지
-  - `lr/max`와 layer-wise effective lr이 기존 `train/learning_rate` 그래프와 얼마나 다른지
-- **성공 기준**:
-  1. 동일 데이터/유사 step 구간에서 Run 11 대비 grad 폭주 시점이 유의미하게 늦어짐
-  2. checkpoint 중간 평가에서 영어/한국어 벤치마크가 base 수준을 유지
-  3. 이후 실험에서 어떤 module multiplier를 줄여야 할지 로그만 보고 결정 가능해짐
+  - `gradient_accumulation_steps=4`
+  - preprocessing 대폭 수정:
+    - raw text에서 URL / 이메일 / bare domain 제거
+    - `hard cut` 제거, 문장/문단 경계 기반 packing 유지
+    - `padding 제외 마지막 non-pad = EOS` 보장
+    - trailing newline, 괄호형 고지문, 날짜 단독 라인, 캡션/출처 라인, 긴 연표 tail block 제거
+    - HF 원격 대신 로컬 dataset/tokenizer cache 우선 사용
+    - 최종 packed dataset: `71,831 seqs x 2048`, `padding 1.0%`, `train 70,395 / val 1,436`
+- **관찰**:
+  - 이전처럼 gradient explosion은 재현되지 않음
+  - train 종료 직후 ppl 출력은 정상, standalone eval / benchmark 경로도 별도 수정 후 안정화
+  - 다만 domain ppl은 기대처럼 개선되지 않고 오히려 상승
+  - benchmark는 catastrophic forgetting 수준까지는 아니지만, base 대비 눈에 띄게 하락
+- **영어 벤치마크 (MMLU)**:
+  | Group | Base | Run 11 (ckpt-998) | Run 12 | Diff vs Base |
+  |-------|------|-------------------|--------|--------------|
+  | Overall | 76.7% | 76.71% | **75.12%** | **-1.58%** |
+  | Humanities | 71.49% | - | 70.12% | -1.37% |
+  | Other | 76.95% | - | 75.59% | -1.36% |
+  | Social Sciences | 83.49% | - | 81.99% | -1.50% |
+  | STEM | 75.23% | - | 73.68% | -1.55% |
+- **한국어 벤치마크 (KMMLU)**:
+  | Group | Base | Run 11 (ckpt-998) | Run 12 | Diff vs Base |
+  |-------|------|-------------------|--------|--------------|
+  | Overall | 48.9% | 49.01% | **45.16%** | **-3.74%** |
+  | Applied Science | - | - | 43.42% | - |
+  | HUMSS | - | - | 45.68% | - |
+  | Other | - | - | 44.50% | - |
+  | STEM | - | - | 47.33% | - |
+- **해석**:
+  - 안정성 측면에서는 성공: `explosion -> no explosion`
+  - 품질 측면에서는 기대 이하: `benchmark 유지 -> benchmark 하락`
+  - 특히 한국어(KMMLU) 하락폭이 영어(MMLU)보다 큼
+  - 즉 현재 세팅은 "학습은 안정화됐지만, 성능 보존/향상 측면에서 우세하지 않은 절충안"에 가깝다
+- **교훈**:
+  1. bad batch 문제를 제거해도, Qwen3.5 + DeltaNet CPT에서 장기 누적 update가 성능 저하를 완전히 막아주진 않음
+  2. "explosion 방지"와 "benchmark 보존"은 별개 문제였음
+  3. 다음 비교축은 Qwen 하이퍼파라미터 미세조정보다 Gemma-3 baseline을 먼저 확인하는 것이 더 효율적일 수 있음
