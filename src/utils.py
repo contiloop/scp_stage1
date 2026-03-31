@@ -66,6 +66,7 @@ def reassemble_naver_chunks(records: list[dict]) -> list[dict]:
 def clean_text(text: str) -> str:
     text = html.unescape(text)
     text = re.sub(r"<[^>]+>", "", text)
+    text = re.sub(r"[\u200b\u200c\u200d\ufeff]", "", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     text = re.sub(r"[ \t]+", " ", text)
     return text.strip()
@@ -87,7 +88,9 @@ def fmt_news(doc: dict) -> str:
     return f"{doc['title']}\n\n{doc['content']}"
 
 def fmt_glossary(doc: dict) -> str:
-    return f"{doc['title']}: {doc['content']}"
+    title = doc.get("title", "").strip()
+    content = doc.get("content", "").strip()
+    return content if not title else f"{title}: {content}"
 
 def fmt_earnings_call(doc: dict) -> str:
     return doc["text"].strip()
