@@ -165,7 +165,25 @@ def _run_lm_eval_subprocess(cmd_args: list[str]):
     return subprocess.run(cmd, capture_output=True, text=True)
 
 
-def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int = 8, limit: int = 400) -> dict:
+def _base_model_from_config(config_path: str | None) -> str | None:
+    if not config_path:
+        return None
+    try:
+        import yaml
+        with open(config_path) as f:
+            cfg = yaml.safe_load(f)
+        return cfg.get("model", {}).get("name")
+    except Exception:
+        return None
+
+
+def run_lm_eval(
+    model_path: str,
+    tasks: str = BENCHMARK_TASKS,
+    batch_size: int = 8,
+    limit: int = 400,
+    base_model: str | None = None,
+) -> dict:
     """lm-evaluation-harness로 벤치마크 실행."""
     label = _ckpt_label(model_path)
     out_dir = ROOT / "checkpoints" / "lm_eval_results"
@@ -179,7 +197,9 @@ def run_lm_eval(model_path: str, tasks: str = BENCHMARK_TASKS, batch_size: int =
         model_args = f"pretrained={merged_path},trust_remote_code=True"
     elif (mp / "adapter_config.json").exists():
         print("  [WARN] using adapter for benchmark (lora_B may be zero)")
-        model_args = f"pretrained={BASE_MODEL},peft={model_path},trust_remote_code=True"
+        fallback_base = base_model or BASE_MODEL
+        print(f"  using base model for adapter benchmark: {fallback_base}")
+        model_args = f"pretrained={fallback_base},peft={model_path},trust_remote_code=True"
     else:
         model_args = f"pretrained={model_path},trust_remote_code=True"
 
@@ -259,7 +279,13 @@ def run_benchmark_comparison(model_path: str, base_model: str | None, tasks: str
     # 2. CPT 모델 평가
     step = "[2/2]" if run_base else "[1/1]"
     print(f"\n{step} CPT model evaluation...")
-    cpt_results, cpt_stdout = run_lm_eval(model_path, all_tasks, batch_size=batch_size, limit=limit)
+    cpt_results, cpt_stdout = run_lm_eval(
+        model_path,
+        all_tasks,
+        batch_size=batch_size,
+        limit=limit,
+        base_model=base_model,
+    )
 
     # 3. 결과 저장 (lm-eval stdout 표 포함)
     label = _ckpt_label(model_path)
@@ -448,6 +474,8 @@ def main():
         if not args.model_path:
             print("[ERROR] --model_path required for --benchmarks_only")
             return
+        if not args.base_model:
+            args.base_model = _base_model_from_config(args.config)
         if not args.base_model and not args.skip_base_benchmarks:
             args.base_model = BASE_MODEL
         run_benchmark_comparison(
