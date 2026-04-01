@@ -15,7 +15,7 @@ lora:
   use_rslora: true
 
 training:
-  learning_rate: 5.0e-6
+  learning_rate: 1.0e-5
   optim: "adamw_torch"
   optim_args: null
   lr_scheduler_type: "cosine_with_min_lr"
@@ -42,7 +42,7 @@ training:
   dataloader_num_workers: 4
 
 stability:
-  llrd_decay: 0.95
+  llrd_decay: 1.0
   module_lr_multipliers:
     attn: 1.0
     mlp: 1.0

@@ -246,3 +246,49 @@
   1. bad batch 문제를 제거해도, Qwen3.5 + DeltaNet CPT에서 장기 누적 update가 성능 저하를 완전히 막아주진 않음
   2. "explosion 방지"와 "benchmark 보존"은 별개 문제였음
   3. 다음 비교축은 Qwen 하이퍼파라미터 미세조정보다 Gemma-3 baseline을 먼저 확인하는 것이 더 효율적일 수 있음
+
+## Run 13 — Gemma-3-4B CPT baseline (초기 benchmark 확인)
+- **목표**:
+  1. Qwen Run 12와 최대한 비슷한 학습/평가 조건에서 Gemma-3 baseline 확인
+  2. `explosion` 없이 CPT가 안정적으로 진행되는지 점검
+  3. 영어/한국어 벤치마크 보존력 비교
+- **설정**:
+  - config: `configs/stage1_gemma.yaml`
+  - `optim=adamw_torch`
+  - `learning_rate=5e-6`
+  - `llrd_decay=0.95`
+  - `module_lr_multipliers={attn:1.0, mlp:1.0, deltanet:1.0, other:1.0}`
+  - `per_device_train_batch_size=16`
+  - `gradient_accumulation_steps=4`
+  - benchmark-only eval:
+    - `python -m src.evaluate --model_path checkpoints/stage1_cpt_gemma --config configs/stage1_gemma.yaml --benchmarks_only --skip_base_benchmarks --batch_size 1`
+- **결과 (영어/한국어 benchmark-only)**:
+  - 상단 aggregate: `0.6950 ± 0.0230`
+  - 영어 벤치마크 (MMLU):
+    | Group | Gemma Base (Run 7) | Run 13 | Diff vs Base |
+    |-------|---------------------|--------|--------------|
+    | Overall | 60.0% | **59.15%** | **-0.85%** |
+    | Humanities | - | 59.14% | - |
+    | Other | - | 61.93% | - |
+    | Social Sciences | - | 67.10% | - |
+    | STEM | - | 49.89% | - |
+  - 한국어 벤치마크 (KMMLU):
+    | Group | Gemma Base (Run 7) | Run 13 | Diff vs Base |
+    |-------|---------------------|--------|--------------|
+    | Overall | 35.2% | **32.96%** | **-2.24%** |
+    | Applied Science | - | 32.67% | - |
+    | HUMSS | - | 29.96% | - |
+    | Other | - | 34.42% | - |
+    | STEM | - | 33.98% | - |
+- **해석**:
+  - 현재 시점 Gemma-3 baseline은 Qwen Run 12보다 영어/한국어 모두 낮음
+  - Gemma 자기 기준으로 봐도 benchmark 보존이 안 좋음
+  - `Gemma Base -> Run 13` 변화:
+    - `MMLU 60.0% -> 59.15%` (`-0.85%p`)
+    - `KMMLU 35.2% -> 32.96%` (`-2.24%p`)
+  - 특히 한국어(KMMLU) 격차가 큼: `Qwen Run 12 45.16%` vs `Gemma Run 13 32.96%`
+  - 영어(MMLU)도 차이가 큼: `Qwen Run 12 75.12%` vs `Gemma Run 13 59.15%`
+  - 따라서 "Gemma로 바꾸면 benchmark 보존력이 더 좋을 것"이라는 가설은 현재 결과만 보면 지지되지 않음
+- **주의**:
+  - 이 결과는 `skip_base_benchmarks`로 측정한 CPT-only benchmark이며, 이후 Gemma base 직접 비교를 붙이면 해석이 더 명확해질 수 있음
+  - benchmark eval 중 VRAM OOM이 간헐적으로 발생해 `batch_size=1`로 실행함
