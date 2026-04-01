@@ -1,0 +1,29 @@
+sources:
+  - name: hk
+    repo: "alwaysgood/ko-news-split-512"
+    file: "hk.jsonl"
+    reassemble: news_chunks
+    format: news
+    upsample: 1
+
+  - name: mk
+    repo: "alwaysgood/ko-news-split-512"
+    file: "mk.jsonl"
+    reassemble: news_chunks
+    format: news
+    upsample: 1
+
+  - name: korea_bank
+    repo: "alwaysgood/ko-news-split-512"
+    file: "korea-bank-700-cleaned.jsonl"
+    fields: { title: "term", content: "text" }
+    format: glossary
+    upsample: 3
+
+  - name: naver
+    repo: "alwaysgood/ko-news-split-512"
+    file: "naver_terms_clean.jsonl"
+    reassemble: naver_chunks
+    format: glossary
+    exclude_categories: ["학문명백과"]
+    upsample: 2

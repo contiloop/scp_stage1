@@ -309,3 +309,19 @@
   - `make preprocess CONFIG=configs/stage1_gemma_ko_only.yaml`
   - `make train CONFIG=configs/stage1_gemma_ko_only.yaml`
   - `python -m src.evaluate --model_path checkpoints/stage1_cpt_gemma_ko_only --config configs/stage1_gemma_ko_only.yaml --benchmarks_only --skip_base_benchmarks --batch_size 1`
+
+## Repro Baseline — Gemma Run 7 config 복원
+- **목적**:
+  - 현재 Gemma 실험축이 너무 많이 바뀌어서, 예전 `Run 7`의 강한 결과를 다시 확인하기 위한 복원 baseline
+- **config**:
+  - `configs/stage1_gemma_run7_repro.yaml`
+- **핵심값**:
+  - `learning_rate=1e-5`
+  - `weight_decay=0.01`
+  - `per_device_train_batch_size=8`
+  - `gradient_accumulation_steps=2`
+  - `use_rslora=true`
+  - `llrd_decay=1.0`
+- **실행**:
+  - `make train CONFIG=configs/stage1_gemma_run7_repro.yaml`
+  - `python -m src.evaluate --model_path checkpoints/stage1_cpt_gemma_run7_repro --config configs/stage1_gemma_run7_repro.yaml --benchmarks_only --skip_base_benchmarks --batch_size 1`

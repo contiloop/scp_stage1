@@ -1,0 +1,55 @@
+model:
+  name: "unsloth/gemma-3-4b-pt"
+  max_seq_length: 2048
+  dtype: "bfloat16"
+  load_in_4bit: false
+
+lora:
+  r: 32
+  lora_alpha: 32
+  lora_dropout: 0.0
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  bias: "none"
+  task_type: "CAUSAL_LM"
+  use_dora: false
+  use_rslora: true
+
+training:
+  learning_rate: 1.0e-5
+  optim: "adamw_torch"
+  optim_args: null
+  lr_scheduler_type: "cosine_with_min_lr"
+  lr_scheduler_kwargs:
+    min_lr_rate: 0.3
+  warmup_ratio: 0.1
+  num_train_epochs: 1
+  per_device_train_batch_size: 16
+  gradient_accumulation_steps: 8    # effective batch = 128 × 2048 = 256K tokens
+  bf16: true
+  gradient_checkpointing: true
+  weight_decay: 0.001
+  max_grad_norm: 3.0
+  logging_steps: 10
+  save_steps: 499
+  eval_on_start: true
+  eval_strategy: "steps"
+  eval_steps: 500
+  per_device_eval_batch_size: 4
+  save_total_limit: 3
+  seed: 42
+  report_to: "wandb"
+  output_dir: "checkpoints/stage1_cpt_gemma_ko_no_namu"
+  dataloader_num_workers: 4
+
+stability:
+  llrd_decay: 1.0
+  module_lr_multipliers:
+    attn: 1.0
+    mlp: 1.0
+    deltanet: 1.0
+    other: 1.0
+
+data:
+  config: "configs/data_ko_no_namu.yaml"
+  train_path: "data/processed_gemma_ko_no_namu/train"
+  val_path: "data/processed_gemma_ko_no_namu/val"
