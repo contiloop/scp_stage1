@@ -292,3 +292,20 @@
 - **주의**:
   - 이 결과는 `skip_base_benchmarks`로 측정한 CPT-only benchmark이며, 이후 Gemma base 직접 비교를 붙이면 해석이 더 명확해질 수 있음
   - benchmark eval 중 VRAM OOM이 간헐적으로 발생해 `batch_size=1`로 실행함
+
+## Next Ablation — Gemma ko-only (en_econ 제거)
+- **가설**:
+  - `en_econ`이 Gemma-3에 과도한 분포 혼합을 만들고 있을 수 있음
+  - 영어 데이터를 빼면 한국어 benchmark(`KMMLU`)와 한국어 도메인 적응이 더 나아질 가능성이 있음
+  - 대신 영어 benchmark(`MMLU`)는 일부 하락할 수 있음
+- **설정**:
+  - train config: `configs/stage1_gemma_ko_only.yaml`
+  - data config: `configs/data_ko_only.yaml`
+  - 차이점:
+    - `en_econ` source 제거
+    - output: `checkpoints/stage1_cpt_gemma_ko_only`
+    - processed data: `data/processed_gemma_ko_only/...`
+- **실행**:
+  - `make preprocess CONFIG=configs/stage1_gemma_ko_only.yaml`
+  - `make train CONFIG=configs/stage1_gemma_ko_only.yaml`
+  - `python -m src.evaluate --model_path checkpoints/stage1_cpt_gemma_ko_only --config configs/stage1_gemma_ko_only.yaml --benchmarks_only --skip_base_benchmarks --batch_size 1`
